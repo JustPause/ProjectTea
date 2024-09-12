@@ -52,3 +52,23 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## inportant links
+
+[vue integrasion](https://docs.astro.build/en/guides/integrations-guide/vue/)
+[after finish setuo, configer astro ASAP](https://docs.astro.build/en/reference/configuration-reference/)
+[add content pages for evry tea](https://docs.astro.build/en/guides/content-collections/)
+[or pages](https://docs.astro.build/en/basics/astro-pages/)
+[intresting conspet, need to inpelent](https://docs.astro.build/en/guides/view-transitions/)
+
+[Work step by step on this](https://docs.astro.build/en/tutorial/2-pages/)
+
+## ToDo
+
+### Pages
+
+- [ ] index page
+
+### Fetures
+
+- [ ] view-transitions
