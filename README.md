@@ -1,57 +1,6 @@
-# Astro Starter Kit: Basics
+# Tea project, Tea database
 
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This is a collaboration project between Nina, a designer, and Justinas, a programmer. We both share a deep passion for tea and want to share that love with the world, which is why we decided to create a website dedicated to tea enthusiasts like ourselves. Through our site, you'll be able to explore various types of teas, learn more about their origins, brewing techniques, and dive into the rich culture surrounding tea. We also share our personal tasting experiences and expert recommendations to help guide your own tea journey. Additionally, this project doubles as Justinas' college semester project, so he is putting in extra effort to ensure it’s completed before the New Year. We hope you’ll find our site as enjoyable to use as we have found creating it!
 
 ## inportant links
 
@@ -68,6 +17,21 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ### Pages
 
 - [ ] index page
+- [ ] Over view abaout teas
+  - [ ] White Tea
+  - [ ] Yellow Tea
+  - [ ] Green Tea
+  - [ ] Oolong Tea
+  - [ ] Black Tea
+- [ ] Your opinions on tea
+  - [ ] Favorite tea’s
+    A list of 5 of my favorit teas and 5 of nenas favorint teas
+  - [ ] Reconmandasions on teas
+    List of must try teas
+  - [ ] Receipts on tea
+    A resepys of teas that we dirnk most oftenly. or want to share with the world
+
+
 
 ### Fetures
 
