@@ -5,12 +5,12 @@ export default {
     extend: {
       colors: {
         textColor: {
-          light: "#005600",
+          light: "#394132",
           dark: "#A7BF8F",
         },
         mainColor: {
           light: "#005600",
-          dark: "#A7BF8F",
+          dark: "#394132",
         },
       },
     },

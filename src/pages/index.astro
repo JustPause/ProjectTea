@@ -1,28 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout title="Tea today is delicious">
   <main>
-	<div class="relative flex h-screen">
-		<div class="w-3/5">
-		  <img
-			src="/public/a823ff6bdd05ad85b615988a96e28739.jpg"
-			class="w-full h-full object-cover object-center cut"
-		  />
-		</div>
-		<div class="absolute w-2/5 h-full right-0 flex items-center">
-		  <div class="text-center p-4">
-			<p class="text-6xl">Discover various flavours of tea</p>
-			<p class="text-xl mt-4">
-			  Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
-			  phasellus mollis sit aliquam sit nullam neque ultrices.
-			</p>
-		  </div>
-		</div>
-	  </div>
+    <div class="relative flex h-screen">
+      <div class="w-3/5">
+        <img
+          src="/a823ff6bdd05ad85b615988a96e28739.jpg"
+          class="w-full h-full object-cover object-center cut"
+        />
+      </div>
+      <div class="absolute w-2/5 h-full right-0 flex items-center">
+        <div class="text-center p-4 text-textColor-light">
+          <p class="text-8xl">Discover various flavours of tea</p>
+          <p class="text-2xl mt-4">
+            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+            phasellus mollis sit aliquam sit nullam neque ultrices.
+          </p>
+        </div>
+      </div>
+      <div>
+        <!-- <a id="Black Tea">Black Tea</a>
+			<a id="Green Tea">Green Tea</a>
+			<a id="Fruit Tea">Fruit Tea</a>
+			<a id="Rooibos Tea">Rooibos Tea</a> -->
 
-	  <div class="h-96"></div>
+      </div>
+    </div>
+
+    <div class="h-96"></div>
   </main>
 </Layout>
 
