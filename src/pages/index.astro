@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+
 ---
 
 <Layout title="Tea today is delicious">
   <main>
-    <div class="relative flex ">
+    <div class="relative flex">
       <div class="w-3/5 height-fing">
         <img
           src="/a823ff6bdd05ad85b615988a96e28739.jpg"
@@ -22,11 +23,10 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <div>
-        <!-- <a id="Black Tea">Black Tea</a>
-			<a id="Green Tea">Green Tea</a>
-			<a id="Fruit Tea">Fruit Tea</a>
-			<a id="Rooibos Tea">Rooibos Tea</a> -->
-
+        <a id="Black Tea">Black Tea</a>
+        <a id="Green Tea">Green Tea</a>
+        <a id="Fruit Tea">Fruit Tea</a>
+        <a id="Rooibos Tea">Rooibos Tea</a>
       </div>
     </div>
 
@@ -46,7 +46,10 @@ import Layout from "../layouts/Layout.astro";
     clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
     object-fit: cover;
   }
-  .height-fing{
+  .height-fing {
     height: 820px;
+  }
+  .max-width-fing {
+    max-width: 1080px;
   }
 </style>
