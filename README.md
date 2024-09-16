@@ -16,7 +16,7 @@ This is a collaboration project between Nina, a designer, and Justinas, a progra
 
 ### Pages
 
-- [ ] Header conponent
+- [x] Header conponent
 - [ ] index page
 - [ ] Over view abaout teas
   - [ ] White Tea
