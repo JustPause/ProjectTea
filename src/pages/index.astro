@@ -1,21 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tea today is delicious">
-	<main>
-
-	</main>
+  <main>
+    <div class="flex h-auto">
+      <div>
+        <img
+          src="/public/a823ff6bdd05ad85b615988a96e28739.jpg"
+          class="w-3/4 h-2/5 object-cover object-center cut"
+        />
+      </div>
+      <div class="absolute w-2/5 h-full flex items-center gap-2 right-0">
+        <div>
+          <p class="text-6xl">Discover various flavours of tea</p>
+          <p class="text-xl">
+            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
+            phasellus mollis sit aliquam sit nullam neque ultrices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
+  main {
+    padding: 0;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .cut {
+    clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
+    object-fit: cover;
+  }
 </style>
