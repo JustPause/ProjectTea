@@ -5,14 +5,14 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Tea today is delicious">
   <main>
-    <div class="relative flex h-screen">
-      <div class="w-3/5">
+    <div class="relative flex ">
+      <div class="w-3/5 height-fing">
         <img
           src="/a823ff6bdd05ad85b615988a96e28739.jpg"
-          class="w-full h-full object-cover object-center cut"
+          class="w-full object-cover object-center cut h-full"
         />
       </div>
-      <div class="absolute w-2/5 h-full right-0 flex items-center">
+      <div class="absolute w-2/5 right-0 flex items-center height-fing">
         <div class="text-center p-4 text-textColor-light">
           <p class="text-8xl">Discover various flavours of tea</p>
           <p class="text-2xl mt-4">
@@ -45,5 +45,8 @@ import Layout from "../layouts/Layout.astro";
   .cut {
     clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
     object-fit: cover;
+  }
+  .height-fing{
+    height: 820px;
   }
 </style>
