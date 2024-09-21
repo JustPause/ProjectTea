@@ -1,8 +1,11 @@
 ---
-// import * as tea from "../posts/black tea.md";
-// const posts = Object.values(
-//   await import.meta.glob("../posts/*.md", { eager: true })
-// );
+import * as tea from "../posts/black tea.md";
+
+const posts = Object.values(
+  await import.meta.glob("../posts/*.md", { eager: true })
+);
+
+const items = ["Dog", "Cat", "Platypus"];
 ---
 
 <div class="flex-shrink-0">
@@ -11,11 +14,24 @@
     <a id="Fruit Tea">Fruit Tea</a>
     <a id="Rooibos Tea">Rooibos Tea</a> -->
 
-  <div class="inline-flex flex-col items-start gap-8 bg-slate-50 ">
-    <div class="card"></div>
-    
+  <div class="inline-flex flex-row items-start gap-8">
+    {items.map((item) => <div class="card w-80 h-96 bg-slate-500">{item}</div>)}
   </div>
 </div>
+
+<p>{tea.frontmatter.title}</p>
+<p>Written by: {tea.frontmatter.author}</p>
+
+<p>Post Archive:</p>
+<ul>
+  {
+    posts.map((post) => (
+      <li>
+        <a href={post.url}>{post.frontmatter.title}</a>
+      </li>
+    ))
+  }
+</ul>
 
 <style scoped>
   .card {
