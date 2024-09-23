@@ -3,7 +3,7 @@ import * as tea from "../posts/black_tea.md";
 interface Post {
   frontmatter: {
     title: string;
-    description?: string;
+    description: string;
     date: string;
   };
 }
@@ -16,9 +16,14 @@ const posts = Object.values(
 <div class="flex flex-shrink-0 justify-center">
   <div class="inline-flex overflow-hidden flex-row items-start gap-16 self">
     {
-      posts.map((post) => (
-        <div class="card bg-slate-500">{post.frontmatter.title}</div>
-      ))
+      posts.map((post) => {
+        const postSmall = post.frontmatter;
+        return (
+          <div class="card bg-slate-500" key={postSmall.title}>
+            {postSmall.title}
+          </div>
+        );
+      })
     }
   </div>
 </div>
