@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import Cards from "../layouts/Cards.astro";
 ---
 
 <Layout title="Tea today is delicious">
@@ -21,14 +21,10 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
       </div>
-      <div>
-        <a id="Black Tea">Black Tea</a>
-        <a id="Green Tea">Green Tea</a>
-        <a id="Fruit Tea">Fruit Tea</a>
-        <a id="Rooibos Tea">Rooibos Tea</a>
-      </div>
     </div>
 
+    <Cards />
+    
     <div class="h-96"></div>
   </main>
 </Layout>
@@ -36,7 +32,7 @@ import Layout from "../layouts/Layout.astro";
 <style>
   main {
     padding: 0;
-    max-width: calc(100% - 2rem);
+    max-width: 100%;
     color: white;
     font-size: 20px;
     line-height: 1.6;
@@ -46,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
     object-fit: cover;
   }
   .height-fing {
-    height: 820px;
+    height: 100vh;
   }
   .max-width-fing {
     max-width: 1080px;
