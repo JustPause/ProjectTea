@@ -1,0 +1,33 @@
+---
+interface Page {
+  frontmatter: {
+    title: string;
+    bg_img: string;
+    url: string;
+    hover_text: string;
+  };
+}
+
+const pages = Object.values(
+  await import.meta.glob<Page>("../pages/recipe/*.md", { eager: true })
+).slice(0, 6);
+---
+
+<div class="flex flex-row flex-wrap justify-center items-center">
+  {
+    pages.map((page) => (
+      <div
+        class="card bg-slate-500 rounded-2xl m-4"
+      ><p class="text-textColor-light px-3">
+        {page.frontmatter.title}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .card {
+    width: 10em;
+    height: 10em;
+  }
+</style>
