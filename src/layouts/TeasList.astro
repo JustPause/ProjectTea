@@ -1,0 +1,44 @@
+---
+interface Post {
+  frontmatter: {
+    title: string;
+    bg_img: string;
+    url: string;
+    hover_text: string;
+  };
+}
+
+const setBackgroundImage = (bg_img) => {
+  return {
+    backgroundImage: `url('/public/img/${bg_img}.webp')`,
+    backgroundPosition: `center`,
+    backgroundSize: `contain`,
+  };
+};
+
+const posts = Object.values(
+  await import.meta.glob<Post>("../posts/*.md", { eager: true })
+);
+---
+
+<div class="relative flex flex-shrink-0 justify-center mb-80">
+  <div class=" absolute -top-32 inline-flex overflow-hidden flex-row items-start gap-16 self">
+    {
+      posts.map((post) => (
+        <div
+          class="card bg-slate-500 rounded-2xl z-10"
+          style={setBackgroundImage(post.frontmatter.bg_img)}
+        ><p class="text-textColor-light px-3">
+          {post.frontmatter.title}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style scoped>
+  .card {
+    width: 14em;
+    height: 18em;
+  }
+</style>

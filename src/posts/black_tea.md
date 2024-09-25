@@ -1,6 +1,6 @@
 ---
 title: 'Black Tea'
-bg_img: '#'
+bg_img: 'Black'
 url: '#'
 hover_text: 'This is my first blog post in Astro.'
 ---

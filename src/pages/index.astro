@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Cards from "../layouts/Cards.astro";
+import TeasList from "../layouts/TeasList.astro";
+import ResepesList from "../layouts/ResepesList.astro";
 ---
 
 <Layout title="Tea today is delicious">
@@ -8,7 +9,7 @@ import Cards from "../layouts/Cards.astro";
     <div class="relative flex">
       <div class="w-3/5 height-fing">
         <img
-          src="/a823ff6bdd05ad85b615988a96e28739.jpg"
+          src="/public/img/pexels-lulizler-3920505.jpg"
           class="w-full object-cover object-center cut h-full"
         />
       </div>
@@ -23,8 +24,23 @@ import Cards from "../layouts/Cards.astro";
       </div>
     </div>
 
-    <Cards />
-    
+    <TeasList />
+
+    <div class="relative flex">
+      <div class="flex w-3/5 height-fing">
+        <img
+          src="/public/img/pexels-daniela-constantini-5591737.jpg"
+          class="absolute w-full object-cover object-center cut-2 h-full -z-10"
+        />
+      </div>
+      <div class="absolute w-2/5 right-0 flex flex-col">
+        <div class="text-center py-48 text-textColor-light">
+          <p class="text-8xl">Discover various flavours of tea</p>
+        </div>
+
+        <ResepesList />
+      </div>
+    </div>
     <div class="h-96"></div>
   </main>
 </Layout>
@@ -41,6 +57,16 @@ import Cards from "../layouts/Cards.astro";
     clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
     object-fit: cover;
   }
+
+  .cut-2 {
+    clip-path: polygon(0% 0%, 60% 0%, 37% 100%, 0% 100%);
+    object-fit: cover;
+  }
+
+  .second-img-h {
+    height: 100vh;
+  }
+
   .height-fing {
     height: 100vh;
   }
