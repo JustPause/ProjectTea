@@ -2,7 +2,7 @@
 interface Post {
   frontmatter: {
     title: string;
-    bg_img: string;
+    img: string;
     url: string;
     hover_text: string;
   };
@@ -22,14 +22,16 @@ const posts = Object.values(
 ---
 
 <div class="relative flex flex-shrink-0 justify-center mb-80">
-  <div class=" absolute -top-32 inline-flex overflow-hidden flex-row items-start gap-16 self">
+  <div
+    class="absolute -top-32 inline-flex overflow-hidden flex-row items-start gap-16 self"
+  >
     {
       posts.map((post) => (
         <div
           class="card bg-slate-500 rounded-2xl z-10"
-          style={setBackgroundImage(post.frontmatter.bg_img)}
-        ><p class="text-textColor-light px-3">
-          {post.frontmatter.title}</p>
+          style={setBackgroundImage(post.frontmatter.img)}
+        >
+          <p class="text-textColor-light px-3">{post.frontmatter.title}</p>
         </div>
       ))
     }

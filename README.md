@@ -46,3 +46,5 @@ This is a collaboration project between Nina, a designer, and Justinas, a progra
 
 - [ ] try to add [boonakis-tea-api](https://github.com/boonaki/boonakis-tea-api)
 - [ ] view-transitions
+- jei man duomu baze nebutina, ar reikia ja vistiek ideti, ar galima prasisukti ir be jos
+- ar galima padaryti svetainia angliskai, ar geriau lietuviskai

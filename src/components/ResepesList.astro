@@ -8,6 +8,14 @@ interface Page {
   };
 }
 
+const setBackgroundImage = (img) => {
+  return {
+    backgroundImage: `url('/public/img/teas/${img}.webp')`,
+    backgroundPosition: `center`,
+    backgroundSize: `contain`,
+  };
+};
+
 const pages = Object.values(
   await import.meta.glob<Page>("../pages/recipe/*.md", { eager: true })
 ).slice(0, 6);
@@ -17,9 +25,10 @@ const pages = Object.values(
   {
     pages.map((page) => (
       <div
-        class="card bg-slate-500 rounded-2xl m-4"
-      ><p class="text-textColor-light px-3">
-        {page.frontmatter.title}</p>
+        class="card bg-mainColor-dark rounded-2xl m-4"
+        style={setBackgroundImage(page.frontmatter.bg_img)}
+      >
+        <p class="text-textColor-dark px-3">{page.frontmatter.title}</p>
       </div>
     ))
   }
