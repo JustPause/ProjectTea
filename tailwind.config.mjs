@@ -9,7 +9,7 @@ export default {
           dark: "#A7BF8F",
         },
         mainColor: {
-          light: "#005600",
+          light: "#A7BF8F",
           dark: "#394132",
         },
       },

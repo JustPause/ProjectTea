@@ -1,4 +1,4 @@
 ---
 title: Chai Latte
-img: #
+bg_img: pexels-doraklimova-9928286
 ---

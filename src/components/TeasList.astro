@@ -2,7 +2,7 @@
 interface Post {
   frontmatter: {
     title: string;
-    img: string;
+    bg_img: string;
     url: string;
     hover_text: string;
   };
@@ -18,18 +18,19 @@ const setBackgroundImage = (bg_img) => {
 
 const posts = Object.values(
   await import.meta.glob<Post>("../posts/*.md", { eager: true })
-);
+).slice(0, 6);
 ---
 
-<div class="relative flex flex-shrink-0 justify-center mb-80">
+<div id="list-div" class="relative flex flex-shrink-0 justify-center mb-80">
   <div
-    class="absolute -top-32 inline-flex overflow-hidden flex-row items-start gap-16 self"
+    class="absolute -top-4 inline-flex overflow-hidden flex-row flex-nowrap items-start gap-fing self justify-center"
+    id="list"
   >
     {
       posts.map((post) => (
         <div
           class="card bg-slate-500 rounded-2xl z-10"
-          style={setBackgroundImage(post.frontmatter.img)}
+          style={setBackgroundImage(post.frontmatter.bg_img)}
         >
           <p class="text-textColor-light px-3">{post.frontmatter.title}</p>
         </div>
@@ -42,5 +43,12 @@ const posts = Object.values(
   .card {
     width: 14em;
     height: 18em;
+  }
+  .theCardSepereitor {
+    margin-bottom: 80rem;
+  }
+
+  .gap-fing {
+    gap: 2rem;
   }
 </style>

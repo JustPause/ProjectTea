@@ -1,4 +1,0 @@
----
-title: Ginger Tea
-img: #
----

@@ -10,9 +10,9 @@ interface Page {
 
 const setBackgroundImage = (img) => {
   return {
-    backgroundImage: `url('/public/img/teas/${img}.webp')`,
+    backgroundImage: `url('/public/img/recipes/${img}.jpg')`,
     backgroundPosition: `center`,
-    backgroundSize: `contain`,
+    backgroundSize: `cover`,
   };
 };
 
@@ -21,14 +21,14 @@ const pages = Object.values(
 ).slice(0, 6);
 ---
 
-<div class="flex flex-row flex-wrap justify-center items-center">
+<div class="flex flex-row flex-wrap justify-center">
   {
     pages.map((page) => (
       <div
-        class="card bg-mainColor-dark rounded-2xl m-4"
+        class="card bg-mainColor-dark rounded-2xl m-4 object-cover"
         style={setBackgroundImage(page.frontmatter.bg_img)}
       >
-        <p class="text-textColor-dark px-3">{page.frontmatter.title}</p>
+        <p class="text-textColor-dark px-3 bg-black rounded-2xl bg-opacity-75">{page.frontmatter.title}</p>
       </div>
     ))
   }
@@ -36,7 +36,7 @@ const pages = Object.values(
 
 <style>
   .card {
-    width: 10em;
-    height: 10em;
+    width: 11vw;
+    height: 11vw;
   }
 </style>
