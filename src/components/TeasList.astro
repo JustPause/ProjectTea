@@ -17,7 +17,7 @@ const setBackgroundImage = (bg_img) => {
 };
 
 const posts = Object.values(
-  await import.meta.glob<Post>("../posts/*.md", { eager: true })
+  await import.meta.glob<Post>("../posts/tea/*.md", { eager: true })
 ).slice(0, 6);
 ---
 
