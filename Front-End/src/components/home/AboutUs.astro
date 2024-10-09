@@ -1,0 +1,53 @@
+<div class="flex mt-32 relative">
+  <div class="w-2/5 flex flex-col items-center justify-center h-screen">
+    <div class="text-center text-textColor-light mb-8">
+      <p class="text-8xl">The team</p>
+    </div>
+
+    <div id="Programmer" class="mx-24 min-h-48 flex rounded-2xl overflow-hidden bg-black mb-8">
+      <div class="w-1/2 bg-contain bg-programmer"></div>
+      <div class="w-1/2 left-0 text-white text-center">
+        <p class="p-8 text-2xl">
+          Page develeper, resercher, tea brouwerew and a student form lithuania
+        </p>
+      </div>
+    </div>
+
+    <div id="Designer" class="mx-24 min-h-48 flex rounded-2xl overflow-hidden bg-white">
+      <div class="w-1/2  bg-contain bg-designer"></div>
+      <div class="w-1/2 left-0 text-black text-center">
+        <p class="p-8 text-2xl">
+          Page designer, resercher, tea brouwerew and a student form germany
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex w-3/5 right-0">
+    <img
+      src="/img/background/pexels-tranmautritam-92327.jpg"
+      class="w-full object-cover object-center cut-3 h-screen"
+    />
+  </div>
+</div>
+
+<style>
+  .cut-3 {
+    clip-path: polygon(36% 0%, 100% 0%, 100% 100%, 0% 100%);
+    object-fit: cover;
+  }
+
+  .bg-programmer {
+    background-image: url(/img/background/pexels-pixabay-270404.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-designer {
+    background-image: url(/img/background/pexels-picjumbo-com-55570-196645.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
