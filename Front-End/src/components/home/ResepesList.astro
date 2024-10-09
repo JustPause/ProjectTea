@@ -17,7 +17,7 @@ const setBackgroundImage = (img) => {
 };
 
 const pages = Object.values(
-  await import.meta.glob<Page>("../posts/recipe/*.md", { eager: true })
+  await import.meta.glob<Page>("../../posts/recipe/*.md", { eager: true })
 ).slice(0, 6);
 ---
 
