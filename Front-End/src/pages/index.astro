@@ -1,87 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import TeasList from "../components/home/TeasList.astro";
-import ResepesList from "../components/home/ResepesList.astro";
-import Search from "../components/home/Search.astro";
-import AboutUs from "../components/home/AboutUs.astro";
+
 ---
 
 <Layout title="Tea today is delicious">
   <main>
-    <div class="relative flex">
-      <div class="w-3/5 height-fing">
-        <img
-          src="/img/background/pexels-lulizler-3920505.jpg"
-          class="w-full object-cover object-center cut h-full"
-        />
-      </div>
-      <div class="absolute w-2/5 right-10 flex items-center height-fing sm:right-0">
-        <div class="text-center p-4 text-textColor-light">
-          <p class="lg:text-8xl text-6xl">Discover various flavours of tea</p>
-          <p class="text-2xl mt-4">
-            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
-            phasellus mollis sit aliquam sit nullam neque ultrices.
-          </p>
-
-          <Search />
-        </div>
-      </div>
-    </div>
-
-    <TeasList />
-
-    <div class="relative sm:flex hidden">
-      <div class="flex w-3/5 height-fing">
-        <img
-          src="img/background/pexels-daniela-constantini-5591737.jpg"
-          class="absolute w-full object-cover object-center cut-2 h-full img-1 -z-10"
-        />
-      </div>
-      <div
-        class=" w-2/5 flex flex-col items-center justify-center content-center lg:flex"
-      >
-        <div class="text-center pb-16 text-textColor-light">
-          <p class="lg:text-8xl text-6xl">Discover various mixes of tea</p>
-        </div>
-
-        <ResepesList />
-      </div>
-    </div>
-
-    <AboutUs/>
   </main>
 
   <style>
-    main {
-      padding: 0;
-      max-width: 100%;
-      color: white;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-    .cut {
-      clip-path: polygon(0% 0%, 60% 0%, 100% 100%, 0% 100%);
-      object-fit: cover;
-    }
-
-    .cut-2 {
-      clip-path: polygon(0% 0%, 60% 0%, 36% 100%, 0% 100%);
-      object-fit: cover;
-    }
-
-
-
-    .second-img-h {
-      height: 100vh;
-    }
-
-    .height-fing {
-      height: 100vh;
-    }
-
-    .max-width-fing {
-      max-width: 1080px;
-    }
-
   </style>
 </Layout>
