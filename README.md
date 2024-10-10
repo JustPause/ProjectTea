@@ -116,6 +116,7 @@ How to add fonts [more](https://docs.astro.build/en/guides/fonts/)
 - flask
 
 Indented Code Block (expected style):
+
 ```bash
   python3 -m venv .env
   source .env/bin/activate
