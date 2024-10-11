@@ -1,5 +1,5 @@
 ---
-import Logo from "./logo.astro"
+import Logo from "./logo.astro";
 
 const Tabs = [
   { name: "Tea", link: "/teaList" },
@@ -7,7 +7,6 @@ const Tabs = [
   { name: "Recipes", link: "/recipes" },
   { name: "Profile", link: "/profile" }
 ];
-
 ---
 
 <div class="absolute w-full h-48 from-[#000A] bg-gradient-to-b -z-10"></div>
@@ -22,7 +21,10 @@ const Tabs = [
       <div class="flex flex-row gap-12 mr-4 items-center" id="tabs">
         {
           Tabs.map((data) => (
-            <a class="text-white text-base text-center" href={data.link} > {data.name} </a>
+            <a class="text-white text-base text-center" href={data.link}>
+              {" "}
+              {data.name}{" "}
+            </a>
           ))
         }
         <div
