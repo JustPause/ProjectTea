@@ -4,14 +4,25 @@ import Layout from "src/layouts/layout.astro"
 
 <Layout title="Tea today is delicious">
   <main>
-    <div class="h-screen w-screen object-cover overflow-hidden">
+    <div class="h-screen w-screen overflow-hidden">
+      <div class="absolute w-1/2 h-full right-0 from-true-black 
+      bg-gradient-to-l z-40"></div>
       <img
-        class="h-screen object-cover"
-        style="max-width: 1000%; max-height: 1000%; width: 100vw; object-position: 100% 50%; transform: scaley(-1);"
+        class="h-auto w-screen TeaCupBackground"
+        style=""
         src="/public/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
-        alt=""
+        alt="Tea"
       />
     </div>
-    P
+    <div class="absolute flex bottom-8 items-center content-center w-full">
+      <div class="flex w-48 h-16 bg-black "></div>
+    </div>
+
   </main>
 </Layout>
+
+<style>
+  .TeaCupBackground{ 
+    transform: scaleY(-1) scale(1.16) translate(-7%, 22.5%);
+    }
+</style>
