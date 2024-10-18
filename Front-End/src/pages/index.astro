@@ -1,28 +1,223 @@
 ---
-import Layout from "src/layouts/layout.astro"
+import Layout from "src/layouts/layout.astro";
+
+const Block2DataTabs = [
+  {
+    name: "Green Tea",
+    text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
+    link: "#",
+  },
+  {
+    name: "White Tea",
+    text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
+    link: "#",
+  },
+  {
+    name: "Black Tea",
+    text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
+    link: "#",
+  },
+];
+
+const Block2DataTeas = [
+  [
+    {
+      name: "1",
+      img: "pexels-charlotte-may-5946652",
+      link: "#",
+    },
+    {
+      name: "2",
+      img: "pexels-charlotte-may-5946652",
+      link: "#",
+    },
+    {
+      name: "3",
+      img: "pexels-charlotte-may-5946652",
+      link: "#",
+    },
+    {
+      name: "4",
+      img: "pexels-charlotte-may-5946652",
+      link: "#",
+    },
+    {
+      name: "5",
+      img: "pexels-charlotte-may-5946652",
+      link: "#",
+    },
+  ],
+  [
+    {
+      name: "6",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "7",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "8",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "9",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "10",
+      img: "#",
+      link: "#",
+    },
+  ],
+  [
+    {
+      name: "11",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "12",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "13",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "14",
+      img: "#",
+      link: "#",
+    },
+    {
+      name: "15",
+      img: "#",
+      link: "#",
+    },
+  ],
+];
 ---
 
 <Layout title="Tea today is delicious">
   <main>
-    <div class="h-screen w-screen overflow-hidden">
-      <div class="absolute w-1/2 h-full right-0 from-true-black 
-      bg-gradient-to-l z-40"></div>
+    <div id="Block-1">
+      <div class="h-screen w-screen overflow-hidden">
+        <div
+          class="absolute w-1/2 h-full right-0 from-true-black bg-gradient-to-l z-40"
+        >
+        </div>
+        <img
+          class="h-auto w-screen TeaCupBackground"
+          style=""
+          src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
+          alt="Tea"
+        />
+      </div>
+      <div
+        class="absolute bottom-0 left-0 flex justify-center items-center w-full"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <svg
+            width="79"
+            height="19"
+            viewBox="0 0 79 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M77 2L41.5 17L2 2"
+              stroke="#F4F0E5"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+
+          <!-- Second SVG with relative positioning -->
+          <svg
+            width="79"
+            height="19"
+            viewBox="0 0 79 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="relative -top-8"
+          >
+            <path
+              d="M77 2L41.5 17L2 2"
+              stroke="#F4F0E5"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Block-2"
+      class="my-8 flex flex-col gap-8 h-screen"
+    >
+      <div id="TopList" class="flex gap-x-16 justify-center items-center ">
+        {
+          Block2DataTabs.map((data) => (
+            <button
+              class="bg-transparent text-light/50
+            focus:text-light px-4 py-2 rounded hover:bg-color/10 focus:underline flex flex-row"
+            >
+              {data.name}
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="flex flex-col gap-4 justify-center items-center">
+        <p class="text-5xl text-light">
+          {Block2DataTabs[0].name}
+        </p>
+        <div class="flex flex-col justify-center items-center">
+          <p class="text-light text-center w-80 h-32">
+            {Block2DataTabs[0].text}
+          </p>
+
+          <button class="text-dark-green px-8 py-2 w-fit rounded-lg bg-light"
+            >All {Block2DataTabs[0].name}
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-row gap-8 overflow-hidden my-auto justify-center items-center ">
+        {
+          Block2DataTeas[0].map((data) => (
+            <div class="flex flex-col justify-center items-center gap-2">
+              <img
+                src="/public/img/background/{data.img}.jpg"
+                class="rounded-full w-auto h-64 bg-black"
+              />
+              <p class="text-light">{data.name}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div id="Black-3" class="my-16">
       <img
-        class="h-auto w-screen TeaCupBackground"
+        class="h-screen w-screen object-cover"
         style=""
-        src="/public/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
+        src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
         alt="Tea"
       />
     </div>
-    <div class="absolute flex bottom-8 items-center content-center w-full">
-      <div class="flex w-48 h-16 bg-black "></div>
-    </div>
-
   </main>
 </Layout>
 
 <style>
-  .TeaCupBackground{ 
+  .TeaCupBackground {
     transform: scaleY(-1) scale(1.16) translate(-7%, 22.5%);
-    }
+  }
+  .Block3{
+transform-origin: 50% 50%;
+  }
 </style>
