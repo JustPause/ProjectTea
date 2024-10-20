@@ -1,3 +1,67 @@
-body{
-	background-color: #394132;
+:root {
+  --white: #ffffff;
+  --light: #f4f0e5;
+  --color: #b8cfa3;
+  --dark-green: #394132;
+  --true-black: #000;
+  --black: #303030;
+  --accent: #a62f03;
+}
+
+body {
+  /* background-color: var(--dark-green); */
+  background-color: #394132;
+}
+
+p {
+  color: var(--light);
+}
+
+.Headline-1 {
+  font-size: 70px;
+
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 1.25em;
+}
+.Headline-2 {
+  font-size: 50px;
+
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Headline-3 {
+  font-size: 30px;
+
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.Subheadline {
+  font-size: 20px;
+
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.Text {
+  font-size: 16px;
+
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.Caption {
+  font-size: 12px;
+
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }

@@ -3,8 +3,8 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      crimson: ["Turquoise", "Crimson Text", "sans-serif"],
+      serif: ["Plus Jakarte Sans", "Arima", "serif"],
     },
     extend: {
       colors: {
@@ -15,14 +15,6 @@ export default {
         "true-black": "#000",
         black: "#303030",
         accent: "#a62f03",
-      },
-      spacing: {
-        "Headline-1": "5.852rem",
-        "Headline-2": "4.18rem",
-        "Headline-3": "2.5rem",
-        Subheadline: "1.67rem",
-        Text: "1.33rem",
-        Caption: "1rem",
       },
     },
   },

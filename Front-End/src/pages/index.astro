@@ -109,11 +109,13 @@ const Block2DataTeas = [
     <div id="Block-1">
       <div class="h-screen w-screen overflow-hidden">
         <div
-          class="absolute w-1/2 h-full right-0 from-true-black bg-gradient-to-l z-40"
+          id="DarkSideBar"
+          class="absolute w-1/2 h-full right-0 z-10 from-true-black bg-gradient-to-l"
         >
         </div>
 
         <img
+          id="TheBackGorundImage"
           class="h-auto w-screen TeaCupBackground"
           style=""
           src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
@@ -121,12 +123,65 @@ const Block2DataTeas = [
         />
       </div>
 
-      <div class="absolute"></div>
+      <div
+        id="Text"
+        class="absolute flex flex-col gap-4 content-center items-center w-[36rem] TeaCupText top-[20%] right-[10%] z-20"
+      >
+        <p class="Headline-1 text-center">Discover varijas flavors of tea</p>
+        <p class="Text text-center pb-4">
+          Explore different types of tea, their production processes and health
+          advantages, while keeping track of your personal tea journey.
+        </p>
+
+        <form class="w-10/12">
+          <!-- <label
+            for="default-search"
+            class="mb-2 font-medium text-gray-900 sr-only dark:text-white"
+            >Search</label
+          > -->
+
+          <div class="relative flex flex-row gap-8">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+              </svg>
+            </div>
+
+            <input
+              type="search"
+              id="default-search"
+              class="p-2 ps-10 rounded-lg w-full"
+              placeholder="Search for..."
+              required
+            />
+
+            <button
+            type="submit"
+            class="bg-light text-dark-green focus:ring-4 font-medium rounded-lg px-6 py-2 w-auto"
+            >Search
+          </button>
+          </div>
+
+  
+        </form>
+      </div>
 
       <div
         class="absolute bottom-0 left-0 flex justify-center items-center w-full"
       >
-
         <div class="flex flex-col justify-center items-center">
           <svg
             width="79"
@@ -162,16 +217,13 @@ const Block2DataTeas = [
         </div>
       </div>
     </div>
-    <div
-      id="Block-2"
-      class="my-8 flex flex-col gap-8 h-screen"
-    >
-      <div id="TopList" class="flex gap-x-16 justify-center items-center ">
+    <div id="Block-2" class="my-8 flex flex-col gap-8 h-screen">
+      <div id="TopList" class="flex gap-x-16 justify-center items-center">
         {
           Block2DataTabs.map((data) => (
             <button
               class="bg-transparent text-light/50
-            focus:text-light px-4 py-2 rounded hover:bg-color/10 focus:underline flex flex-row"
+            focus:text-light px-4 py-2 rounded hover:bg-color/10 focus:underline focus:text-lg flex flex-row"
             >
               {data.name}
             </button>
@@ -193,7 +245,9 @@ const Block2DataTeas = [
           </button>
         </div>
       </div>
-      <div class="flex flex-row gap-8 overflow-hidden my-auto justify-center items-center ">
+      <div
+        class="flex flex-row gap-8 overflow-hidden my-auto justify-center items-center"
+      >
         {
           Block2DataTeas[0].map((data) => (
             <div class="flex flex-col justify-center items-center gap-2">
@@ -222,7 +276,10 @@ const Block2DataTeas = [
   .TeaCupBackground {
     transform: scaleY(-1) scale(1.16) translate(-7%, 22.5%);
   }
-  .Block3{
-transform-origin: 50% 50%;
+  TeaCupText {
+    transform: translate(50%, 50%);
+  }
+  .Block3 {
+    transform-origin: 50% 50%;
   }
 </style>
