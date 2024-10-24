@@ -5,18 +5,18 @@ const Block2DataTabs = [
   {
     name: "Green Tea",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
-    link: "#",
+    link: "#"
   },
   {
     name: "White Tea",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
-    link: "#",
+    link: "#"
   },
   {
     name: "Black Tea",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
-    link: "#",
-  },
+    link: "#"
+  }
 ];
 
 const Block2DataTeas = [
@@ -24,83 +24,83 @@ const Block2DataTeas = [
     {
       name: "1",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "2",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "3",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "4",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "5",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
-    },
+      link: "#"
+    }
   ],
   [
     {
       name: "6",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "7",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "8",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "9",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "10",
       img: "#",
-      link: "#",
-    },
+      link: "#"
+    }
   ],
   [
     {
       name: "11",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "12",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "13",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "14",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "15",
       img: "#",
-      link: "#",
-    },
-  ],
+      link: "#"
+    }
+  ]
 ];
 ---
 
@@ -110,7 +110,7 @@ const Block2DataTeas = [
       <div class="h-screen w-screen overflow-hidden">
         <div
           id="DarkSideBar"
-          class="absolute w-1/2 h-full right-0 z-10 from-true-black bg-gradient-to-l"
+          class="absolute w-full h-full right-0 z-10 from-true-black bg-gradient-to-l opacity-95"
         >
         </div>
 
@@ -125,21 +125,15 @@ const Block2DataTeas = [
 
       <div
         id="Text"
-        class="absolute flex flex-col gap-4 content-center items-center w-[36rem] TeaCupText top-[20%] right-[10%] z-20"
+        class="absolute flex flex-col gap-4 content-center items-center w-[64rem] TeaCupText top-[20%] right-[10%] z-20"
       >
-        <p class="Headline-1 text-center">Discover varijas flavors of tea</p>
+        <p class="Headline-2 text-center">Discover varijas flavors of tea</p>
         <p class="Text text-center pb-4">
           Explore different types of tea, their production processes and health
           advantages, while keeping track of your personal tea journey.
         </p>
 
         <form class="w-10/12">
-          <!-- <label
-            for="default-search"
-            class="mb-2 font-medium text-gray-900 sr-only dark:text-white"
-            >Search</label
-          > -->
-
           <div class="relative flex flex-row gap-8">
             <div
               class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
@@ -163,19 +157,17 @@ const Block2DataTeas = [
             <input
               type="search"
               id="default-search"
-              class="p-2 ps-10 rounded-lg w-full"
+              class="p-4 ps-10 rounded-lg w-full"
               placeholder="Search for..."
               required
             />
 
             <button
-            type="submit"
-            class="bg-light text-dark-green focus:ring-4 font-medium rounded-lg px-6 py-2 w-auto"
-            >Search
-          </button>
+              type="submit"
+              class="bg-light text-dark-green focus:ring-4 font-medium rounded-lg px-11 py-2 w-auto"
+              >Search
+            </button>
           </div>
-
-  
         </form>
       </div>
 
@@ -217,15 +209,13 @@ const Block2DataTeas = [
         </div>
       </div>
     </div>
+
     <div id="Block-2" class="my-8 flex flex-col gap-8 h-screen">
-      <div id="TopList" class="flex gap-x-16 justify-center items-center">
+      <div id="TopList" class="flex gap-x-32 justify-center items-center">
         {
           Block2DataTabs.map((data) => (
-            <button
-              class="bg-transparent text-light/50
-            focus:text-light px-4 py-2 rounded hover:bg-color/10 focus:underline focus:text-lg flex flex-row"
-            >
-              {data.name}
+            <button class="bg-transparent text-light/50 px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row ">
+              <p class="focus:text-light focus:underline Text">{data.name}</p>
             </button>
           ))
         }
