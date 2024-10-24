@@ -1,5 +1,6 @@
 ---
 import Layout from "src/layouts/layout.astro";
+import NiceButton from "@global/niceButton.astro";
 
 const Block2DataTabs = [
   {
@@ -162,12 +163,7 @@ const Block2DataTeas = [
               required
             />
 
-            <button
-              type="submit"
-              class="bg-light focus:ring-4 font-medium rounded-lg px-12 py-4"
-            >
-              <p class="Text text-dark-green leading-none">Search</p>
-            </button>
+            <NiceButton text="Search" />
           </div>
         </form>
       </div>
@@ -226,52 +222,52 @@ const Block2DataTeas = [
         <p class="text-light Headline-2">
           {Block2DataTabs[0].name}
         </p>
+
         <div class="flex flex-col justify-center items-center">
-          <p class="text-light text-center Text w-80 leading-tight">
+          <p class="text-light text-center Text w-[60rem] leading-tight mb-8">
             {Block2DataTabs[0].text}
           </p>
 
-          <button
-            class="text-dark-green px-8 py-2 mt-8 w-fit rounded-lg bg-light"
-            >All {Block2DataTabs[0].name}
-          </button>
+          <NiceButton text={`All ${Block2DataTabs[0].name}`} />
         </div>
+
+        <div
+          class="relative mt-96 flex flex-row gap-24 overflow-hidden my-auto justify-center items-center "
+        >
+          {
+            Block2DataTeas[0].map((data) => (
+              <div class="flex flex-col justify-center items-center gap-4">
+                <img
+                  src="/img/background/{data.img}.jpg"
+                  class="rounded-full w-auto h-80 bg-black"
+                />
+                <p class="text-light">{data.name}</p>
+              </div>
+            ))
+          }
+        </div>
+        
       </div>
-      <div
-        class="flex flex-row gap-8 overflow-hidden my-auto justify-center items-center"
-      >
-        {
-          Block2DataTeas[0].map((data) => (
-            <div class="flex flex-col justify-center items-center gap-2">
-              <img
-                src="/img/background/{data.img}.jpg"
-                class="rounded-full w-auto h-64 bg-black"
-              />
-              <p class="text-light">{data.name}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-    <div id="Black-3" class="my-16">
-      <img
-        class="h-screen w-screen object-cover"
-        style=""
-        src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
-        alt="Tea"
-      />
+      <!-- <div id="Black-3" class="my-16">
+        <img
+          class="h-screen w-screen object-cover"
+          style=""
+          src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
+          alt="Tea"
+        />
+      </div> -->
     </div>
   </main>
-</Layout>
 
-<style>
-  .TeaCupBackground {
-    transform: scaleY(-1) scale(1.16) translate(-7%, 22.5%);
-  }
-  TeaCupText {
-    transform: translate(50%, 50%);
-  }
-  .Block3 {
-    transform-origin: 50% 50%;
-  }
-</style>
+  <style>
+    .TeaCupBackground {
+      transform: scaleY(-1) scale(1.16) translate(-7%, 22.5%);
+    }
+    TeaCupText {
+      transform: translate(50%, 50%);
+    }
+    .Block3 {
+      transform-origin: 50% 50%;
+    }
+  </style>
+</Layout>
