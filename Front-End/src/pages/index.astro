@@ -134,7 +134,7 @@ const Block2DataTeas = [
         </p>
 
         <form class="w-10/12">
-          <div class="relative flex flex-row gap-8">
+          <div class="relative flex flex-row gap-14">
             <div
               class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
             >
@@ -157,15 +157,16 @@ const Block2DataTeas = [
             <input
               type="search"
               id="default-search"
-              class="p-4 ps-10 rounded-lg w-full"
+              class="p-4 ps-10 rounded-lg w-full placeholder-black"
               placeholder="Search for..."
               required
             />
 
             <button
               type="submit"
-              class="bg-light text-dark-green focus:ring-4 font-medium rounded-lg px-11 py-2 w-auto"
-              >Search
+              class="bg-light focus:ring-4 font-medium rounded-lg px-12 py-4"
+            >
+              <p class="Text text-dark-green leading-none">Search</p>
             </button>
           </div>
         </form>
@@ -222,15 +223,16 @@ const Block2DataTeas = [
       </div>
 
       <div class="flex flex-col gap-4 justify-center items-center">
-        <p class="text-5xl text-light">
+        <p class="text-light Headline-2">
           {Block2DataTabs[0].name}
         </p>
         <div class="flex flex-col justify-center items-center">
-          <p class="text-light text-center w-80 h-32">
+          <p class="text-light text-center Text w-80 leading-tight">
             {Block2DataTabs[0].text}
           </p>
 
-          <button class="text-dark-green px-8 py-2 w-fit rounded-lg bg-light"
+          <button
+            class="text-dark-green px-8 py-2 mt-8 w-fit rounded-lg bg-light"
             >All {Block2DataTabs[0].name}
           </button>
         </div>
