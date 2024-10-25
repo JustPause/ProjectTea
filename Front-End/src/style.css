@@ -11,6 +11,7 @@
 body {
   /* background-color: var(--dark-green); */
   background-color: #394132;
+  font-size: medium;
 }
 
 p {
