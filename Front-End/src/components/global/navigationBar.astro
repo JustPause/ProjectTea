@@ -11,24 +11,24 @@ const Tabs = [
 
 <div class="fixed w-full h-48 from-[#000A] bg-gradient-to-b z-40"></div>
 
-<nav class="fixed w-full px-6 z-50 mt-6">
-  <div class="w-full h-16 flex flex-row items-center justify-between mb-4">
-    <div class="left-0 pb-4" id="logo">
+<nav class="fixed w-full px-6 z-50 mt-4">
+  <div class="w-full h-8 flex flex-row items-center justify-between mb-2">
+    <div class="left-0 h-16 flex items-center content-center overflow-hidden mb-2" id="logo">
       <Logo />
     </div>
 
-    <div class="flex flex-row">
-      <div class="flex flex-row gap-24 mr-4 items-center" id="tabs">
+    <div class="flex flex-row h-full">
+      <div class="flex flex-row gap-16 mr-4 items-center h-full" id="tabs">
         {
           Tabs.map((data) => (
             <a class="text-center" href={data.link}>
-              <p class="text-white Text ">{data.name}</p>
+              <p class="text-white Text leading-none">{data.name}</p>
             </a>
           ))
         }
         <div
           id="modes"
-          class="border w-12 h-12 rounded-full flex items-center justify-center"
+          class="border w-8 h-8 rounded-full flex items-center justify-center"
         >
           <svg
             width="24"
@@ -45,5 +45,5 @@ const Tabs = [
       </div>
     </div>
   </div>
-  <hr class="border-px w-full h-1 border-white" />
+  <hr class="border-px w-full border-white" />
 </nav>
