@@ -224,7 +224,7 @@ const Block2DataTeas = [
 
     <!-- ----------------------------------------------------------------------------------------- -->
 
-    <div id="Block-2" class="my-6 flex flex-col">
+    <div id="Block-2" class="mt-4 mb-24 flex flex-col">
       <div id="TopList" class="flex gap-20 justify-center items-center">
         {
           Block2DataTabs.map((data) => (
@@ -450,22 +450,66 @@ const Block2DataTeas = [
         animation-play-state: paused;
       }
     </style>
-
-    <div id="Block-4" class="flex flex-col h-screen">
-      <div class="flex flex-col gap-10 w-11/12 border-2">
+    <div
+      id="Block-4"
+      class="flex flex-col h-screen items-center justify-center content-center"
+    >
+      <div class="flex flex-col gap-10 w-11/12 h-[80%] text-center">
         <p class="Headline-2 leading-none">Recepis</p>
 
-        <div class="h-[38rem] flex flex-row gap-16">
-          <div class="h-full w-3/6 bg-white"></div>
-          <div class="h-full w-1/6 bg-white"></div>
-          <div class="h-full w-1/6 bg-white"></div>
-          <div class="h-full w-1/6 bg-white"></div>
+        <div class="h-full flex flex-row gap-16 text-start">
+          <div
+            class="flex flex-row h-full w-3/6 bg-color rounded-2xl border-4 border-color"
+          >
+            <img
+              src="/img/recipes/pexels-marta-dzedyshko-1042863-2775858.jpg"
+              alt=""
+              class="overflow-clip w-1/2 object-cover rounded-2xl"
+            />
+            <div class="flex flex-col w-1/2 px-4 py-16 justify-around">
+              <p class="Subheadline text-black">
+                Honey Lavender Black Tea Latte
+              </p>
+              <p class="Text text-black">
+                The Honey Lavender Black Tea Latte is one of the most aromatic
+                drinks ever. In this recipe, you will learn how to use dried
+                lavender to take your tea lattes to the next level.
+              </p>
+              <div class="flex flex-row items-center space-x-1" >
+                <p class="Caption text-black leading-4">To the Recipe</p>
+                <svg
+                  width="6"
+                  height="10"
+                  viewBox="0 0 6 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex "
+                >
+                  <path
+                    d="M1 0.848632L5 4.84863L1 8.84863"
+                    stroke="#394132"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="h-full w-1/6 bg-color rounded-2xl border-4 border-color">
+          
+          </div>
+          <div class="h-full w-1/6 bg-color rounded-2xl border-4 border-color">
+          </div>
+          <div class="h-full w-1/6 bg-color rounded-2xl border-4 border-color">
+          </div>
         </div>
 
         <div>
-          <NiceButton text="Search" />
+          <NiceButton text="More Recepis" />
         </div>
       </div>
     </div>
+<script>
+  
+</script>
   </main>
 </Layout>
