@@ -1,8 +1,17 @@
 ---
 import Logo from "./logo.astro";
 
-const AboutUs = ["The Team", "Our Work"];
-const TeaPause = ["Tea", "Benefits", "Recipes", "Profile"];
+const AboutUs = [
+  { name: "The Team", link: "/team" },
+  { name: "Our Work", link: "/work" }
+];
+
+const TeaPause = [
+  { name: "Tea", link: "/tea" },
+  { name: "Benefits", link: "/benefits" },
+  { name: "Recipes", link: "/recipes" },
+  { name: "Profile", link: "/profile" }
+];
 ---
 
 <div class="px-6">
@@ -21,9 +30,9 @@ const TeaPause = ["Tea", "Benefits", "Recipes", "Profile"];
 
         {
           AboutUs.map((article: any) => (
-            <div>
-              <p class="Text leading-none">{article}</p>
-            </div>
+            <a href={article.link}>
+              <p class="Text leading-none">{article.name}</p>
+            </a>
           ))
         }
       </div>
@@ -31,9 +40,9 @@ const TeaPause = ["Tea", "Benefits", "Recipes", "Profile"];
         <p class="Subheadline">TeaPause</p>
         {
           TeaPause.map((article: any) => (
-            <div>
-              <p class="Text leading-none">{article}</p>
-            </div>
+            <a href={article.link}>
+              <p class="Text leading-none">{article.name}</p>
+            </a>
           ))
         }
       </div>
