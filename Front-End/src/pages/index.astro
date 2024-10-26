@@ -457,16 +457,16 @@ const Block2DataTeas = [
       <div class="flex flex-col gap-10 w-11/12 h-[80%] text-center">
         <p class="Headline-2 leading-none">Recepis</p>
 
-        <div class="h-full flex flex-row gap-16 text-start">
+        <div id="container" class="h-full flex flex-row gap-16 text-start">
           <div
-            class="flex flex-row h-full w-3/6 bg-color rounded-2xl border-4 border-color"
+            class="child section active flex flex-row h-full w-1/6 bg-color rounded-2xl border-4 border-color overflow-hidden flex-shrink-0"
           >
             <img
               src="/img/recipes/pexels-marta-dzedyshko-1042863-2775858.jpg"
               alt=""
               class="overflow-clip w-1/2 object-cover rounded-2xl"
             />
-            <div class="flex flex-col w-1/2 px-4 py-16 justify-around">
+            <div class="flex flex-col w-1/2 px-4 py-20 justify-around overflow-clip">
               <p class="Subheadline text-black">
                 Honey Lavender Black Tea Latte
               </p>
@@ -475,7 +475,7 @@ const Block2DataTeas = [
                 drinks ever. In this recipe, you will learn how to use dried
                 lavender to take your tea lattes to the next level.
               </p>
-              <div class="flex flex-row items-center space-x-1" >
+              <div class="flex flex-row items-center space-x-1">
                 <p class="Caption text-black leading-4">To the Recipe</p>
                 <svg
                   width="6"
@@ -483,7 +483,7 @@ const Block2DataTeas = [
                   viewBox="0 0 6 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="flex "
+                  class="flex"
                 >
                   <path
                     d="M1 0.848632L5 4.84863L1 8.84863"
@@ -494,12 +494,20 @@ const Block2DataTeas = [
               </div>
             </div>
           </div>
-          <div class="h-full w-1/6 bg-color rounded-2xl border-4 border-color">
-          
+
+          <div
+            class="section flex flex-row h-full w-1/6 bg-color rounded-2xl border-4 border-color"
+          >
           </div>
-          <div class="h-full w-1/6 bg-color rounded-2xl border-4 border-color">
+
+          <div
+            class="section flex flex-row h-full w-1/6 bg-color rounded-2xl border-4 border-color"
+          >
           </div>
-          <div class="h-full w-1/6 bg-color rounded-2xl border-4 border-color">
+
+          <div
+            class="section flex flex-row h-full w-1/6 bg-color rounded-2xl border-4 border-color"
+          >
           </div>
         </div>
 
@@ -508,8 +516,11 @@ const Block2DataTeas = [
         </div>
       </div>
     </div>
-<script>
-  
-</script>
+    <style>
+      .active {
+        width: 50%;
+      }
+    </style>
+    <script></script>
   </main>
 </Layout>
