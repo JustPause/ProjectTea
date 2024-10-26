@@ -1,0 +1,33 @@
+---
+const { img, H1, p1, b1 } = Astro.props;
+---
+
+<div class="relative h-screen w-screen overflow-hidden">
+  <img
+    id="TheBackGorundImage"
+    class="h-auto w-screen Background object-cover origin-center"
+    src={`/img/background/${img}.jpeg`}
+    alt="Tea"
+  />
+
+  <div
+    id="Text"
+    class="absolute flex flex-col gap-4 content-center items-center w-[44rem] TeaCupText top-[20%] left-[10%] z-20 bg-true-black/50 p-10 rounded-2xl backdrop-blur-xl drop-shadow-md"
+  >
+    <p class="Headline-2 text-center">{H1}</p>
+    <p class="Text text-center pb-4">
+        {p1}
+    </p>
+    <div class="flex w-full">
+      <button class="border-white border-2 font-medium rounded-lg px-12 py-4">
+        <p class="Text text-white leading-none">{b1}</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .Background {
+    transform: scale(0.675) rotate(90deg) translate(-85%);
+  }
+</style>

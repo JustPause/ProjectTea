@@ -1,7 +1,45 @@
 ---
 import Logo from "./logo.astro";
+
+const AboutUs = ["The Team", "Our Work"];
+const TeaPause = ["Tea", "Benefits", "Recipes", "Profile"];
 ---
 
-<div>
-  
+<div class="px-6">
+  <hr class="border-b-px w-full border-white" />
+  <div class="flex flex-row w-full justify-between my-8">
+    <div class="flex flex-col">
+      <div class="mb-4">
+        <Logo />
+      </div>
+      <p class="w-96 Text">Random text about our vision of this project</p>
+    </div>
+
+    <div class="flex flex-row justify-between w-[15%]">
+      <div class="flex flex-col gap-4">
+        <p class="Subheadline">About Us</p>
+
+        {
+          AboutUs.map((article: any) => (
+            <div>
+              <p class="Text leading-none">{article}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="flex flex-col gap-4">
+        <p class="Subheadline">TeaPause</p>
+        {
+          TeaPause.map((article: any) => (
+            <div>
+              <p class="Text leading-none">{article}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <hr class="border-b-px w-full border-white" />
+
+  <p class="Text my-4">©2024 TeaPause. Tea served</p>
 </div>
