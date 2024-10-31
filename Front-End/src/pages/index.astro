@@ -8,20 +8,20 @@ const Block2DataTabs = [
     name: "Green Tea's",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
     link: "#",
-    id: 1
+    id: 1,
   },
   {
     name: "White Tea's",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
     link: "#",
-    id: 2
+    id: 2,
   },
   {
     name: "Black Tea's",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
     link: "#",
-    id: 3
-  }
+    id: 3,
+  },
 ];
 
 const Block2DataTeas = [
@@ -29,83 +29,83 @@ const Block2DataTeas = [
     {
       name: "1",
       img: "pexels-charlotte-may-5946652",
-      link: "#"
+      link: "#",
     },
     {
       name: "2",
       img: "pexels-charlotte-may-5946652",
-      link: "#"
+      link: "#",
     },
     {
       name: "3",
       img: "pexels-charlotte-may-5946652",
-      link: "#"
+      link: "#",
     },
     {
       name: "4",
       img: "pexels-charlotte-may-5946652",
-      link: "#"
+      link: "#",
     },
     {
       name: "5",
       img: "pexels-charlotte-may-5946652",
-      link: "#"
-    }
+      link: "#",
+    },
   ],
   [
     {
       name: "6",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "7",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "8",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "9",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "10",
       img: "#",
-      link: "#"
-    }
+      link: "#",
+    },
   ],
   [
     {
       name: "11",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "12",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "13",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "14",
       img: "#",
-      link: "#"
+      link: "#",
     },
     {
       name: "15",
       img: "#",
-      link: "#"
-    }
-  ]
+      link: "#",
+    },
+  ],
 ];
 ---
 
@@ -168,6 +168,12 @@ const Block2DataTeas = [
             />
 
             <NiceButton text="Search" />
+
+            <div
+              class="absolute top-16 flex flex-col w-full gap-2"
+              id="results"
+            >
+            </div>
           </div>
         </form>
       </div>
@@ -223,6 +229,42 @@ const Block2DataTeas = [
       }
     </style>
 
+    <script>
+      const searchBar = document.getElementById(
+        "default-search"
+      ) as HTMLInputElement;
+      const results = document.getElementById("results");
+
+      const data = [
+        "Apple",
+        "Banana",
+        "Orange",
+        "Grapes",
+        "Pineapple",
+        "Mango",
+      ];
+
+
+
+
+      searchBar.addEventListener("input", function () {
+        const query = searchBar.value.toLowerCase();
+
+        const filteredData = data.filter((item) =>
+          item.toLowerCase().includes(query)
+        );
+
+        results.innerHTML = "";
+
+        filteredData.forEach((item) => {
+          const a = document.createElement("a");
+          a.classList.add("Text", "bg-white", "w-3/5", "p-4", "rounded-lg");
+          a.textContent = item;
+          results.appendChild(a);
+        });
+      });
+    </script>
+
     <!-- ----------------------------------------------------------------------------------------- -->
 
     <div id="Block-2" class="mt-4 mb-24 flex flex-col">
@@ -249,7 +291,10 @@ const Block2DataTeas = [
           </p>
         </div>
 
-        <NiceButton text={`All ${Block2DataTabs[0].name}`} link={Block2DataTabs[0].link} />
+        <NiceButton
+          text={`All ${Block2DataTabs[0].name}`}
+          link={Block2DataTabs[0].link}
+        />
       </div>
 
       <div class="relative flex flex-row justify-center items-center">
