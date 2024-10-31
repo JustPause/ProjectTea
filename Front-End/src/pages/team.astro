@@ -1,4 +1,81 @@
 ---
-import Layout from "src/layouts/layout.astro"
+import Layout from "src/layouts/layout.astro";
 ---
-<div class="w-8 h-8 bg-black"></div>
+
+<Layout title="Tea today is delicious" language="en">
+  <div class="bg-black" id="block-1">
+    <div class="relative w-screen h-screen">
+      <div
+        class="w-2/3 absolute left-0 bg-red-500 h-full"
+        style="clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);"
+      >
+      </div>
+
+      <div
+        class="w-2/3 absolute right-0 bg-blue-500 h-full"
+        style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);"
+      >
+      </div>
+
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center text-white text-center"
+      >
+        <p class="Headline-3">The Story Behind Our Project</p>
+        <p class="Headline-1">Meet the Tea-m</p>
+        <p class="Text">
+          We are two enthusiastic tea drinkers who find joy in every sip of tea.
+        </p>
+      </div>
+      <div>
+        <p class="absolute bottom-16 left-24 Headline-1">Justinas</p>
+        <p class="absolute top-16 right-24 Headline-1">Ninn</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="block-2" class="m-24 flex justify-center">
+    <div class="flex flex-row gap-64">
+      <div
+        class="flex-col flex gap-4 bg-white w-[48rem] h-[28rem] p-16 rounded-2xl text-black"
+      >
+        <p class="Headline-2 leading-tight text-black">JustPause</p>
+        <p class="Text text-justify text-black">
+          A passionate tea enthusiast who has a deep affection for black tea,
+          especially when it’s brewed perfectly and combined with a splash of
+          creamy milk.
+        </p>
+
+        <div class="flex flex-row gap-2 items-center">
+          <img src="/public/svg/svg1.svg" alt="" />
+          <p class="Text text-black">Black tea with milk</p>
+        </div>
+
+        <div class="flex flex-row gap-2 items-center">
+          <img src="/public/svg/svg2.svg" alt="" />
+          <p class="Text text-black">Whiskey shot</p>
+        </div>
+      </div>
+
+      <div
+        class="flex-col flex gap-4 bg-white w-[48rem] h-[28rem] p-16 rounded-2xl text-black"
+      >
+        <p class="Headline-2 leading-tight text-black">JustPause</p>
+        <p class="Text text-justify text-black">
+          A passionate tea enthusiast who has a deep affection for black tea,
+          especially when it’s brewed perfectly and combined with a splash of
+          creamy milk.
+        </p>
+
+        <div class="flex flex-row gap-2 items-center">
+          <img src="/public/svg/svg1.svg" alt="" />
+          <p class="Text text-black">Black tea with milk</p>
+        </div>
+
+        <div class="flex flex-row gap-2 items-center">
+          <img src="/public/svg/svg2.svg" alt="" />
+          <p class="Text text-black">Whiskey shot</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
