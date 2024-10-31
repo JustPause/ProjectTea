@@ -1,9 +1,11 @@
 ---
-const { text } = Astro.props;
+const { text, link } = Astro.props;
 ---
 
-<button class="bg-light font-medium rounded-lg px-12 py-4">
-  <p class="Text text-dark-green leading-none mt-1 align-middle">
-    {text}
-  </p>
-</button>
+<form action={link}>
+  <button class="bg-light font-medium rounded-lg px-12 py-4">
+    <p class="Text text-dark-green leading-none mt-1 align-middle">
+      {text}
+    </p>
+  </button>
+</form>
