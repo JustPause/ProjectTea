@@ -55,15 +55,3 @@ const { title, language } = Astro.props;
     <Footer />
   </body>
 </html>
-
-<script>
-  function toggleDarkMode() {
-    document.documentElement.classList.toggle("dark");
-    // Save user preference in local storage
-    if (document.documentElement.classList.contains("dark")) {
-      localStorage.theme = "dark";
-    } else {
-      localStorage.theme = "light";
-    }
-  }
-</script>
