@@ -4,7 +4,7 @@ import Footer from "@global/footer.astro";
 
 interface Props {
   title: string;
-  language: string
+  language: string;
 }
 
 const { title, language } = Astro.props;
@@ -55,3 +55,15 @@ const { title, language } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<script is:global>
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle("dark");
+    // Save user preference in local storage
+    if (document.documentElement.classList.contains("dark")) {
+      localStorage.theme = "dark";
+    } else {
+      localStorage.theme = "light";
+    }
+  }
+</script>
