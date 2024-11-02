@@ -8,20 +8,20 @@ const Block2DataTabs = [
     name: "Green Tea's",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
     link: "#",
-    id: 1,
+    id: 1
   },
   {
     name: "White Tea's",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
     link: "#",
-    id: 2,
+    id: 2
   },
   {
     name: "Black Tea's",
     text: "B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la B la ",
     link: "#",
-    id: 3,
-  },
+    id: 3
+  }
 ];
 
 const Block2DataTeas = [
@@ -29,84 +29,97 @@ const Block2DataTeas = [
     {
       name: "1",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "2",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "3",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "4",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
+      link: "#"
     },
     {
       name: "5",
       img: "pexels-charlotte-may-5946652",
-      link: "#",
-    },
+      link: "#"
+    }
   ],
   [
     {
       name: "6",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "7",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "8",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "9",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "10",
       img: "#",
-      link: "#",
-    },
+      link: "#"
+    }
   ],
   [
     {
       name: "11",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "12",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "13",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "14",
       img: "#",
-      link: "#",
+      link: "#"
     },
     {
       name: "15",
       img: "#",
-      link: "#",
-    },
-  ],
+      link: "#"
+    }
+  ]
 ];
+
+// ----------------------------------------------
+
+import axios from 'axios';
+
+let teas = [];
+
+const fetchFruits = async () => {
+  const response = await axios.get('http://localhost:5000/fruits');
+  teas = response.data;
+};
+
+fetchFruits();
 ---
 
 <Layout title="Tea today is delicious" language="en">
@@ -164,13 +177,14 @@ const Block2DataTeas = [
               id="default-search"
               class="p-4 ps-10 rounded-lg w-full placeholder-black"
               placeholder="Search for..."
+              autocomplete="off"
               required
             />
 
             <NiceButton text="Search" />
 
             <div
-              class="absolute top-16 flex flex-col w-full gap-2"
+              class="absolute top-16 flex flex-col w-full gap-2 max-h-32 overflow-scroll rounded-lg w"
               id="results"
             >
             </div>
@@ -218,6 +232,17 @@ const Block2DataTeas = [
           </div>
         </div>
       </div>
+
+      <div
+        class="flex items-center justify-center h-screen bg-white dark:bg-black"
+      >
+        <button
+          id="toggle"
+          class="px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
+          Switch to Dark Mode
+        </button>
+      </div>
     </div>
 
     <style>
@@ -233,19 +258,17 @@ const Block2DataTeas = [
       const searchBar = document.getElementById(
         "default-search"
       ) as HTMLInputElement;
+
       const results = document.getElementById("results");
 
       const data = [
-        "Apple",
-        "Banana",
-        "Orange",
-        "Grapes",
-        "Pineapple",
-        "Mango",
+        "darjeeling-ftgfop1",
+        "darjeeling-millikthong-ftgfop1-ff-2024",
+        "gold-assam-mangalam-ftgfop1",
+        "kanyam-sftgfop",
+        "skonis-ir-kvapas-earl-grey",
+        "citrusu-vejas"
       ];
-
-
-
 
       searchBar.addEventListener("input", function () {
         const query = searchBar.value.toLowerCase();
@@ -258,8 +281,18 @@ const Block2DataTeas = [
 
         filteredData.forEach((item) => {
           const a = document.createElement("a");
-          a.classList.add("Text", "bg-white", "w-3/5", "p-4", "rounded-lg");
+          a.classList.add(
+            "Caption",
+            "bg-white",
+            "w-3/5",
+            "p-2",
+            "rounded-lg",
+            "font-normal"
+          );
           a.textContent = item;
+          a.href = "#";
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
           results.appendChild(a);
         });
       });
@@ -912,4 +945,26 @@ const Block2DataTeas = [
       </svg>
     </div>
   </main>
+  <div class="flex items-center justify-center h-screen">
+    <button
+      id="toggle"
+      class="px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+    >
+      Toggle Dark Mode
+    </button>
+  </div>
 </Layout>
+
+<script>
+  const toggleButton = document.getElementById("toggle");
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    // Update button text based on current mode
+    if (document.body.classList.contains("dark")) {
+      toggleButton.textContent = "Switch to Light Mode";
+    } else {
+      toggleButton.textContent = "Switch to Dark Mode";
+    }
+  });
+</script>
