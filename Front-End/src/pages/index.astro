@@ -110,16 +110,16 @@ const Block2DataTeas = [
 
 // ----------------------------------------------
 
-import axios from 'axios';
+// import axios from 'axios';
 
-let teas = [];
+// let teas = [];
 
-const fetchFruits = async () => {
-  const response = await axios.get('http://localhost:5000/fruits');
-  teas = response.data;
-};
+// const fetchFruits = async () => {
+//   const response = await axios.get('http://localhost:5000/fruits');
+//   teas = response.data;
+// };
 
-fetchFruits();
+// fetchFruits();
 ---
 
 <Layout title="Tea today is delicious" language="en">
@@ -259,7 +259,7 @@ fetchFruits();
         "default-search"
       ) as HTMLInputElement;
 
-      const results = document.getElementById("results");
+      const results = document.getElementById("results") as HTMLInputElement;
 
       const data = [
         "darjeeling-ftgfop1",
@@ -460,11 +460,15 @@ fetchFruits();
     </style>
 
     <script>
-      const scroll = document.getElementById("scroll");
-      const leftArrow = document.getElementById("leftArrow");
-      const rightArrow = document.getElementById("rightArrow");
+      const scroll = document.getElementById("scroll") as HTMLInputElement;
+      const leftArrow = document.getElementById(
+        "leftArrow"
+      ) as HTMLInputElement;
+      const rightArrow = document.getElementById(
+        "rightArrow"
+      ) as HTMLInputElement;
 
-      let scrollInterval;
+      let scrollInterval: number;
 
       // Function to scroll left
       function scrollLeft() {
@@ -956,7 +960,7 @@ fetchFruits();
 </Layout>
 
 <script>
-  const toggleButton = document.getElementById("toggle");
+  const toggleButton = document.getElementById("toggle") as HTMLInputElement;
 
   toggleButton.addEventListener("click", () => {
     document.body.classList.toggle("dark");
