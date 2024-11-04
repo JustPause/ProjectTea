@@ -5,17 +5,16 @@ const Tabs = [
   { name: "Tea", link: "/teaList" },
   { name: "Benefits", link: "/benefits" },
   { name: "Recipes", link: "/recipes" },
-  { name: "Profile", link: "/profile" },
+  { name: "Profile", link: "/profile" }
 ];
 ---
 
-<div class="fixed w-full h-48 from-[#000A] bg-gradient-to-b z-40"/>
+<div class="fixed w-full h-48 from-[#000A] bg-gradient-to-b z-40"></div>
 
 <nav class="fixed w-full px-6 z-50 mt-4">
   <div class="w-full h-8 flex flex-row items-center justify-between mb-2">
     <div
       class="left-0 h-16 flex items-center content-center overflow-hidden mb-2"
-      id="logo"
     >
       <Logo />
     </div>
@@ -52,3 +51,38 @@ const Tabs = [
   </div>
   <hr class="border-b-px w-full border-white" />
 </nav>
+
+<script>
+  // Check localStorage for saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    updateModeIcon(savedTheme === "dark");
+  }
+
+  // Toggle theme function
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle("dark");
+
+    // Save current theme to localStorage
+    const currentTheme = document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
+    localStorage.setItem("theme", currentTheme);
+
+    // Update the mode icon
+    updateModeIcon(currentTheme === "dark");
+  }
+
+  // Update the icon based on the theme
+  function updateModeIcon(isDarkMode) {
+    const icon = document.getElementById("mode-icon");
+    if (isDarkMode) {
+      icon.classList.remove("bg-yellow-500"); // Remove light mode color
+      icon.classList.add("bg-gray-600"); // Add dark mode color
+    } else {
+      icon.classList.remove("bg-gray-600"); // Remove dark mode color
+      icon.classList.add("bg-yellow-500"); // Add light mode color
+    }
+  }
+</script>
