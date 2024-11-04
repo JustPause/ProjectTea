@@ -243,8 +243,9 @@ const Block2DataTeas = [
       transform: translate(50%, 50%);
     }
   </style>
-
+  <!-- TODO FIX This V inplementuoti is duomenu bazes duomenis -->
   <script>
+
     const searchBar = document.getElementById(
       "default-search"
     ) as HTMLInputElement;
@@ -289,9 +290,10 @@ const Block2DataTeas = [
   </script>
 
   <!-- ----------------------------------------------------------------------------------------- -->
-
+   
+  <!-- TODO FIX This V inplementuoti is duomenu bazes duomenis -->
   <div id="Block-2" class="mt-4 mb-24 flex flex-col">
-    <!-- <div id="TopList" class="flex gap-20 justify-center items-center">
+    <div id="TopList" class="flex gap-20 justify-center items-center">
       {
         Block2DataTabs.map((data) => (
           <button class="focus:text-light focus:underline bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row text-light/50 TeaSelection">
@@ -425,7 +427,7 @@ const Block2DataTeas = [
             stroke-linejoin="round"></path>
         </svg>
       </div>
-    </div> -->
+    </div>
   </div>
 
   <style>
@@ -458,17 +460,14 @@ const Block2DataTeas = [
 
     let scrollInterval: number;
 
-    // Function to scroll left
     function scrollLeft() {
       scroll.scrollBy({ left: -50, behavior: "smooth" });
     }
 
-    // Function to scroll right
     function scrollRight() {
       scroll.scrollBy({ left: 50, behavior: "smooth" });
     }
 
-    // Start scrolling when mouse enters the arrow
     leftArrow.addEventListener("mouseenter", () => {
       scrollInterval = setInterval(scrollLeft, 10);
     });
@@ -477,7 +476,6 @@ const Block2DataTeas = [
       scrollInterval = setInterval(scrollRight, 10);
     });
 
-    // Stop scrolling when mouse leaves the arrow
     leftArrow.addEventListener("mouseleave", () => {
       clearInterval(scrollInterval);
     });
@@ -680,8 +678,6 @@ const Block2DataTeas = [
 
     sections.forEach((section) => {
       section.addEventListener("click", () => {
-        // remove active class from all another section
-        // and add it to the selected section
         sections.forEach((section) => {
           section.classList.remove("active");
         });
@@ -928,33 +924,3 @@ const Block2DataTeas = [
     </svg>
   </div>
 </Layout>
-<div class="flex items-center justify-center h-screen">
-  <button
-    id="toggle"
-    class="px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
-  >
-    Toggle Dark Mode
-  </button>
-</div>
-<div class="flex items-center justify-center h-screen">
-  <button
-    id="toggle"
-    class="px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
-  >
-    Toggle Dark Mode
-  </button>
-</div>
-
-<script>
-  const toggleButton = document.getElementById("toggle") as HTMLInputElement;
-
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    // Update button text based on current mode
-    if (document.body.classList.contains("dark")) {
-      toggleButton.textContent = "Switch to Light Mode";
-    } else {
-      toggleButton.textContent = "Switch to Dark Mode";
-    }
-  });
-</script>

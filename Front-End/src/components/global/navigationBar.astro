@@ -57,8 +57,7 @@ const Tabs = [
     }
   }
 
-  const modeButton = document.getElementById("modes");
-  if (modeButton) {
-    modeButton.addEventListener("click", toggleDarkMode);
-  }
+  const modeButton = document.getElementById("modes") as HTMLInputElement;
+
+  modeButton.addEventListener("click", toggleDarkMode);
 </script>
