@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@global/*": ["src/components/global/*"],
-      "@home/*": ["src/components/home/*"],
-    }
+      "@home/*": ["src/components/home/*"]
+    },
+    "verbatimModuleSyntax": true // Add this line to replace importsNotUsedAsValues
   }
 }
