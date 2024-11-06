@@ -6,6 +6,7 @@
       "@global/*": ["src/components/global/*"],
       "@home/*": ["src/components/home/*"]
     },
+    "strict": false,
     "verbatimModuleSyntax": true // Add this line to replace importsNotUsedAsValues
   }
 }

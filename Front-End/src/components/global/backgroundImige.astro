@@ -1,5 +1,5 @@
 ---
-const { img, H1, p1, b1 } = Astro.props;
+const { img, H1, p1, b1, link } = Astro.props;
 ---
 
 <div class="relative h-screen w-screen overflow-hidden">
@@ -16,12 +16,15 @@ const { img, H1, p1, b1 } = Astro.props;
   >
     <p class="Headline-2 text-center">{H1}</p>
     <p class="Text text-center pb-4">
-        {p1}
+      {p1}
     </p>
     <div class="flex w-full">
-      <button class="border-white border-2 font-medium rounded-lg px-12 py-4">
-        <p class="Text text-white leading-none">{b1}</p>
-      </button>
+      <a
+        class="border-white text-white border-2 font-medium rounded-lg px-12 py-4 hover:bg-light hover:text-black hover:border-black"
+        href={link}
+      >
+        <p class="Text leading-none text-inherit">{b1}</p>
+      </a>
     </div>
   </div>
 </div>
