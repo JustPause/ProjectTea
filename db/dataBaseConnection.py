@@ -1,11 +1,12 @@
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
-db = SQLAlchemy()
+from main import db
 
 class Tea(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
+    tea_group = db.Column(db.Integer, nullable=False) # 0 unlisted, 1 Black Tea, 2 Green Tea, 3 White Tea
     link = db.Column(db.String(200), unique=True, nullable=False)
 
 class Comment(db.Model):

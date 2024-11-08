@@ -1,6 +1,12 @@
 from flask import Flask, send_from_directory
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///TeaBase.db'  # Change URI for a different database
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
