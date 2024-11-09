@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/justinas/Programming/KaunoKolegija/Semestras_3/dotNet Projectas/ProjectTea/.env/bin/python3" "$0" "$@"
+'''exec' "/home/justpause/Programming/KaunoKolegija/Semestras_3/Programavimo thenologijos .Net/ProjectTea/.env/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
