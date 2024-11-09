@@ -1,21 +1,23 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from main import db
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column
 
 class Tea(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), unique=True, nullable=False)
-    tea_group = db.Column(db.Integer, nullable=False) # 0 unlisted, 1 Black Tea, 2 Green Tea, 3 White Tea
-    link = db.Column(db.String(200), unique=True, nullable=False)
+    __tablename__ = 'tea'
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(db.String(80), unique=True, nullable=False)
+    tea_group: Mapped[int] = mapped_column(nullable=False)  # 0 unlisted, 1 Black Tea, 2 Green Tea, 3 White Tea
+    link: Mapped[str] = mapped_column(db.String(200), unique=True, nullable=False)
 
 class Comment(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    tea_id = db.Column(db.Integer, db.ForeignKey('tea.id'), nullable=False)
-    text = db.Column(db.String(255), nullable=False)
-    time = db.Column(db.DateTime, default=datetime.utcnow)
-
+    __tablename__ = 'comment'
+    id: Mapped[int] = mapped_column(primary_key=True)
+    tea_id: Mapped[int] = mapped_column(ForeignKey('tea.id'), nullable=False)
+    text: Mapped[str] = mapped_column(db.String(255), nullable=False)
+    time: Mapped[datetime] = mapped_column(default=datetime.utcnow)
 class Recipe(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    tea_id = db.Column(db.Integer, db.ForeignKey('tea.id'), nullable=False)
-    instructions = db.Column(db.Text, nullable=False)  
+    __tablename__ = 'recipe'
+    id: Mapped[int] = mapped_column(primary_key=True)
+    tea_id: Mapped[int] = mapped_column(ForeignKey('tea.id'), nullable=False)
+    instructions: Mapped[str] = mapped_column(db.Text, nullable=False)
