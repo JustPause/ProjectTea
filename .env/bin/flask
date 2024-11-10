@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/home/justpause/Programming/KaunoKolegija/Semestras_3/Programavimo thenologijos .Net/ProjectTea/.env/bin/python3" "$0" "$@"
-' '''
+#!/tmp/ProjectTea/.env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -120,7 +120,7 @@ Indented Code Block (expected style):
 ```bash
   python3 -m venv .env
   source .env/bin/activate
-  pip install Flask
+  pip install -r requirements.txt
 ```
 
 To just run after inisiligine the flask project

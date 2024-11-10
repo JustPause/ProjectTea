@@ -1,14 +1,10 @@
 from flask import Flask, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+
 app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
-
-class Base(DeclarativeBase):
-    pass
-
-db = SQLAlchemy(model_class=Base)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ProjectTea.db"
-db.init_app(app)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/ProjectTea.db"
+db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
