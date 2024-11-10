@@ -3,7 +3,7 @@ from main import app
 
 with app.app_context():
     
-    # Database.drop_tea_table()
+    Database.drop_tea_table()
     Database.drop_comment_table()
     Database.drop_recipe_table()
     
