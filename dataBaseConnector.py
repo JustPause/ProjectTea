@@ -1,5 +1,5 @@
 from datetime import datetime
-from db.dataBaseConnection import Tea, Comment, Recipe
+from dataBaseConnection import Tea, Comment, Recipe
 from main import db
 
 class Database:

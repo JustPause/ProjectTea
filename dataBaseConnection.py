@@ -16,6 +16,7 @@ class Comment(db.Model):
     tea_id: Mapped[int] = mapped_column(ForeignKey('tea.id'), nullable=False)
     text: Mapped[str] = mapped_column(db.String(255), nullable=False)
     time: Mapped[datetime] = mapped_column(default=datetime.utcnow)
+    
 class Recipe(db.Model):
     __tablename__ = 'recipe'
     id: Mapped[int] = mapped_column(primary_key=True)

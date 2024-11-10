@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 
 app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/ProjectTea.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ProjectTea.db"
 db = SQLAlchemy(app)
 
 @app.route("/")
@@ -38,5 +38,8 @@ def team():
 def page_not_found(e):
   return send_from_directory('Front-End/dist', '404.html'), 404
 
-if __name__ == '__main__':
+with app.app_context():
+    db.create_all()
+
+if __name__ == "__main__":
     app.run(debug=True)
