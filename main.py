@@ -1,10 +1,9 @@
 from flask import Flask, send_from_directory
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import DeclarativeBase
+from dataBaseConnection import db, Tea, Comment, Recipe
 
 app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ProjectTea.db"
-db = SQLAlchemy(app)
+db.init_app(app)
 
 @app.route("/")
 def index():
@@ -38,8 +37,11 @@ def team():
 def page_not_found(e):
   return send_from_directory('Front-End/dist', '404.html'), 404
 
-with app.app_context():
-    db.create_all()
+def setup():
+    with app.app_context():
+        db.create_all()
+
+# setup()
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,7 +1,9 @@
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from main import db
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
+
+db = SQLAlchemy()
 
 class Tea(db.Model):
     __tablename__ = 'tea'
