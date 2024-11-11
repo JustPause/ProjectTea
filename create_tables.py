@@ -1,8 +1,4 @@
-from main import app, db
-# from db.dataBaseConnection import Tea, Comment, Recipe
+from main import db, app
 
 with app.app_context():
     db.create_all()
-    print("Tables created successfully.")
-    
-    
