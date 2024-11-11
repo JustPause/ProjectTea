@@ -1,4 +1,4 @@
-#!/home/justinas/Programming/KaunoKolegija/Semestras_3/dotNet_Projectas/ProjectTea/.env/bin/python3
+#!/tmp/ProjectTea/.env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

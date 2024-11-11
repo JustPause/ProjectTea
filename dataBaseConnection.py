@@ -1,7 +1,9 @@
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from main import db
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
+
+db = SQLAlchemy()
 
 class Tea(db.Model):
     __tablename__ = 'tea'
@@ -16,6 +18,7 @@ class Comment(db.Model):
     tea_id: Mapped[int] = mapped_column(ForeignKey('tea.id'), nullable=False)
     text: Mapped[str] = mapped_column(db.String(255), nullable=False)
     time: Mapped[datetime] = mapped_column(default=datetime.utcnow)
+    
 class Recipe(db.Model):
     __tablename__ = 'recipe'
     id: Mapped[int] = mapped_column(primary_key=True)

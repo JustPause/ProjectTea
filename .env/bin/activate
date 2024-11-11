@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/justinas/Programming/KaunoKolegija/Semestras_3/dotNet_Projectas/ProjectTea/.env"
+VIRTUAL_ENV="/tmp/ProjectTea/.env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
