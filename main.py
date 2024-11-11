@@ -1,4 +1,7 @@
 from flask import Flask, send_from_directory
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy() 
 app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ProjectTea.db"
 db.init_app(app)
