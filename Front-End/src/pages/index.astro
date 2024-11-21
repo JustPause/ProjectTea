@@ -2,6 +2,7 @@
 import Layout from "src/layouts/layout.astro";
 import NiceButton from "@global/niceButton.astro";
 import BackgroundImige from "@global/backgroundImige.astro";
+import json from "public/teas.json";
 
 const Block2DataTabs = [
   {
@@ -55,7 +56,7 @@ const Block2DataTabs = [
       <div class="h-screen w-screen overflow-hidden">
         <div
           id="DarkSideBar"
-          class="absolute w-full h-full right-0 z-10 from-true-black/90 bg-gradient-to-l opacity-95"
+          class="absolute w-full h-full right-0 z-10 from-true-black/100 bg-gradient-to-l opacity-95"
         >
         </div>
 
@@ -199,9 +200,8 @@ const Block2DataTabs = [
       filteredData.forEach((item) => {
         const a = document.createElement("a");
         a.classList.add(
-          
           "bg-white",
-       
+
           "p-2",
           "rounded-lg",
           "font-normal"
@@ -221,31 +221,32 @@ const Block2DataTabs = [
   <div id="Block-2" class="mt-4 mb-24 flex flex-col">
     <div id="TopList" class="flex gap-20 justify-center items-center">
       {
-        Block2DataTabs.map((data) => (
-          <button class="focus:text-light focus:underline bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row text-light/50 TeaSelection">
+        Object.keys(json).map((category) => (
+          <button
+            data-category={category}
+            class="bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row text-light/50 TeaSelection"
+          >
             <p id="Block2DataTabs-p" class="Text text-inherit leading-none">
-              {data.name}
+              {category}
             </p>
           </button>
         ))
       }
     </div>
 
-    <div class="flex flex-col gap-4 justify-center items-center">
-      <p class="text-light Headline-2 leading-none">
-        {Block2DataTabs[0].name}
+    <div
+      id="teaDetails"
+      class="flex flex-col gap-4 justify-center items-center"
+    >
+      <p id="teaName" class="text-light Headline-2 leading-none"></p>
+
+      <p
+        id="teaDescription"
+        class="text-light text-center Text w-[36rem] h-36 leading-tight"
+      >
       </p>
 
-      <div class="flex flex-col justify-center items-center">
-        <p class="text-light text-center Text w-[36rem] h-36 leading-tight">
-          {Block2DataTabs[0].text}
-        </p>
-      </div>
-
-      <NiceButton
-        text={`All ${Block2DataTabs[0].name}`}
-        link={Block2DataTabs[0].Buttonlink}
-      />
+      <NiceButton id="teaButton" text="" link="#" />
     </div>
 
     <div
@@ -282,18 +283,22 @@ const Block2DataTabs = [
           id="scroll"
           class="h-full flex flex-row items-center gap-16 overflow-x-hidden scrollbar-hide"
         >
-          <div
-            class="h-52 w-52 bg-white border-[5px] border-color rounded-full shrink-0 overflow-hidden"
-          >
-            <a href={Block2DataTabs[0].link[0]}>
-              <img
-                src={`/img/teas/${Block2DataTabs[0].img[0]}.webp`}
-                class="w-full h-full object-cover object-center teaImige"
-                alt=""
-              /></a
-            >
-          </div>
-          <div
+          {
+            Object.keys(json).map((category) =>
+              json[category].tea.slice(0, 5).map((tea) => (
+                <div class="h-52 w-52 bg-white border-[5px] border-color rounded-full shrink-0 overflow-hidden">
+                  <a href={tea.name.replaceAll(" ","-")}>
+                    <img
+                      src={tea.img}
+                      class="w-full h-full object-cover object-center teaImige"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              ))
+            )
+          }
+          <!-- <div
             class="h-52 w-52 bg-white border-[5px] border-color rounded-full shrink-0 overflow-hidden"
           >
             <a href={Block2DataTabs[0].link[1]}>
@@ -336,7 +341,7 @@ const Block2DataTabs = [
                 alt=""
               /></a
             >
-          </div>
+          </div> -->
         </div>
 
         <div
@@ -366,6 +371,45 @@ const Block2DataTabs = [
         </svg>
       </div>
     </div>
+
+    <script type="module" data-message="a">
+      const categoryButtons = document.querySelectorAll(
+        "button[data-category]"
+      );
+      const teaDetails = document.getElementById("teaDetails");
+      const teaName = document.getElementById("teaName");
+      const teaDescription = document.getElementById("teaDescription");
+      const teaButton = document.getElementById("buttontext");
+
+      function onCreate() {
+        teaName.textContent = "Green Tea";
+        teaDescription.textContent =
+          "Explore different types of tea, their production processes and health advantages, while keeping track of your personal tea journey.";
+        teaButton.textContent = `All Green Tea`;
+      }
+
+      onCreate();
+      fetch("/teas.json")
+        .then((response) => response.json())
+        .then((teas) => {
+          function updateTeaDetails(category) {
+            const selectedTea = teas[category]; //teas[category]["description"]
+            teaName.textContent = category;
+            teaDescription.textContent = selectedTea.description;
+            teaButton.textContent = `All ${category}`;
+          }
+
+          categoryButtons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              const category = e.target.closest("button").dataset.category;
+              updateTeaDetails(category);
+            });
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching teas:", error);
+        });
+    </script>
   </div>
 
   <style>
