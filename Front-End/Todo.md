@@ -1,6 +1,7 @@
 # TODO
 
 - [x] Headerio miktuvai visi kaip ir veikia
+- [ ] Tea pasirinkimia, riekia padaryti arbatu sarasa
 - [ ] Iskojijmo funcija gera, bet neuveda i po paskaudimo i taji puslapi su datos duomenimis
 - [ ] Andtros dalies arbatu pasirinkimas neatitinka standartu
   - [ ] Jis neturi iskarto parinktos arbatos, kuri turtu buti Green tea
