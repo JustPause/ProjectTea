@@ -2,10 +2,13 @@
 const { text, link } = Astro.props;
 ---
 
-<form action={link}>
-  <button class="bg-light font-medium rounded-lg px-12 py-4">
-    <p id="buttontext" class="Text text-dark-green leading-none mt-1 align-middle">
+<div class="flex justify-center align-center" >
+  <a class="bg-light w-max font-medium rounded-lg px-12 py-4 " href={link}>
+    <p
+      id="buttontext"
+      class="Text text-dark-green leading-none flex w-max "
+    >
       {text}
     </p>
-  </button>
-</form>
+  </a>
+</div>

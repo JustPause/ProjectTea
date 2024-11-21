@@ -4,18 +4,6 @@ import NiceButton from "@global/niceButton.astro";
 import BackgroundImige from "@global/backgroundImige.astro";
 import json from "public/teas.json";
 
-// ----------------------------------------------
-
-// import axios from 'axios';
-
-// let teas = [];
-
-// const fetchFruits = async () => {
-//   const response = await axios.get('http://localhost:5000/data');
-//   teas = response.data;
-// };
-
-// fetchFruits();
 ---
 
 <Layout title="Tea today is delicious" language="en">
@@ -140,12 +128,12 @@ import json from "public/teas.json";
     }
   </style>
   <!-- TODO FIX This V inplementuoti is duomenu bazes duomenis -->
-  <script>
+  <script type="module">
     const searchBar = document.getElementById(
       "default-search"
-    ) as HTMLInputElement;
+    );
 
-    const results = document.getElementById("results") as HTMLInputElement;
+    const results = document.getElementById("results");
 
     const data = [
       "darjeeling-ftgfop1",
@@ -162,24 +150,24 @@ import json from "public/teas.json";
       const filteredData = data.filter((item) =>
         item.toLowerCase().includes(query)
       );
-
+      
       results.innerHTML = "";
 
       filteredData.forEach((item) => {
         const a = document.createElement("a");
         a.classList.add(
           "bg-white",
-
           "p-2",
           "rounded-lg",
           "font-normal"
         );
         a.textContent = item;
-        a.href = "#";
+        a.href = item;
         a.target = "_blank";
         a.rel = "noopener noreferrer";
         results.appendChild(a);
       });
+    
     });
   </script>
 
@@ -357,14 +345,14 @@ import json from "public/teas.json";
     }
   </style>
 
-  <script>
-    const scroll = document.getElementById("scroll") as HTMLInputElement;
-    const leftArrow = document.getElementById("leftArrow") as HTMLInputElement;
+  <script type="module">
+    const scroll = document.getElementById("scroll");
+    const leftArrow = document.getElementById("leftArrow");
     const rightArrow = document.getElementById(
       "rightArrow"
-    ) as HTMLInputElement;
+    );
 
-    let scrollInterval: number;
+    let scrollInterval;
 
     function scrollLeft() {
       scroll.scrollBy({ left: -50, behavior: "smooth" });
@@ -566,7 +554,7 @@ import json from "public/teas.json";
       </div>
 
       <div>
-        <NiceButton text="More Recepis" />
+        <NiceButton text="More Recepis" link="/recipes" />
       </div>
     </div>
   </div>
@@ -580,7 +568,7 @@ import json from "public/teas.json";
     }
   </style>
 
-  <script>
+  <script type="module"> 
     const sections = document.querySelectorAll(".section");
 
     sections.forEach((section) => {

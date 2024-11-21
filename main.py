@@ -28,7 +28,7 @@ def singleTea():
   
 @app.route("/teaList")
 def teaList():
-    return send_from_directory('Front-End/dist', 'teaList.html')
+    return send_from_directory('Front-End/dist', 'teaList/index.html')
   
 @app.route("/team")
 def team():

@@ -12,3 +12,4 @@
 - [ ] Receptu miktukas nuveda neikur
 - [ ] Asmenimis puslapis neegzstuoja
 - [ ] Meet the tea-m nuveda neras imanomas paspausti
+- [ ] Komentaru filtas, kad bendrakursiai nebutu labai nemalonus
