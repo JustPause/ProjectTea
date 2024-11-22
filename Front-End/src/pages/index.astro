@@ -241,9 +241,10 @@ import json from "public/teas.json";
         >
           {
             Object.keys(json).map((category) =>
-              json[category].tea.slice(0, 5).map((tea) => (
+              json[category].tealist.slice(0, 5).map((tea) => (
                 <div class="h-52 w-52 bg-white border-[5px] border-color rounded-full shrink-0 overflow-hidden">
-                  <a href={tea.name.replaceAll(" ","-")}>
+                  <a href="{}">
+                    {tea}
                     <img
                       src={tea.img}
                       class="w-full h-full object-cover object-center teaImige"
@@ -255,7 +256,6 @@ import json from "public/teas.json";
             )
           }
         </div>
-
         <div
           class="absolute bg-gradient-to-r from-transparent to-dark-green h-full w-72 right-0 z-10 pointer-events-none"
           id="rightShader"
@@ -283,7 +283,7 @@ import json from "public/teas.json";
         </svg>
       </div>
     </div>
-
+    
     <script type="module" data-message="a">
       const categoryButtons = document.querySelectorAll(
         "button[data-category]"
@@ -294,10 +294,10 @@ import json from "public/teas.json";
       const teaButton = document.getElementById("buttontext");
 
       function onCreate() {
-        teaName.textContent = "Green Tea";
+        teaName.textContent = "Green Teas";
         teaDescription.textContent =
           "Explore different types of tea, their production processes and health advantages, while keeping track of your personal tea journey.";
-        teaButton.textContent = `All Green Tea`;
+        teaButton.textContent = `All Green Teas`;
       }
 
       onCreate();
