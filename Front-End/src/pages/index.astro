@@ -3,7 +3,6 @@ import Layout from "src/layouts/layout.astro";
 import NiceButton from "@global/niceButton.astro";
 import BackgroundImige from "@global/backgroundImige.astro";
 import json from "public/teas.json";
-
 ---
 
 <Layout title="Tea today is delicious" language="en">
@@ -129,9 +128,7 @@ import json from "public/teas.json";
   </style>
   <!-- TODO FIX This V inplementuoti is duomenu bazes duomenis -->
   <script type="module">
-    const searchBar = document.getElementById(
-      "default-search"
-    );
+    const searchBar = document.getElementById("default-search");
 
     const results = document.getElementById("results");
 
@@ -150,24 +147,18 @@ import json from "public/teas.json";
       const filteredData = data.filter((item) =>
         item.toLowerCase().includes(query)
       );
-      
+
       results.innerHTML = "";
 
       filteredData.forEach((item) => {
         const a = document.createElement("a");
-        a.classList.add(
-          "bg-white",
-          "p-2",
-          "rounded-lg",
-          "font-normal"
-        );
+        a.classList.add("bg-white", "p-2", "rounded-lg", "font-normal");
         a.textContent = item;
         a.href = item;
         a.target = "_blank";
         a.rel = "noopener noreferrer";
         results.appendChild(a);
       });
-    
     });
   </script>
 
@@ -239,21 +230,20 @@ import json from "public/teas.json";
           id="scroll"
           class="h-full flex flex-row items-center gap-16 overflow-x-hidden scrollbar-hide"
         >
+          <!-- ToDo: is js gauni Arbata [green tea, black tea, white tea] ta categorija idedi i cia ir textas automatiskai pasikeicia -->
           {
-            Object.keys(json).map((category) =>
-              json[category].tealist.slice(0, 5).map((tea) => (
-                <div class="h-52 w-52 bg-white border-[5px] border-color rounded-full shrink-0 overflow-hidden">
-                  <a href="{}">
-                    {tea}
-                    <img
-                      src={tea.img}
-                      class="w-full h-full object-cover object-center teaImige"
-                      alt=""
-                    />
-                  </a>
-                </div>
-              ))
-            )
+            json["Green Teas"].tealist.slice(0,5).map((tea) => (
+              <div class="h-52 w-52 bg-white border-[5px] border-color rounded-full shrink-0 overflow-hidden">
+                <a href={tea.tea.name}>
+                  tea.tea.name
+                  <img
+                    src={`img/teas/Green Tea/id${tea.id}.jpg`}
+                    class="w-full h-full object-cover object-center teaImige"
+                    alt=""
+                  />
+                </a>
+              </div>
+            ))
           }
         </div>
         <div
@@ -283,7 +273,6 @@ import json from "public/teas.json";
         </svg>
       </div>
     </div>
-    
     <script type="module" data-message="a">
       const categoryButtons = document.querySelectorAll(
         "button[data-category]"
@@ -297,7 +286,7 @@ import json from "public/teas.json";
         teaName.textContent = "Green Teas";
         teaDescription.textContent =
           "Explore different types of tea, their production processes and health advantages, while keeping track of your personal tea journey.";
-        teaButton.textContent = `All Green Teas`;
+        teaButton.textContent = "All Green Teas";
       }
 
       onCreate();
@@ -348,9 +337,7 @@ import json from "public/teas.json";
   <script type="module">
     const scroll = document.getElementById("scroll");
     const leftArrow = document.getElementById("leftArrow");
-    const rightArrow = document.getElementById(
-      "rightArrow"
-    );
+    const rightArrow = document.getElementById("rightArrow");
 
     let scrollInterval;
 
@@ -568,7 +555,7 @@ import json from "public/teas.json";
     }
   </style>
 
-  <script type="module"> 
+  <script type="module">
     const sections = document.querySelectorAll(".section");
 
     sections.forEach((section) => {
