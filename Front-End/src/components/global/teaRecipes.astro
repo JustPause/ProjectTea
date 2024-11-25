@@ -1,0 +1,194 @@
+---
+import NiceButton from "./niceButton.astro";
+
+const count = [1, 2, 3, 4];
+---
+
+<div
+  id="Block-4"
+  class="flex flex-col h-screen items-center justify-center content-center"
+>
+  <div class="flex flex-col gap-10 w-11/12 h-[80%] text-center">
+    <p class="Headline-2 leading-none">Recepis</p>
+
+    <div
+      id="container"
+      class="h-full flex flex-row justify-between text-start overflow-hidden"
+    >
+      <div
+        class="child section active flex flex-row h-full bg-color rounded-3xl border-4 border-color overflow-hidden flex-shrink-0"
+      >
+        <img
+          src="/img/recipes/pexels-marta-dzedyshko-1042863-2775858.jpg"
+          alt=""
+          class="overflow-clip w-[28rem] object-cover rounded-2xl"
+        />
+        <div
+          class="flex flex-col w-[24rem] px-4 py-20 justify-around overflow-clip"
+        >
+          <p class="Subheadline text-black">Honey Lavender Black Tea Latte</p>
+          <p class="Text text-black">
+            The Honey Lavender Black Tea Latte is one of the most aromatic
+            drinks ever. In this recipe, you will learn how to use dried
+            lavender to take your tea lattes to the next level.
+          </p>
+          <a class="flex flex-row items-center space-x-1" href="">
+            <p class="Caption text-black leading-4">To the Recipe</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex"
+            >
+              <path
+                d="M1 0.848632L5 4.84863L1 8.84863"
+                stroke="#394132"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="child section flex flex-row h-full bg-color rounded-3xl border-4 border-color overflow-hidden flex-shrink-0"
+      >
+        <img
+          src="/img/recipes/pexels-marta-dzedyshko-1042863-2775858.jpg"
+          alt=""
+          class="overflow-clip w-[28rem] object-cover rounded-2xl"
+        />
+        <div
+          class="flex flex-col w-[24rem] px-4 py-20 justify-around overflow-clip"
+        >
+          <p class="Subheadline text-black">Honey Lavender Black Tea Latte</p>
+          <p class="Text text-black">
+            The Honey Lavender Black Tea Latte is one of the most aromatic
+            drinks ever. In this recipe, you will learn how to use dried
+            lavender to take your tea lattes to the next level.
+          </p>
+          <div class="flex flex-row items-center space-x-1">
+            <p class="Caption text-black leading-4">To the Recipe</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex"
+            >
+              <path
+                d="M1 0.848632L5 4.84863L1 8.84863"
+                stroke="#394132"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="child section flex flex-row h-full bg-color rounded-3xl border-4 border-color overflow-hidden flex-shrink-0"
+      >
+        <img
+          src="/img/recipes/pexels-marta-dzedyshko-1042863-2775858.jpg"
+          alt=""
+          class="overflow-clip w-[28rem] object-cover rounded-2xl"
+        />
+        <div
+          class="flex flex-col w-[24rem] px-4 py-20 justify-around overflow-clip"
+        >
+          <p class="Subheadline text-black">Honey Lavender Black Tea Latte</p>
+          <p class="Text text-black">
+            The Honey Lavender Black Tea Latte is one of the most aromatic
+            drinks ever. In this recipe, you will learn how to use dried
+            lavender to take your tea lattes to the next level.
+          </p>
+          <div class="flex flex-row items-center space-x-1">
+            <p class="Caption text-black leading-4">To the Recipe</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex"
+            >
+              <path
+                d="M1 0.848632L5 4.84863L1 8.84863"
+                stroke="#394132"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="child section flex flex-row h-full bg-color rounded-3xl border-4 border-color overflow-hidden flex-shrink-0"
+      >
+        <img
+          src="/img/recipes/pexels-marta-dzedyshko-1042863-2775858.jpg"
+          alt=""
+          class="overflow-clip w-[28rem] object-cover rounded-2xl"
+        />
+        <div
+          class="flex flex-col w-[24rem] px-4 py-20 justify-around overflow-clip"
+        >
+          <p class="Subheadline text-black">Honey Lavender Black Tea Latte</p>
+          <p class="Text text-black">
+            The Honey Lavender Black Tea Latte is one of the most aromatic
+            drinks ever. In this recipe, you will learn how to use dried
+            lavender to take your tea lattes to the next level.
+          </p>
+          <div class="flex flex-row items-center space-x-1">
+            <p class="Caption text-black leading-4">To the Recipe</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex"
+            >
+              <path
+                d="M1 0.848632L5 4.84863L1 8.84863"
+                stroke="#394132"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <NiceButton text="More Recepis" link="/recipes" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .child {
+    width: 16rem;
+  }
+  .active {
+    width: 48rem;
+  }
+</style>
+
+<script type="module">
+  const sections = document.querySelectorAll(".section");
+
+  sections.forEach((section) => {
+    section.addEventListener("click", () => {
+      sections.forEach((section) => {
+        section.classList.remove("active");
+      });
+
+      section.classList.add("active");
+    });
+  });
+</script>

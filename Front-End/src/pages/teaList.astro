@@ -1,7 +1,7 @@
 ---
 import Layout from "src/layouts/layout.astro";
-import BackgroundImige from "@global/backgroundImige.astro";
-import NiceButton from "@global/niceButton.astro";
+import TeaRecipes from "@global/teaRecipes.astro";
+import json from "public/teas.json";
 
 const articles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5];
 
@@ -71,13 +71,13 @@ const Block2DataTabs = [
   <div id="Block-2" class="flex flex-row mt-16">
     <div class="w-3/12 flex flex-col gap-10 items-center mt-8">
       {
-        Block2DataTabs.map((data) => (
+        Object.keys(json).map((category) => (
           <button class="focus:text-light focus:underline bg-transparent px-3 py-2 rounded flex  text-light/50 TeaSelection ">
             <p
               id="Block2DataTabs-p"
-              class="Headline-3 text-inherit leading-none"
+              class="Subheadline text-inherit leading-none"
             >
-              {data.name}
+              {category}
             </p>
             <div class="h-full ml-2 w-10 bg-black invisible" />
           </button>
@@ -87,29 +87,28 @@ const Block2DataTabs = [
 
     <div class="w-9/12 flex flex-row flex-wrap gap-x-16 gap-y-12">
       {
-        articles.map((article: any) => (
+        json["Green Teas"].tealist.map((tea) => (
           <div class="w-[19rem] h-[24rem]  relative rounded-xl  group">
-            <!-- Image with hover brightness effect -->
             <img
-              src="img/recipes/pexels-charlotte-may-5946652.jpg"
+              src={`img/teas/Green Tea/id${tea.id}.jpg`}
               alt=""
-              class="absolute h-full w-full object-cover -z-10 rounded-xl transition-all duration-300 brightness-[0.8] group-hover:brightness-100"
+              class="absolute h-full w-full object-cover -z-10 rounded-xl transition-all duration-300 brightness-[0.6] group-hover:brightness-100"
             />
-            <div class="h-full w-full flex flex-col justify-between">
+            <a href={`tea/green-tea/${tea.tea.name}`} class="h-full w-full flex flex-col justify-between">
               <div class="flex flex-row justify-between">
-                <p class="m-3 text-light Subheadline">Tea Name</p>
-                <img
+                <p class="m-3 text-light Subheadline group-hover:text-black" >{tea.tea.name}</p>
+             <img
                   src="/svg/heart.svg"
                   alt="Logo"
                   class="m-3 w-5 fill-none"
                 />
               </div>
               <div class="flex justify-end m-3">
-                <button class="border-2 rounded-lg py-1 px-4">
-                  <p class="Caption">Learn more</p>
+                <button class="border-2 border-light group-hover:border-black rounded-lg py-1 px-4 transition-all duration-300 hover:bg-black/35">
+                  <p class="Caption text-light group-hover:text-black">Learn more</p>
                 </button>
               </div>
-            </div>
+            </a>
           </div>
         ))
       }
@@ -120,5 +119,10 @@ const Block2DataTabs = [
         transform: scaleX(-1) translateY(-60%);
       }
     </style>
-  </div></Layout
+  </div>
+  
+  <div id="Block-3" class="my-32">
+    <TeaRecipes />
+  </div>
+  </Layout
 >
