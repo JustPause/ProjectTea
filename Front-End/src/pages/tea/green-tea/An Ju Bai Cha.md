@@ -9,7 +9,6 @@ harvest_notes: "Harvested in early spring, the young leaves retain their freshne
 brewing_methods: "Steep one teaspoon of An Ju Bai Cha in water heated to 80°C (176°F) for 3-5 minutes to enjoy its subtle flavors."
 health_benefits: "Rich in antioxidants, this tea promotes hydration and supports digestion."
 popularity: "Highly regarded among tea connoisseurs, it is cherished for its refined and gentle taste."
+layout: ../../teaPage.astro
 ---
 
-
-      
