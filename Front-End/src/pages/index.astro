@@ -7,117 +7,115 @@ import TeaRecipes from "@global/teaRecipes.astro";
 ---
 
 <Layout title="Tea today is delicious" language="en">
-  <main>
-    <div id="Block-1">
-      <div class="h-screen w-screen overflow-hidden">
-        <div
-          id="DarkSideBar"
-          class="absolute w-full h-full right-0 z-10 from-true-black/100 bg-gradient-to-l opacity-95"
-        >
+  <div id="Block-1">
+    <div class="h-screen w-screen overflow-hidden">
+      <div
+        id="DarkSideBar"
+        class="absolute w-full h-full right-0 z-10 from-true-black/100 bg-gradient-to-l opacity-95"
+      >
+      </div>
+
+      <img
+        id="TheBackGorundImage"
+        class="h-auto w-screen TeaCupBackground"
+        style=""
+        src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
+        alt="Tea"
+      />
+    </div>
+
+    <div
+      id="Text"
+      class="absolute flex flex-col gap-4 content-center items-center w-[44rem] TeaCupText top-[20%] right-[10%] z-20"
+    >
+      <p class="Headline-2 text-center">Discover varijas flavors of tea</p>
+      <p class="Text text-center pb-4">
+        Explore different types of tea, their production processes and health
+        advantages, while keeping track of your personal tea journey.
+      </p>
+
+      <form class="w-10/12">
+        <div class="relative flex flex-row gap-14">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+            </svg>
+          </div>
+
+          <input
+            type="search"
+            id="default-search"
+            class="p-4 ps-10 rounded-lg w-full placeholder-black"
+            placeholder="Search for..."
+            autocomplete="off"
+            required
+          />
+
+          <!-- <NiceButton text="Search" /> -->
+
+          <div
+            class="absolute top-16 flex flex-col w-full gap-2 max-h-32 overflow-scroll rounded-lg w"
+            id="results"
+          >
+          </div>
         </div>
+      </form>
+    </div>
 
-        <img
-          id="TheBackGorundImage"
-          class="h-auto w-screen TeaCupBackground"
-          style=""
-          src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
-          alt="Tea"
-        />
-      </div>
-
-      <div
-        id="Text"
-        class="absolute flex flex-col gap-4 content-center items-center w-[44rem] TeaCupText top-[20%] right-[10%] z-20"
-      >
-        <p class="Headline-2 text-center">Discover varijas flavors of tea</p>
-        <p class="Text text-center pb-4">
-          Explore different types of tea, their production processes and health
-          advantages, while keeping track of your personal tea journey.
-        </p>
-
-        <form class="w-10/12">
-          <div class="relative flex flex-row gap-14">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-            >
-              <svg
-                class="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-              </svg>
-            </div>
-
-            <input
-              type="search"
-              id="default-search"
-              class="p-4 ps-10 rounded-lg w-full placeholder-black"
-              placeholder="Search for..."
-              autocomplete="off"
-              required
-            />
-
-            <!-- <NiceButton text="Search" /> -->
-
-            <div
-              class="absolute top-16 flex flex-col w-full gap-2 max-h-32 overflow-scroll rounded-lg w"
-              id="results"
-            >
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div
-        class="absolute left-0 flex justify-center items-center w-full bottom-4 hover:bottom-8 transition-all duration-300"
-      >
-        <div class="flex flex-col justify-center items-center z-10">
-          <div class="h-4">
-            <svg
-              width="80"
-              height="25"
-              viewBox="0 0 80 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="text-neutral-400"
-            >
-              <path
-                d="M77 2L41.5 17L2 2"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <div>
-            <svg
-              width="80"
-              height="25"
-              viewBox="0 0 80 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="text-white"
-            >
-              <path
-                d="M77 2L41.5 17L2 2"
-                stroke="currentColor"
-                stroke-width="3.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
-          </div>
+    <div
+      class="absolute left-0 flex justify-center items-center w-full bottom-4 hover:bottom-8 transition-all duration-300"
+    >
+      <div class="flex flex-col justify-center items-center z-10">
+        <div class="h-4">
+          <svg
+            width="80"
+            height="25"
+            viewBox="0 0 80 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-neutral-400"
+          >
+            <path
+              d="M77 2L41.5 17L2 2"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            width="80"
+            height="25"
+            viewBox="0 0 80 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-white"
+          >
+            <path
+              d="M77 2L41.5 17L2 2"
+              stroke="currentColor"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
   <style>
     .TeaCupBackground {
