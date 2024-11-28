@@ -15,7 +15,7 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
   <div id="Block-2" class="flex flex-row mx-14 h-full">
     <div class="w-1/2 ml-8 mr-16">
       <img
-        src={`/img/teas/Green Tea/id${frontmatter.id}.jpg`}
+        src={`/img/tea/Green-Teas/id${frontmatter.id}.jpg`}
         alt=`image of ${frontmatter.name}`
         class="max-w-full h-auto overflow-clip flex items-center justify-center"
       />
@@ -25,6 +25,7 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
         Margin="16"
       />
     </div>
+
     <div class="w-1/2 mr-8 ml-16 h-[40rem] flex flex-col">
       <TeaTitleText Title="Origin" Text={frontmatter.origin} Margin="0" />
       <TeaTitleText
@@ -43,6 +44,7 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
         Margin="24"
       />
     </div>
+    
   </div>
 
   <!-- <div id="Block-3" class="bg-black mt-28">
@@ -52,7 +54,7 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
     </div>
   </div> -->
 
-  <div id="Block-4" class="my-32 flex flex-row flex-grow mx-32 gap-32">
+  <div id="Block-4" class="my-32 flex flex-row flex-grow mx-32 gap-32 ">
     <div class="w-1/2"></div>
     <div class="w-1/2">
       <p class="Subheadline">Bancha Iced Tea with Citrus</p>
@@ -60,16 +62,12 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
         Bancha tea can be used in various creative recipes beyond just drinking
         it plain! Here is a refreshing, cold version of Bancha tea infused with
         citrus for a zesty twist.
-      </p><button class="bg-black rounded-xl px-16 float-right"
-        >More Recipes</button
-      >
+      </p><a class="bg-light rounded-xl px-16 my-8 float-right" href="/benefits">More Recipes</a>
     </div>
   </div>
 
-  <div id="Block-5" class="my-32">
+  <div id="Block-5" class="my-32 mx-24">
     <p class="Headline-3">What do other think about it?</p>
     <p class="Text w-[32rem]">Share your opinion about this tea</p>
   </div>
-
-  
 </Layout>

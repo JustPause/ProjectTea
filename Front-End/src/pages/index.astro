@@ -4,6 +4,12 @@ import NiceButton from "@global/niceButton.astro";
 import BackgroundImige from "@global/backgroundImige.astro";
 import json from "public/teas.json";
 import TeaRecipes from "@global/teaRecipes.astro";
+
+const teaLocasion = [
+  "/tea/Green-Teas/",
+  "/tea/Black-Teas/",
+  "/tea/White-Teas/"
+];
 ---
 
 <Layout title="Tea today is delicious" language="en">
@@ -131,7 +137,8 @@ import TeaRecipes from "@global/teaRecipes.astro";
 
     const results = document.getElementById("results");
 
-    const data = [
+    let data = [
+      // kai naudosiu per npm run dev
       "darjeeling-ftgfop1",
       "darjeeling-millikthong-ftgfop1-ff-2024",
       "gold-assam-mangalam-ftgfop1",
@@ -139,6 +146,15 @@ import TeaRecipes from "@global/teaRecipes.astro";
       "skonis-ir-kvapas-earl-grey",
       "citrusu-vejas"
     ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/api/initial-data")
+        .then((response) => response.json())
+        .then((data_from_db) => {
+          data = data_from_db;
+        })
+        .catch((error) => console.error("Error fetching initial data:", error));
+    });
 
     searchBar.addEventListener("input", function () {
       const query = searchBar.value.toLowerCase();
@@ -150,23 +166,19 @@ import TeaRecipes from "@global/teaRecipes.astro";
       results.innerHTML = "";
 
       filteredData.forEach((item) => {
-        const a = document.createElement("a");
-        a.classList.add("bg-white", "p-2", "rounded-lg", "font-normal");
-        a.textContent = item;
-        a.href = item;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        results.appendChild(a);
+        const searchBarFingThatShowsLinks = document.createElement("a");
+        searchBarFingThatShowsLinks.classList.add(
+          "bg-white",
+          "p-2",
+          "rounded-lg",
+          "font-normal"
+        );
+        searchBarFingThatShowsLinks.textContent = item;
+        searchBarFingThatShowsLinks.href = "/tea/Green-Teas/" + item;
+        searchBarFingThatShowsLinks.target = "_blank";
+        searchBarFingThatShowsLinks.rel = "noopener noreferrer";
+        results.appendChild(searchBarFingThatShowsLinks);
       });
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("/api/initial-data") // Adjust URL if necessary
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data)
-        })
-        .catch((error) => console.error("Error fetching initial data:", error));
     });
   </script>
 
@@ -245,7 +257,7 @@ import TeaRecipes from "@global/teaRecipes.astro";
                 <a href={`/tea/Green-Teas/${tea.tea.name}`}>
                   tea.tea.name
                   <img
-                    src={`/img/teas/Green Tea/id${tea.id}.jpg`}
+                    src={`/img/tea/Green-Teas/id${tea.id}.jpg`}
                     class="w-full h-full object-cover object-center teaImige"
                     alt={`imige of the tea ${tea.tea.name}`}
                   />
