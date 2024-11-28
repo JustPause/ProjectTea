@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, abort
+from flask import Flask, send_from_directory, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from getDataFormJson import teaList as teaListMethod 
 from config import Config
@@ -12,12 +12,14 @@ tea_names = [tea['name'] for tea in teaListMethod()[0]]
 
 from dataBaseConnection import Tea, Comment, Recipe
 
-from insert_data import insert_data
+from working_with_data import insert_data, get_search_data
 with app.app_context():
     db.create_all()
     insert_data()
 
-    
+@app.route('/api/initial-data', methods=['GET'])
+def initial_data():
+    return jsonify(get_search_data())
 
 @app.route("/")
 def index():

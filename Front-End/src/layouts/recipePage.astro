@@ -1,0 +1,32 @@
+---
+import Layout from "src/layouts/layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title="The Tea List" language="en">
+  <div class="flex flex-row mx-32 pt-40 pb-80   justify-evenly">
+    <img
+      class="w-[42rem]"
+      src={`/img/recipes/${frontmatter.img}`}
+      alt="recipes img"
+    />
+    <div class="w-[42rem] flex flex-col justify-between">
+      <p class="Headline-1">{frontmatter.name}</p>
+      <p class="Text">
+        {frontmatter.description}
+      </p>
+      <div class="flex flex-row">
+        <div class="border mr-12"></div>
+        <div>
+          <p class="Subheadline">INGREDIENTS</p>
+          <p class="Caption">Per Cup</p>
+          <div class="flex flex-col mt-4 ml-2">
+            {frontmatter.ingredients.map((ingredient) => (
+              <p class="Text">{ingredient}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

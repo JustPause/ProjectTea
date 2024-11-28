@@ -128,3 +128,9 @@ To just run after inisiligine the flask project
 ```bash
   flask --app main run
 ```
+
+If you whant to updata data form json you need to run
+```bash
+  python fileToMd.py
+```
+and move teas_md to Front-End/src/pages/tea/
