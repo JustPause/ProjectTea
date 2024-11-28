@@ -1,13 +1,22 @@
 from flask import Flask, send_from_directory, abort
 from flask_sqlalchemy import SQLAlchemy
 from getDataFormJson import teaList as teaListMethod 
+from config import Config
 
-db = SQLAlchemy() 
-app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ProjectTea.db"
-db.init_app(app)
+
+app = Flask(__name__, static_folder = 'Front-End/dist', static_url_path = '')
+app.config.from_object(Config)
+db = SQLAlchemy(app)
 
 tea_names = [tea['name'] for tea in teaListMethod()[0]]
+
+from dataBaseConnection import Tea, Comment, Recipe
+
+with app.app_context():
+    db.create_all()
+
+with app.app_context():
+    tables = db.inspect(db.engine).get_table_names()
 
 @app.route("/")
 def index():
@@ -48,11 +57,7 @@ def redirect_to_tea(tea_name):
 def page_not_found(e):
   return send_from_directory('Front-End/dist', '404.html'), 404
 
-def setup():
+if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-
-# setup()
-
-if __name__ == "__main__":
     app.run(debug=True)

@@ -1,4 +1,3 @@
-from getDataFormJson import teaList as teaListMethod 
-Green, Black, White=teaListMethod()
-
-print([tea['name'] for tea in teaListMethod()[0]])
+from main import app, db
+with app.app_context():
+    db.create_all()

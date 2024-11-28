@@ -2,8 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
-
-db = SQLAlchemy()
+from main import db
 
 class Tea(db.Model):
     __tablename__ = 'tea'
@@ -11,6 +10,9 @@ class Tea(db.Model):
     name: Mapped[str] = mapped_column(db.String(80), unique=True, nullable=False)
     tea_group: Mapped[int] = mapped_column(nullable=False)  # 0 unlisted, 1 Black Tea, 2 Green Tea, 3 White Tea
     link: Mapped[str] = mapped_column(db.String(200), unique=True, nullable=False)
+    
+    def __repr__(self):
+        return f'<Tea {self.name}>'
 
 class Comment(db.Model):
     __tablename__ = 'comment'
@@ -19,8 +21,14 @@ class Comment(db.Model):
     text: Mapped[str] = mapped_column(db.String(255), nullable=False)
     time: Mapped[datetime] = mapped_column(default=datetime.utcnow)
     
+    def __repr__(self):
+        return f'<Comment {self.tea_id}>'
+    
 class Recipe(db.Model):
     __tablename__ = 'recipe'
     id: Mapped[int] = mapped_column(primary_key=True)
     tea_id: Mapped[int] = mapped_column(ForeignKey('tea.id'), nullable=False)
     instructions: Mapped[str] = mapped_column(db.Text, nullable=False)
+    
+    def __repr__(self):
+        return f'<Recipe {self.id}>'
