@@ -1,10 +1,13 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, abort
 from flask_sqlalchemy import SQLAlchemy
+from getDataFormJson import teaList as teaListMethod 
 
 db = SQLAlchemy() 
 app = Flask(__name__, static_folder='Front-End/dist', static_url_path='')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ProjectTea.db"
 db.init_app(app)
+
+tea_names = [tea['name'] for tea in teaListMethod()[0]]
 
 @app.route("/")
 def index():
@@ -33,6 +36,13 @@ def teaList():
 @app.route("/team")
 def team():
     return send_from_directory('Front-End/dist', 'team.html')
+
+@app.route('/tea/green-tea/<tea_name>')
+def redirect_to_tea(tea_name):
+    if tea_name in tea_names:
+        return send_from_directory('Front-End/dist', f"tea/green-tea/{tea_name}/index.html")
+    else:
+        abort(404)
 
 @app.errorhandler(404)
 def page_not_found(e):
