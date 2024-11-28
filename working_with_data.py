@@ -59,4 +59,9 @@ def insert_data():
     # recipe10 = Database.add_recipe(tea_id=tea10.id, instructions="Steep in hot water at 95°C for 3-5 minutes.")
     
 def get_search_data():
-    return Database.get_all_teas()
+    # teaList = [dict(zip("name", row)) for row in Database.get_all_teas()]
+    return {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
