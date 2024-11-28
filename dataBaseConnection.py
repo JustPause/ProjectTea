@@ -7,9 +7,9 @@ from main import db
 class Tea(db.Model):
     __tablename__ = 'tea'
     id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(db.String(80), unique=True, nullable=False)
-    tea_group: Mapped[int] = mapped_column(nullable=False)  # 0 unlisted, 1 Black Tea, 2 Green Tea, 3 White Tea
-    link: Mapped[str] = mapped_column(db.String(200), unique=True, nullable=False)
+    name: Mapped[str] = mapped_column(db.String(80), nullable=False)
+    tea_group: Mapped[str] = mapped_column(nullable=False)  # 0 unlisted, 1 Black Tea, 2 Green Tea, 3 White Tea
+    link: Mapped[str] = mapped_column(db.String(200), nullable=False)
     
     def __repr__(self):
         return f'<Tea {self.name}>'

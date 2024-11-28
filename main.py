@@ -12,11 +12,12 @@ tea_names = [tea['name'] for tea in teaListMethod()[0]]
 
 from dataBaseConnection import Tea, Comment, Recipe
 
+from insert_data import insert_data
 with app.app_context():
     db.create_all()
+    insert_data()
 
-with app.app_context():
-    tables = db.inspect(db.engine).get_table_names()
+    
 
 @app.route("/")
 def index():
