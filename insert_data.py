@@ -1,12 +1,24 @@
 from dataBaseConnector import Database
+from getDataFormJson import teaList
 from main import app
+import json
+import sys
 
 with app.app_context():
     
-    Database.drop_tea_table()
-    Database.drop_comment_table()
-    Database.drop_recipe_table()
+    # Database.drop_tea_table()
+    # Database.drop_comment_table()
+    # Database.drop_recipe_table()
     
+    Green, Black, White=teaList()
+      
+    for tea in Green:
+        Database.add_tea(name=tea["name"], tea_group=tea["type"], link=tea["link"])
+    for tea in Black:
+        Database.add_tea(name=tea["name"], tea_group=tea["type"], link=tea["link"])
+    for tea in White:
+        Database.add_tea(name=tea["name"], tea_group=tea["type"], link=tea["link"])
+        
     # tea1 = Database.add_tea(name="Earl Grey", tea_group=1, link="http://example.com/earlgrey")
     # tea2 = Database.add_tea(name="Matcha", tea_group=2, link="http://example.com/matcha")
     # tea3 = Database.add_tea(name="Chamomile", tea_group=3, link="http://example.com/chamomile")
@@ -17,6 +29,7 @@ with app.app_context():
     # tea8 = Database.add_tea(name="Peppermint", tea_group=3, link="http://example.com/peppermint")
     # tea9 = Database.add_tea(name="Blackberry Tea", tea_group=1, link="http://example.com/blackberrytea")
     # tea10 = Database.add_tea(name="Lemon Balm", tea_group=3, link="http://example.com/lemonbalm")
+
     
     # comment1 = Database.add_comment(tea_id=tea1.id, text="Great taste, very aromatic!")
     # comment2 = Database.add_comment(tea_id=tea2.id, text="I love the earthy notes in Matcha.")
