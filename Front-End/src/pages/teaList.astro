@@ -2,7 +2,6 @@
 import Layout from "src/layouts/layout.astro";
 import TeaRecipes from "@global/teaRecipes.astro";
 import json from "public/teas.json";
-
 ---
 
 <Layout title="The Tea List" language="en">
@@ -61,10 +60,15 @@ import json from "public/teas.json";
               alt=""
               class="absolute h-full w-full object-cover -z-10 rounded-xl transition-all duration-300 brightness-[0.6] group-hover:brightness-100"
             />
-            <a href={`/tea/Green-Teas/${tea.tea.name}`} class="h-full w-full flex flex-col justify-between">
+            <a
+              href={`/tea/Green-Teas/${tea.tea.name}`}
+              class="h-full w-full flex flex-col justify-between"
+            >
               <div class="flex flex-row justify-between">
-                <p class="m-3 text-light Subheadline group-hover:text-black" >{tea.tea.name}</p>
-             <img
+                <p class="m-3 text-light Subheadline group-hover:text-black">
+                  {tea.tea.name}
+                </p>
+                <img
                   src="/svg/heart.svg"
                   alt="Logo"
                   class="m-3 w-5 fill-none"
@@ -72,7 +76,9 @@ import json from "public/teas.json";
               </div>
               <div class="flex justify-end m-3">
                 <button class="border-2 border-light group-hover:border-black rounded-lg py-1 px-4 transition-all duration-300 hover:bg-black/35">
-                  <p class="Caption text-light group-hover:text-black">Learn more</p>
+                  <p class="Caption text-light group-hover:text-black">
+                    Learn more
+                  </p>
                 </button>
               </div>
             </a>
@@ -87,9 +93,8 @@ import json from "public/teas.json";
       }
     </style>
   </div>
-  
+
   <div id="Block-3" class="my-32">
     <TeaRecipes />
   </div>
-  </Layout
->
+</Layout>
