@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 <Layout title="The Tea List" language="en">
   <div class="flex flex-row mx-32 pt-40 pb-80   justify-evenly">
     <img
-      class="w-[42rem]"
+      class="w-[42rem] object-cover rounded-2xl"
       src={`/img/recipes/${frontmatter.img}`}
       alt="recipes img"
     />

@@ -2,6 +2,7 @@
 import Layout from "src/layouts/layout.astro";
 const { frontmatter } = Astro.props;
 import TeaTitleText from "src/layouts/teaTitleText.astro";
+import json from "public/resapys.json";
 ---
 
 <Layout title="The Tea List" language="en">
@@ -17,7 +18,7 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
       <img
         src={`/img/tea/Green-Teas/id${frontmatter.id}.jpg`}
         alt=`image of ${frontmatter.name}`
-        class="max-w-full h-auto overflow-clip flex items-center justify-center"
+        class="max-w-full h-auto overflow-clip flex items-center justify-center rounded-2xl"
       />
       <TeaTitleText
         Title="Popularity"
@@ -44,7 +45,6 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
         Margin="24"
       />
     </div>
-    
   </div>
 
   <!-- <div id="Block-3" class="bg-black mt-28">
@@ -54,15 +54,23 @@ import TeaTitleText from "src/layouts/teaTitleText.astro";
     </div>
   </div> -->
 
-  <div id="Block-4" class="my-32 flex flex-row flex-grow mx-32 gap-32 ">
-    <div class="w-1/2"></div>
-    <div class="w-1/2">
-      <p class="Subheadline">Bancha Iced Tea with Citrus</p>
-      <p class="Text">
-        Bancha tea can be used in various creative recipes beyond just drinking
-        it plain! Here is a refreshing, cold version of Bancha tea infused with
-        citrus for a zesty twist.
-      </p><a class="bg-light rounded-xl px-16 my-8 float-right" href="/benefits">More Recipes</a>
+  <div id="Block-4" class="my-32 flex flex-row flex-grow mx-32 gap-32 h-96">
+    <img
+      src="/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
+      alt=""
+      srcset=""
+      class="object-cover w-1/2"
+    />
+    <div class="w-1/2 flex items-center mt-24">
+      <div>
+        <p class="Subheadline">{json["Black Teas"]["resapylist"][0]["name"]}</p>
+        <p class="Text">
+          {json["Black Teas"]["resapylist"][0]["description"]}
+        </p><a
+          class="bg-light rounded-xl px-16 my-8 float-right"
+          href="/recipes/Black-Teas/Black Tea with milk">More Recipes</a
+        >
+      </div>
     </div>
   </div>
 

@@ -213,7 +213,7 @@ const teaLocasion = [
       >
       </p>
 
-      <NiceButton id="teaButton" text="" link="#" />
+      <NiceButton id="teaButton" text="" link="/teaList" />
     </div>
 
     <div
@@ -244,6 +244,7 @@ const teaLocasion = [
           class="absolute bg-gradient-to-r from-dark-green to-transparent h-full w-72 left-0 z-10 pointer-events-none"
           id="leftShader"
         >
+        
         </div>
 
         <div
@@ -255,7 +256,6 @@ const teaLocasion = [
             json["Green Teas"].tealist.slice(0, 5).map((tea) => (
               <div class="h-52 w-52 bg-white border-4 border-color rounded-full shrink-0 overflow-hidden">
                 <a href={`/tea/Green-Teas/${tea.tea.name}`}>
-                  tea.tea.name
                   <img
                     src={`/img/tea/Green-Teas/id${tea.id}.jpg`}
                     class="w-full h-full object-cover object-center teaImige"
