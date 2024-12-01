@@ -1,0 +1,593 @@
+{
+  "whiteteas": {
+    "description": "Uncover the delicate elegance of white teas, celebrated for their minimal processing and subtle flavors. Discover their gentle harvesting techniques, potential health benefits, and savor the light, refreshing taste while curating your own white tea journey.",
+    "tealist": [
+      {
+        "id": 1,
+        "group": "White Tea",
+        "type": "white_tea",
+        "tea": {
+          "name": "Bai Hao Yin Zhen",
+          "details": {
+            "description": "Bai Hao Yin Zhen, also known as Silver Needle, is a premium white tea known for its delicate, sweet flavor and fine, silvery buds.",
+            "origin": "Grown in the Fujian Province of China, this tea is renowned for its purity and high quality.",
+            "harvest_notes": "Made exclusively from young, unopened tea buds, harvested during the early spring.",
+            "brewing_methods": "Steep one teaspoon of Bai Hao Yin Zhen in water heated to 75°C-80°C (167°F-176°F) for 2-3 minutes for a light, sweet infusion.",
+            "health_benefits": "Rich in antioxidants, Silver Needle is believed to support skin health and boost the immune system.",
+            "popularity": "Highly prized among tea enthusiasts for its subtle sweetness and delicate profile."
+          }
+        }
+      },
+      {
+        "id": 2,
+        "group": "White Tea",
+        "type": "white_tea",
+        "tea": {
+          "name": "Bai Mu Dan",
+          "details": {
+            "description": "Bai Mu Dan, or White Peony, is a popular white tea with a balanced flavor profile of floral sweetness and a hint of earthiness.",
+            "origin": "Originating from Fujian Province, China, Bai Mu Dan is made from young tea leaves and unopened buds.",
+            "harvest_notes": "Harvested in early spring, this tea includes both buds and leaves, giving it a fuller flavor.",
+            "brewing_methods": "Steep one teaspoon of Bai Mu Dan in water heated to 75°C-80°C (167°F-176°F) for 2-3 minutes for a smooth, aromatic cup.",
+            "health_benefits": "Known for its high antioxidant content, White Peony may help reduce inflammation and promote relaxation.",
+            "popularity": "Widely enjoyed for its complex flavor and affordability compared to Silver Needle."
+          }
+        }
+      },
+      {
+        "id": 3,
+        "group": "White Tea",
+        "type": "white_tea",
+        "tea": {
+          "name": "Gong Mei",
+          "details": {
+            "description": "Gong Mei, or Tribute Eyebrow, is a robust white tea with a fruity and slightly woody flavor.",
+            "origin": "Grown in the Fujian and Guangxi regions of China, Gong Mei is one of the more affordable white teas.",
+            "harvest_notes": "Made from more mature leaves, giving it a stronger flavor compared to Bai Hao Yin Zhen or Bai Mu Dan.",
+            "brewing_methods": "Steep one teaspoon of Gong Mei in water heated to 80°C-85°C (176°F-185°F) for 2-3 minutes for a fruity, robust infusion.",
+            "health_benefits": "This tea is believed to improve digestion and provide a gentle boost of energy.",
+            "popularity": "Favored for its strong flavor and affordability, Gong Mei is a common choice for everyday white tea drinkers."
+          }
+        }
+      },
+      {
+        "id": 4,
+        "group": "White Tea",
+        "type": "white_tea",
+        "tea": {
+          "name": "Lao Bai Cha",
+          "details": {
+            "description": "Lao Bai Cha, or Old White Tea, is a uniquely aged white tea with a rich, mellow, and slightly sweet flavor.",
+            "origin": "This tea is aged over several years, often in Fujian, China, to develop its complex flavor.",
+            "harvest_notes": "Made from white tea leaves that are carefully stored and aged to enhance their flavor and aroma.",
+            "brewing_methods": "Steep one teaspoon of Lao Bai Cha in water heated to 85°C-90°C (185°F-194°F) for 2-3 minutes to enjoy its rich, matured taste.",
+            "health_benefits": "Believed to improve with age, this tea is often consumed for its calming properties and digestive benefits.",
+            "popularity": "Valued for its unique aging process and smooth, developed flavors."
+          }
+        }
+      },
+      {
+        "id": 5,
+        "group": "White Tea",
+        "type": "white_tea",
+        "tea": {
+          "name": "Shou Mei",
+          "details": {
+            "description": "Shou Mei is a full-bodied white tea with a bold, earthy flavor and a subtle sweetness.",
+            "origin": "This tea is grown in China’s Fujian and Guangxi regions and made from mature leaves and buds.",
+            "harvest_notes": "Picked later in the season, Shou Mei has a darker color and a stronger flavor due to its mature leaves.",
+            "brewing_methods": "Steep one teaspoon of Shou Mei in water heated to 85°C-90°C (185°F-194°F) for 2-3 minutes for a bold, earthy brew.",
+            "health_benefits": "Rich in antioxidants, Shou Mei is said to support digestion and boost overall well-being.",
+            "popularity": "Appreciated for its robust flavor and affordability, making it a popular choice for everyday drinking."
+          }
+        }
+      },
+      {
+        "id": 6,
+        "group": "White Tea",
+        "type": "white_tea",
+        "tea": {
+          "name": "Ya Bao",
+          "details": {
+            "description": "Ya Bao, or Tea Buds, is a unique white tea made from unopened buds, offering a sweet, pine-like flavor with a hint of spice.",
+            "origin": "Sourced from wild tea trees in Yunnan, China, Ya Bao is a rare and distinctive white tea.",
+            "harvest_notes": "Harvested from wild trees, the buds are minimally processed to preserve their natural sweetness and aroma.",
+            "brewing_methods": "Steep one teaspoon of Ya Bao in water heated to 75°C-80°C (167°F-176°F) for 3-4 minutes for a sweet and spicy infusion.",
+            "health_benefits": "Known for its soothing properties, Ya Bao is often consumed to promote relaxation and mental clarity.",
+            "popularity": "Highly regarded for its unique flavor and rarity, Ya Bao is a favorite among tea connoisseurs."
+          }
+        }
+      }
+    ]
+  },
+  "greenteas": {
+    "description": "Discover the vibrant world of green teas, renowned for their fresh flavors and minimal processing. Learn about their diverse varieties, meticulous production techniques, and impressive health benefits, while documenting your personal green tea journey.",
+    "tealist": [
+      {
+        "id": 1,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "An Ju Bai Cha",
+          "details": {
+            "description": "An Ju Bai Cha is a delicate Chinese green tea with light, silvery-green leaves that offer a sweet and refreshing flavor.",
+            "origin": "This tea comes from Anji County, China, and is prized for its delicate processing and gentle flavor profile.",
+            "harvest_notes": "Harvested in early spring, the young leaves retain their freshness and vibrant taste.",
+            "brewing_methods": "Steep one teaspoon of An Ju Bai Cha in water heated to 80°C (176°F) for 3-5 minutes to enjoy its subtle flavors.",
+            "health_benefits": "Rich in antioxidants, this tea promotes hydration and supports digestion.",
+            "popularity": "Highly regarded among tea connoisseurs, it is cherished for its refined and gentle taste."
+          }
+        }
+      },
+      {
+        "id": 2,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Bancha",
+          "details": {
+            "description": "Bancha is made from the older, mature leaves of the tea plant harvested later in the season, offering a robust flavor and a comforting aroma.",
+            "origin": "This tea is from Japan, where it is commonly enjoyed as an everyday beverage.",
+            "harvest_notes": "Picked after the first flush of the season, Bancha’s leaves are larger and more mature, contributing to its fuller flavor.",
+            "brewing_methods": "Steep one teaspoon of Bancha in water heated to 80°C (176°F) for 2-3 minutes for a refreshing cup.",
+            "health_benefits": "Bancha is known for its potential to help with digestion and support heart health.",
+            "popularity": "A favorite in Japanese households, it provides a soothing, everyday tea experience."
+          }
+        }
+      },
+      {
+        "id": 3,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Bi Luo Chun",
+          "details": {
+            "description": "Bi Luo Chun, also known as 'Green Snail Spring,' is a fragrant Chinese green tea with a delicate, floral flavor and tight, curled leaves.",
+            "origin": "This tea is grown in the Jiangsu Province of China, where its unique appearance and fragrance are highly regarded.",
+            "harvest_notes": "Hand-picked in early spring, the leaves are carefully rolled into tight spirals to preserve their fresh, floral character.",
+            "brewing_methods": "Steep one teaspoon of Bi Luo Chun in water heated to 80°C (176°F) for 2-3 minutes to reveal its aromatic notes.",
+            "health_benefits": "Bi Luo Chun is rich in antioxidants, which can help reduce stress and support cognitive function.",
+            "popularity": "A beloved tea in China, it’s known for its sweet, delicate flavor and enchanting aroma."
+          }
+        }
+      },
+      {
+        "id": 4,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Dragon Well (Longjing)",
+          "details": {
+            "description": "Dragon Well, or Longjing, is a famous Chinese green tea known for its flat leaves and nutty, slightly sweet flavor.",
+            "origin": "This tea is grown in Hangzhou, China, and is one of the most celebrated green teas worldwide.",
+            "harvest_notes": "Picked in early spring, the tender leaves are pan-roasted to preserve their fresh, vegetal taste.",
+            "brewing_methods": "Steep one teaspoon of Dragon Well in water heated to 85°C (185°F) for 2-3 minutes for a rich, flavorful cup.",
+            "health_benefits": "This tea may support metabolism, improve digestion, and promote healthy skin.",
+            "popularity": "Longjing is a well-known tea that is revered for its smooth and nutty flavor, enjoyed by tea lovers worldwide."
+          }
+        }
+      },
+      {
+        "id": 5,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "En Shi Yu Lu",
+          "details": {
+            "description": "En Shi Yu Lu is a high-quality Chinese green tea from the Hubei Province, known for its rich flavor and fragrant aroma.",
+            "origin": "This tea is from Enshi, Hubei, where unique growing techniques are used to produce its refreshing and smooth taste.",
+            "harvest_notes": "Harvested in early spring, the leaves are processed with a special method that retains their freshness and vibrant green color.",
+            "brewing_methods": "Steep one teaspoon of En Shi Yu Lu in water heated to 80°C (176°F) for 2-3 minutes for the best flavor.",
+            "health_benefits": "This tea supports immune health and provides a gentle energy boost.",
+            "popularity": "Known for its quality and flavor, En Shi Yu Lu is appreciated by those who enjoy a refreshing and aromatic green tea."
+          }
+        }
+      },
+      {
+        "id": 6,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Fenggang Zinc Selenium Tea",
+          "details": {
+            "description": "Fenggang Zinc Selenium Tea is a mineral-rich green tea that provides a unique, earthy flavor and offers health-boosting properties.",
+            "origin": "Grown in the Fenggang region of China, this tea is rich in zinc and selenium, which contribute to its distinctive flavor.",
+            "harvest_notes": "Picked during the spring season, the leaves are carefully processed to retain their beneficial minerals and antioxidants.",
+            "brewing_methods": "Steep one teaspoon of Fenggang Zinc Selenium Tea in water heated to 85°C (185°F) for 2-3 minutes to bring out its full mineral richness.",
+            "health_benefits": "Rich in zinc and selenium, this tea may support immune health and reduce inflammation.",
+            "popularity": "Popular for its health benefits, this tea is a favorite among those seeking a mineral-rich brew."
+          }
+        }
+      },
+      {
+        "id": 7,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Genmaicha",
+          "details": {
+            "description": "Genmaicha is a Japanese green tea blend mixed with roasted brown rice, giving it a nutty, comforting flavor.",
+            "origin": "A traditional tea from Japan, Genmaicha is commonly enjoyed as a casual, everyday tea.",
+            "harvest_notes": "The rice is roasted alongside the green tea leaves, imparting a toasted aroma and flavor.",
+            "brewing_methods": "Steep one teaspoon of Genmaicha in water heated to 80°C (176°F) for 3-5 minutes to enjoy its nutty flavor.",
+            "health_benefits": "Genmaicha may promote digestion and help reduce stress, making it an ideal comfort tea.",
+            "popularity": "Widely consumed in Japan, this tea is often referred to as 'popcorn tea' due to the roasted rice."
+          }
+        }
+      },
+      {
+        "id": 8,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Gyokuro",
+          "details": {
+            "description": "Gyokuro is a premium shade-grown Japanese green tea with a rich, sweet flavor and smooth texture.",
+            "origin": "This tea is grown in Japan’s Uji region, where it’s shaded from sunlight to enhance its natural sweetness.",
+            "harvest_notes": "Harvested in early spring, Gyokuro’s leaves are shaded for up to three weeks to produce a rich, umami flavor.",
+            "brewing_methods": "Steep one teaspoon of Gyokuro in water heated to 60°C (140°F) for 2-3 minutes for a sweet, smooth infusion.",
+            "health_benefits": "Gyokuro may promote relaxation, focus, and overall well-being.",
+            "popularity": "Known for its premium quality, Gyokuro is a favorite among tea connoisseurs who appreciate its complexity and rich taste."
+          }
+        }
+      },
+      {
+        "id": 9,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Huang Shan Mao Feng",
+          "details": {
+            "description": "Huang Shan Mao Feng is a fragrant green tea from the Huangshan Mountains, known for its smooth taste and delicate leaves.",
+            "origin": "Grown in the Huangshan Mountains of China, this tea is prized for its bright green leaves and fragrant aroma.",
+            "harvest_notes": "Harvested in early spring, the tender buds are carefully processed to maintain their natural sweetness and freshness.",
+            "brewing_methods": "Steep one teaspoon of Huang Shan Mao Feng in water heated to 80°C (176°F) for 2-3 minutes for a refreshing cup.",
+            "health_benefits": "This tea is rich in antioxidants and is said to promote heart health and boost immunity.",
+            "popularity": "Highly respected in China, Huang Shan Mao Feng is a favorite for its light and refreshing taste."
+          }
+        }
+      },
+      {
+        "id": 10,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Hōjicha",
+          "details": {
+            "description": "Hōjicha is a Japanese roasted green tea that has a warm, toasty flavor and a lower caffeine content.",
+            "origin": "Grown and roasted in Japan, Hōjicha is made by roasting green tea leaves, producing its distinctive flavor.",
+            "harvest_notes": "The leaves are roasted at high temperatures, giving the tea a brown color and a rich, roasted flavor.",
+            "brewing_methods": "Steep one teaspoon of Hōjicha in water heated to 90°C (194°F) for 2-3 minutes for a smooth, roasted taste.",
+            "health_benefits": "Hōjicha is gentle on the stomach and may aid digestion, thanks to its low caffeine content.",
+            "popularity": "Popular in Japan, it’s often consumed in the evening due to its calming properties."
+          }
+        }
+      },
+      {
+        "id": 11,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Jasmine Green Tea",
+          "details": {
+            "description": "Jasmine Green Tea is a fragrant blend of green tea and jasmine blossoms, offering a soothing and aromatic infusion.",
+            "origin": "This tea is widely consumed in China, where it is traditionally scented with fresh jasmine flowers.",
+            "harvest_notes": "The tea leaves are scented with jasmine flowers during the blooming season, which imparts the tea’s distinctive fragrance.",
+            "brewing_methods": "Steep one teaspoon of Jasmine Green Tea in water heated to 80°C (176°F) for 2-3 minutes for a fragrant, floral cup.",
+            "health_benefits": "This tea is known for its calming effects and may help with stress relief and digestion.",
+            "popularity": "A popular choice in China, Jasmine Green Tea is known for its uplifting aroma and soothing qualities."
+          }
+        }
+      },
+      {
+        "id": 12,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Kukicha",
+          "details": {
+            "description": "Kukicha, also known as 'twig tea,' is a Japanese green tea made from the stems and twigs of the tea plant, offering a mild, refreshing taste.",
+            "origin": "Grown in Japan, Kukicha is made from the stems of leaves that are usually discarded, making it a unique and sustainable option.",
+            "harvest_notes": "This tea is made by selecting young twigs and stems after the leaves have been harvested, giving it a less astringent flavor.",
+            "brewing_methods": "Steep one teaspoon of Kukicha in water heated to 80°C (176°F) for 2-3 minutes to enjoy its light, grassy taste.",
+            "health_benefits": "Kukicha is known for its gentle detoxifying effects and is often consumed to improve digestion.",
+            "popularity": "A favorite in Japanese homes, Kukicha is a mild tea enjoyed for its light and refreshing taste."
+          }
+        }
+      },
+      {
+        "id": 13,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Lung Ching",
+          "details": {
+            "description": "Lung Ching, also known as Dragon Well, is one of China’s most famous green teas, with a rich, nutty flavor and a delicate, refreshing finish.",
+            "origin": "Grown in the Zhejiang Province of China, Lung Ching is prized for its smooth texture and natural sweetness.",
+            "harvest_notes": "Hand-picked in early spring, the leaves are carefully pan-roasted to preserve their freshness and nutty flavor.",
+            "brewing_methods": "Steep one teaspoon of Lung Ching in water heated to 85°C (185°F) for 2-3 minutes for a crisp, flavorful cup.",
+            "health_benefits": "Lung Ching is known for its high antioxidant content and is said to support digestion and improve energy levels.",
+            "popularity": "A highly regarded tea, Lung Ching is often enjoyed for its balance of sweetness and roasted flavor."
+          }
+        }
+      },
+      {
+        "id": 14,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Matcha",
+          "details": {
+            "description": "Matcha is a powdered Japanese green tea made from finely ground shade-grown tea leaves, offering a rich, umami flavor and vibrant green color.",
+            "origin": "Produced in Japan, Matcha is typically grown in the Uji region and is used in traditional tea ceremonies.",
+            "harvest_notes": "The tea leaves are shaded before harvest to boost chlorophyll content, then ground into a fine powder to preserve flavor.",
+            "brewing_methods": "For traditional preparation, whisk one teaspoon of Matcha powder in hot water (70°C-80°C/158°F-176°F) until frothy.",
+            "health_benefits": "Matcha is rich in antioxidants, provides sustained energy, and promotes focus and calmness.",
+            "popularity": "A favorite in Japan and increasingly popular worldwide, Matcha is revered for its flavor and health benefits."
+          }
+        }
+      },
+      {
+        "id": 15,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Meng Ding Gan Lu",
+          "details": {
+            "description": "Meng Ding Gan Lu is a prized green tea from Sichuan Province, known for its sweet and vegetal flavor with a delicate floral aroma.",
+            "origin": "Grown in the Mengding Mountains, Sichuan, this tea is renowned for its unique sweetness and fragrant aroma.",
+            "harvest_notes": "Harvested in early spring, the tea leaves are processed delicately to preserve their natural sweetness and floral character.",
+            "brewing_methods": "Steep one teaspoon of Meng Ding Gan Lu in water heated to 80°C (176°F) for 2-3 minutes for a smooth, refreshing infusion.",
+            "health_benefits": "This tea is rich in antioxidants and is known for supporting heart health and digestion.",
+            "popularity": "A highly regarded tea in China, Meng Ding Gan Lu is cherished for its smooth sweetness and unique flavor."
+          }
+        }
+      },
+      {
+        "id": 16,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Morimoto Sencha",
+          "details": {
+            "description": "Morimoto Sencha is a Japanese green tea with a balanced, vegetal flavor and a smooth, refreshing aftertaste.",
+            "origin": "Grown in Japan, this Sencha is typically harvested in the spring from young leaves.",
+            "harvest_notes": "The leaves are steamed immediately after picking to preserve their freshness and green color.",
+            "brewing_methods": "Steep one teaspoon of Morimoto Sencha in water heated to 80°C (176°F) for 2-3 minutes for a refreshing cup.",
+            "health_benefits": "Sencha is known to support overall health, with potential benefits for heart health and reducing inflammation.",
+            "popularity": "Morimoto Sencha is a well-loved green tea in Japan, enjoyed for its clean and crisp flavor."
+          }
+        }
+      },
+      {
+        "id": 17,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Tai Ping Huo Kui",
+          "details": {
+            "description": "Tai Ping Huo Kui is a renowned green tea from the Anhui province of China, with large, flat leaves and a sweet, vegetal flavor.",
+            "origin": "This tea is grown in the Tai Ping region, where its unique leaf shape and delicate flavor make it highly prized.",
+            "harvest_notes": "The leaves are handpicked in the early spring and carefully processed to maintain their large, flat shape.",
+            "brewing_methods": "Steep one teaspoon of Tai Ping Huo Kui in water heated to 80°C (176°F) for 2-3 minutes for a sweet, vegetal infusion.",
+            "health_benefits": "This tea is rich in antioxidants and is known for supporting digestion and boosting energy.",
+            "popularity": "Tai Ping Huo Kui is highly respected in China and enjoyed by tea connoisseurs for its delicate taste."
+          }
+        }
+      },
+      {
+        "id": 18,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Wu Yuan Ming Mei",
+          "details": {
+            "description": "Wu Yuan Ming Mei is a Chinese green tea from the Wu Yuan region, offering a fresh, floral flavor with a smooth, delicate finish.",
+            "origin": "This tea comes from the Wu Yuan region of China, where it’s cultivated for its fresh, delicate taste.",
+            "harvest_notes": "Picked in early spring, the leaves are processed carefully to preserve their freshness and subtle flavors.",
+            "brewing_methods": "Steep one teaspoon of Wu Yuan Ming Mei in water heated to 80°C (176°F) for 2-3 minutes for a fragrant and light cup.",
+            "health_benefits": "Wu Yuan Ming Mei is rich in antioxidants and is known for its potential to reduce inflammation and support heart health.",
+            "popularity": "A delicate and fragrant tea, Wu Yuan Ming Mei is enjoyed for its lightness and refreshing taste."
+          }
+        }
+      },
+      {
+        "id": 19,
+        "group": "Green Tea",
+        "type": "green_tea",
+        "tea": {
+          "name": "Zhu Ye Qing",
+          "details": {
+            "description": "Zhu Ye Qing is a rare Chinese green tea known for its bright, fresh flavor and smooth, vegetal aftertaste.",
+            "origin": "This tea is grown in the mountains of Sichuan, China, and is prized for its delicate, green flavor.",
+            "harvest_notes": "Picked during the spring, the leaves are processed with great care to preserve their vibrant green color and refreshing taste.",
+            "brewing_methods": "Steep one teaspoon of Zhu Ye Qing in water heated to 80°C (176°F) for 2-3 minutes for a clean, refreshing cup.",
+            "health_benefits": "This tea offers a rich supply of antioxidants and may help with detoxification and supporting cardiovascular health.",
+            "popularity": "Zhu Ye Qing is highly prized for its light, sweet flavor and delicate aroma."
+          }
+        }
+      }
+    ]
+  },
+  "blackteas": {
+    "description": "Delve into the bold flavors and rich history of black teas. Learn about their unique oxidation process, diverse varieties, and the energizing benefits they offer. Document your preferences and create a personalized black tea experience.",
+    "tealist": [
+      {
+        "id": 1,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Assam",
+          "details": {
+            "description": "Assam is a bold, malty black tea known for its rich flavor and dark liquor, often used in breakfast blends.",
+            "origin": "Grown in the Assam region of India, this tea thrives in the region's tropical climate.",
+            "harvest_notes": "Assam tea is typically harvested twice a year, during the first flush (spring) and second flush (summer).",
+            "brewing_methods": "Steep one teaspoon of Assam tea in water heated to 95°C-100°C (203°F-212°F) for 3-5 minutes for a robust cup.",
+            "health_benefits": "High in antioxidants, Assam tea is believed to support heart health and boost energy.",
+            "popularity": "Widely popular for its strong, malty flavor, often enjoyed with milk and sugar."
+          }
+        }
+      },
+      {
+        "id": 2,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Ceylon",
+          "details": {
+            "description": "Ceylon tea is a versatile black tea with a bright, citrusy flavor and medium body.",
+            "origin": "Grown in Sri Lanka, the flavor profile varies based on the altitude of cultivation.",
+            "harvest_notes": "Harvested year-round, with higher altitudes producing lighter teas and lower altitudes yielding bolder flavors.",
+            "brewing_methods": "Steep one teaspoon of Ceylon tea in water heated to 95°C-100°C (203°F-212°F) for 3-5 minutes.",
+            "health_benefits": "Rich in antioxidants, it may support immune function and enhance metabolism.",
+            "popularity": "Popular globally as a standalone tea or as a base for blends like Earl Grey."
+          }
+        }
+      },
+      {
+        "id": 3,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Darjeeling",
+          "details": {
+            "description": "Darjeeling is a light, floral black tea often referred to as the 'Champagne of Teas.'",
+            "origin": "Grown in the Darjeeling district of West Bengal, India, at high altitudes.",
+            "harvest_notes": "Typically harvested in three flushes: first flush (spring), second flush (summer), and autumn flush.",
+            "brewing_methods": "Steep one teaspoon of Darjeeling in water heated to 90°C-95°C (194°F-203°F) for 2-3 minutes for a delicate brew.",
+            "health_benefits": "Contains antioxidants that may help combat stress and promote healthy digestion.",
+            "popularity": "Highly prized for its unique muscatel flavor and light body."
+          }
+        }
+      },
+      {
+        "id": 4,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Dian Hong",
+          "details": {
+            "description": "Dian Hong is a premium Chinese black tea with a sweet, malty flavor and golden tips.",
+            "origin": "Produced in Yunnan Province, China, Dian Hong is known for its high-quality leaves.",
+            "harvest_notes": "Crafted from tender, golden buds and leaves, often handpicked during early spring.",
+            "brewing_methods": "Steep one teaspoon of Dian Hong in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes.",
+            "health_benefits": "Rich in flavonoids, it may support cardiovascular health and improve mental alertness.",
+            "popularity": "Beloved for its smooth taste and sweet, honey-like aroma."
+          }
+        }
+      },
+      {
+        "id": 5,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Hong Yu (Ruby)",
+          "details": {
+            "description": "Hong Yu, or Ruby Black Tea, is a rare Taiwanese tea with a rich, fruity flavor and hints of mint and cinnamon.",
+            "origin": "Grown in the Sun Moon Lake region of Taiwan, this tea is made from a hybrid tea plant.",
+            "harvest_notes": "Harvested from summer to autumn, with leaves handpicked for quality.",
+            "brewing_methods": "Steep one teaspoon of Hong Yu in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes.",
+            "health_benefits": "Known for its calming properties and potential to reduce inflammation.",
+            "popularity": "Highly sought after for its complex flavor profile and rarity."
+          }
+        }
+      },
+      {
+        "id": 6,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Jin Jun Mei",
+          "details": {
+            "description": "Jin Jun Mei is an exquisite Chinese black tea with a sweet, caramel-like flavor and golden-hued leaves.",
+            "origin": "Grown in Wuyi Mountains, Fujian Province, China, known for its small-batch production.",
+            "harvest_notes": "Crafted from young buds, picked in early spring and carefully processed by hand.",
+            "brewing_methods": "Steep one teaspoon of Jin Jun Mei in water heated to 90°C-95°C (194°F-203°F) for 2-3 minutes.",
+            "health_benefits": "Believed to promote relaxation and enhance focus.",
+            "popularity": "Highly regarded for its luxury status and exceptional taste."
+          }
+        }
+      },
+      {
+        "id": 7,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Jiu Qu Hong Mei",
+          "details": {
+            "description": "Jiu Qu Hong Mei, or Red Plum, is a sweet and fruity black tea from China.",
+            "origin": "Grown in the Jiuqu district of Zhejiang Province, known for its delicate processing.",
+            "harvest_notes": "Harvested in spring and summer, using tender leaves for a refined flavor.",
+            "brewing_methods": "Steep one teaspoon of Jiu Qu Hong Mei in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes.",
+            "health_benefits": "May support digestion and provide a gentle energy boost.",
+            "popularity": "Appreciated for its fruity and floral notes, making it a favorite among tea lovers."
+          }
+        }
+      },
+      {
+        "id": 8,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Keemun (Qi Men)",
+          "details": {
+            "description": "Keemun is a classic Chinese black tea with a smooth, wine-like flavor and a hint of smokiness.",
+            "origin": "Produced in Qimen County, Anhui Province, China, renowned for its high-quality black teas.",
+            "harvest_notes": "Harvested in early spring, with leaves carefully rolled and oxidized for flavor.",
+            "brewing_methods": "Steep one teaspoon of Keemun in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes.",
+            "health_benefits": "Known to support mental alertness and relaxation.",
+            "popularity": "A staple in traditional English breakfast blends."
+          }
+        }
+      },
+      {
+        "id": 9,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Mi Zhuan",
+          "details": {
+            "description": "Mi Zhuan, or Honey Aroma Tea, is a sweet, mellow black tea with a honey-like fragrance.",
+            "origin": "Grown in Yunnan Province, China, this tea is prized for its unique aroma.",
+            "harvest_notes": "Crafted from leaves with a natural honey-like taste, harvested in late spring.",
+            "brewing_methods": "Steep one teaspoon of Mi Zhuan in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes.",
+            "health_benefits": "May support digestion and provide calming effects.",
+            "popularity": "Loved for its natural sweetness and smooth finish."
+          }
+        }
+      },
+      {
+        "id": 10,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Xiao Chi Gan",
+          "details": {
+            "description": "Xiao Chi Gan, or Small Red Sweet Tea, is a mild, sweet black tea with a smooth, subtle flavor.",
+            "origin": "Produced in Fujian Province, China, known for its high-quality teas.",
+            "harvest_notes": "Made from small leaves, picked in late spring for a delicate profile.",
+            "brewing_methods": "Steep one teaspoon of Xiao Chi Gan in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes.",
+            "health_benefits": "May help relax the mind and improve digestion.",
+            "popularity": "Appreciated for its gentle sweetness and versatility."
+          }
+        }
+      },
+      {
+        "id": 11,
+        "group": "Black Tea",
+        "type": "black_tea",
+        "tea": {
+          "name": "Zheng Shan Xiao Zhong",
+          "details": {
+            "description": "Zheng Shan Xiao Zhong, or Lapsang Souchong, is a smoky black tea with a bold, pinewood aroma.",
+            "origin": "Grown in Wuyi Mountains, Fujian Province, China, known as the birthplace of black tea.",
+            "harvest_notes": "Made from larger leaves and traditionally smoked over pinewood fires.",
+            "brewing_methods": "Steep one teaspoon of Zheng Shan Xiao Zhong in water heated to 95°C-100°C (203°F-212°F) for 4-5 minutes.",
+            "health_benefits": "Rich in antioxidants, it may boost metabolism and support respiratory health.",
+            "popularity": "Renowned for its smoky flavor and robust character."
+          }
+        }
+      }
+    ]
+  }
+}
