@@ -16,7 +16,7 @@ import json from "public/resapys.json";
   <div id="Block-2" class="flex flex-row mx-14 h-full">
     <div class="w-1/2 ml-8 mr-16">
       <img
-        src={`/img/tea/greenteaimages/id${frontmatter.id}.jpg`}
+        src={`/img/tea/${frontmatter.imgFolder}/id${frontmatter.id}.jpg`}
         alt=`image of ${frontmatter.name}`
         class="max-w-full h-auto overflow-clip flex items-center justify-center rounded-2xl"
       />
@@ -64,16 +64,16 @@ import json from "public/resapys.json";
     <div class="w-1/2 flex items-center mt-24">
       <div>
         <p class="Subheadline">{json["Black Teas"]["resapylist"][0]["name"]}</p>
-        
+
         <p class="Text">
           {json["Black Teas"]["resapylist"][0]["description"]}
         </p>
 
         <a
           class="bg-light rounded-xl px-16 my-8 float-right"
-          href="/recipes/Black-Teas/Black Tea with milk">More Recipes
+          href="/recipes/Black-Teas/Black Tea with milk"
+          >More Recipes
         </a>
-
       </div>
     </div>
   </div>
@@ -83,7 +83,24 @@ import json from "public/resapys.json";
     <p class="Text w-[32rem]">Share your opinion about this tea</p>
 
     <div class="flex flex-row">
-      <div class="h-[24rem] w-[32rem] bg-white"></div>
+      <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between">
+        <div class="flex flex-row justify-between pt-6 px-6">
+          <div  class="flex flex-row gap-6">
+            <img src="" alt="" class="w-12 h-12 rounded-full bg-dark-green" />
+            <div class="flex flex-col">
+              <p class="Subheadline text-black">Viezh Robert</p>
+              <p class="Text text-black">Warsaw, Poland</p>
+            </div>
+          </div>
+          
+          <p class="text-black Subheadline">4.5</p>
+        </div>
+
+        <p class="Text text-black pb-6 px-6 overflow-scroll">
+          "Chai tea is pure comfort in a cup. Its blend of spices creates a
+          cozy, aromatic experience that's perfect for any mood or occasion."
+        </p>
+      </div>
     </div>
   </div>
 </Layout>

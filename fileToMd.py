@@ -1,7 +1,6 @@
 import json
 import os
 
-# Load the JSON file
 with open('Front-End/public/teav2.json', 'r') as file:
     data = json.load(file)
 
@@ -12,7 +11,6 @@ for category, content in data.items():
     category_folder = os.path.join(output_base_folder, category.replace(' ', '-'))
     os.makedirs(category_folder, exist_ok=True)
     
-    # Process each tea in the category
     for tea in content.get('tealist'):
         tea_id = tea.get('id')
         group = tea.get('group')
@@ -21,7 +19,6 @@ for category, content in data.items():
         details = tea['tea']['details']
         imgFolder = content['imgFolder']
 
-        # Create a string for the Markdown content
         md_content = f"""---
 id: {tea_id}
 group: "{group}"
@@ -39,11 +36,9 @@ layout: ../../../layouts/teaPage.astro
 ---
 """
 
-        # File name based on the tea name
         file_name = f"{name}.md"
         file_path = os.path.join(category_folder, file_name)
         
-        # Write to the Markdown file
         with open(file_path, 'w', encoding='utf-8') as md_file:
             md_file.write(md_content)
 
