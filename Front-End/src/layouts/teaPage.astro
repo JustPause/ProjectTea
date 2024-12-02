@@ -3,6 +3,8 @@ import Layout from "src/layouts/layout.astro";
 const { frontmatter } = Astro.props;
 import TeaTitleText from "src/layouts/teaTitleText.astro";
 import json from "public/resapys.json";
+
+const count = [1, 2, 3, 4, 5, 6];
 ---
 
 <Layout title="The Tea List" language="en">
@@ -79,28 +81,60 @@ import json from "public/resapys.json";
   </div>
 
   <div id="Block-5" class="my-32 mx-24">
-    <p class="Headline-3">What do other think about it?</p>
-    <p class="Text w-[32rem]">Share your opinion about this tea</p>
+    <p class="Headline-3 text-light">What do other think about it?</p>
+    <p class="Text w-[32rem] text-light">Share your opinion about this tea</p>
 
-    <div class="flex flex-row">
-      <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between">
-        <div class="flex flex-row justify-between pt-6 px-6">
-          <div  class="flex flex-row gap-6">
-            <img src="" alt="" class="w-12 h-12 rounded-full bg-dark-green" />
-            <div class="flex flex-col">
-              <p class="Subheadline text-black">Viezh Robert</p>
-              <p class="Text text-black">Warsaw, Poland</p>
+    <div class="flex flex-row overflow-scroll gap-12 flex-nowrap mt-8">
+      {
+        count.map((a) => (
+          <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0">
+            <div class="flex flex-row justify-between pt-6 px-6 ">
+              <div class="flex flex-row gap-6">
+                <img
+                  src=""
+                  alt=""
+                  class="w-12 h-12 rounded-full bg-dark-green"
+                />
+                <div class="flex flex-col">
+                  <p class="Subheadline text-black">Viezh Robert</p>
+                  <p class="Text text-black">Warsaw, Poland</p>
+                </div>
+              </div>
+              <p class="text-black Subheadline">4.5</p>
             </div>
+            <p class="Text text-black pb-6 px-6 overflow-scroll text-justify">
+              "Chai tea is pure comfort in a cup. Its blend of spices creates a
+              cozy, aromatic experience that's perfect for any mood or
+              occasion."
+            </p>
           </div>
-          
-          <p class="text-black Subheadline">4.5</p>
-        </div>
+        ))
+      }
 
-        <p class="Text text-black pb-6 px-6 overflow-scroll">
-          "Chai tea is pure comfort in a cup. Its blend of spices creates a
-          cozy, aromatic experience that's perfect for any mood or occasion."
-        </p>
+      <div
+        class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0 items-center"
+      >
+        <textarea
+          class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
+          placeholder="Type your comment ..."
+        >
+        </textarea>
+        <button class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
+          >Comment</button
+        >
       </div>
     </div>
   </div>
+  <script type="module">
+    let data
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/api/comments")
+        .then((response) => response.json())
+        .then((data_from_db) => {
+          data = data_from_db;
+        })
+        .catch((error) => console.error("Error fetching initial data:", error));
+    });
+  </script>
 </Layout>
