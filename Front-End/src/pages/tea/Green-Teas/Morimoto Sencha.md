@@ -9,5 +9,7 @@ harvest_notes: "The leaves are steamed immediately after picking to preserve the
 brewing_methods: "Steep one teaspoon of Morimoto Sencha in water heated to 80°C (176°F) for 2-3 minutes for a refreshing cup."
 health_benefits: "Sencha is known to support overall health, with potential benefits for heart health and reducing inflammation."
 popularity: "Morimoto Sencha is a well-loved green tea in Japan, enjoyed for its clean and crisp flavor."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

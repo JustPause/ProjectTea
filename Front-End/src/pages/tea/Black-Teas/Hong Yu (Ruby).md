@@ -9,5 +9,7 @@ harvest_notes: "Harvested from summer to autumn, with leaves handpicked for qual
 brewing_methods: "Steep one teaspoon of Hong Yu in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes."
 health_benefits: "Known for its calming properties and potential to reduce inflammation."
 popularity: "Highly sought after for its complex flavor profile and rarity."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

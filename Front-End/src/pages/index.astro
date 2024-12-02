@@ -185,7 +185,8 @@ import TeaRecipes from "@global/teaRecipes.astro";
         Object.keys(json).map((category) => (
           <button
             data-category={category}
-            class="bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row text-light/50 TeaSelection"
+            class="bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row text-light/50
+            TeaSelection"
           >
             <p id="Block2DataTabs-p" class="Text text-inherit leading-none">
               {category}
@@ -245,23 +246,8 @@ import TeaRecipes from "@global/teaRecipes.astro";
           class="h-full flex flex-row items-center gap-16 overflow-x-hidden scrollbar-hide"
         >
           <!-- ToDo: is js gauni Arbata [green tea, black tea, white tea] ta categorija idedi i cia ir textas automatiskai pasikeicia -->
-           
-          {
-            json["Green Teas"].tealist.slice(0, 5).map((tea) => (
-              <div class="h-52 w-52 bg-white border-4 border-color rounded-full shrink-0 overflow-hidden">
-                <a
-                  href={`/tea/${tea.group.replace(" ", "-").concat("s")}/${tea.tea.name}`}
-                >
-                  <img
-                    src={`/img/tea/${json["Green Teas"].imgFolder}/id${tea.id}.jpg`}
-                    class="w-full h-full object-cover object-center teaImige"
-                    alt={`imige of the tea ${tea.tea.name}`}
-                  />
-                </a>
-              </div>
-            ))
-          }
         </div>
+
         <div
           class="absolute bg-gradient-to-r from-transparent to-dark-green h-full w-72 right-0 z-10 pointer-events-none"
           id="rightShader"
@@ -290,46 +276,85 @@ import TeaRecipes from "@global/teaRecipes.astro";
       </div>
     </div>
     <script type="module">
-      const categoryButtons = document.querySelectorAll(
-        "button[data-category]"
-      );
+      const categoryButtons = document.querySelectorAll(".TeaSelection");
       const teaDetails = document.getElementById("teaDetails");
       const teaName = document.getElementById("teaName");
       const teaDescription = document.getElementById("teaDescription");
       const teaButton = document.getElementById("buttontext");
 
-      const listOfTeas = document.getElementById
-
-      function onCreate() {
-        teaName.textContent = "Green Teas";
-        teaDescription.textContent =
-          "Explore different types of tea, their production processes and health advantages, while keeping track of your personal tea journey.";
-        teaButton.textContent = "All Green Teas";
+      function onCreate(teaName_text, teaDescription_text, teaButton_text) {
+        teaName.textContent = teaName_text;
+        teaDescription.textContent = teaDescription_text;
+        teaButton.textContent = teaButton_text;
       }
 
-      onCreate();
       fetch("/teav2.json")
         .then((response) => response.json())
         .then((teas) => {
+          onCreate(
+            "Green Teas",
+            teas["Green Teas"].description,
+            "All Green Teas"
+          );
+
           function updateTeaDetails(category) {
             const selectedTea = teas[category]; //teas[category]["description"]
             teaName.textContent = category;
             teaDescription.textContent = selectedTea.description;
             teaButton.textContent = `All ${category}`;
 
-
+            renderTeaBar(teas, category);
           }
 
           categoryButtons.forEach((button) => {
             button.addEventListener("click", (e) => {
+              categoryButtons.forEach((oderButtons) => {
+                oderButtons.classList.remove("underline");
+                oderButtons.classList.remove("text-light/100");
+              });
+
+              button.classList.add("underline");
+              button.classList.add("text-light/100");
+
               const category = e.target.closest("button").dataset.category;
+              console.log(category);
+              
               updateTeaDetails(category);
             });
           });
+
+          renderTeaBar(teas, "Green Teas");
         })
         .catch((error) => {
           console.error("Error fetching teas:", error);
         });
+
+      function renderTeaBar(teas, teaHorizontalBar) {
+        const carousel = document.getElementById("scroll");
+        const currentBar = teas[teaHorizontalBar];
+
+        carousel.innerHTML = "";
+
+        // console.log(currentBar);
+
+        currentBar.tealist.slice(0, 5).forEach((tea) => {
+          const teaDiv = document.createElement("div");
+          teaDiv.className =
+            "h-52 w-52 bg-white border-4 border-color rounded-full shrink-0 overflow-hidden";
+
+          teaDiv.innerHTML = `
+      <a href="/tea/${tea.group.replace(" ", "-")}s/${tea.tea.name}">
+        <img
+          src="/img/tea/${currentBar.imgFolder}/id${tea.id}.jpg"
+          class="w-full h-full object-cover object-center teaImige"
+          alt="image of the tea ${tea.tea.name}"
+        />
+      </a>
+    `;
+
+          carousel.appendChild(teaDiv);
+        });
+      }
     </script>
   </div>
 

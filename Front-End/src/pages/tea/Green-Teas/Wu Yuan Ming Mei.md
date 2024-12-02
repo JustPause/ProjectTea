@@ -9,5 +9,7 @@ harvest_notes: "Picked in early spring, the leaves are processed carefully to pr
 brewing_methods: "Steep one teaspoon of Wu Yuan Ming Mei in water heated to 80°C (176°F) for 2-3 minutes for a fragrant and light cup."
 health_benefits: "Wu Yuan Ming Mei is rich in antioxidants and is known for its potential to reduce inflammation and support heart health."
 popularity: "A delicate and fragrant tea, Wu Yuan Ming Mei is enjoyed for its lightness and refreshing taste."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

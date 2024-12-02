@@ -9,5 +9,7 @@ harvest_notes: "Typically harvested in three flushes: first flush (spring), seco
 brewing_methods: "Steep one teaspoon of Darjeeling in water heated to 90°C-95°C (194°F-203°F) for 2-3 minutes for a delicate brew."
 health_benefits: "Contains antioxidants that may help combat stress and promote healthy digestion."
 popularity: "Highly prized for its unique muscatel flavor and light body."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

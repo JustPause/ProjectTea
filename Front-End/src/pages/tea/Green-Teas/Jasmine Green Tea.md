@@ -9,5 +9,7 @@ harvest_notes: "The tea leaves are scented with jasmine flowers during the bloom
 brewing_methods: "Steep one teaspoon of Jasmine Green Tea in water heated to 80°C (176°F) for 2-3 minutes for a fragrant, floral cup."
 health_benefits: "This tea is known for its calming effects and may help with stress relief and digestion."
 popularity: "A popular choice in China, Jasmine Green Tea is known for its uplifting aroma and soothing qualities."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

@@ -9,5 +9,7 @@ harvest_notes: "Hand-picked in early spring, the leaves are carefully rolled int
 brewing_methods: "Steep one teaspoon of Bi Luo Chun in water heated to 80°C (176°F) for 2-3 minutes to reveal its aromatic notes."
 health_benefits: "Bi Luo Chun is rich in antioxidants, which can help reduce stress and support cognitive function."
 popularity: "A beloved tea in China, it’s known for its sweet, delicate flavor and enchanting aroma."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

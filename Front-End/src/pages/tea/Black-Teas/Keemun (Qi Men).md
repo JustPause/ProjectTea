@@ -9,5 +9,7 @@ harvest_notes: "Harvested in early spring, with leaves carefully rolled and oxid
 brewing_methods: "Steep one teaspoon of Keemun in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes."
 health_benefits: "Known to support mental alertness and relaxation."
 popularity: "A staple in traditional English breakfast blends."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

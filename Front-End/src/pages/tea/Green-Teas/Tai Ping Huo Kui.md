@@ -9,5 +9,7 @@ harvest_notes: "The leaves are handpicked in the early spring and carefully proc
 brewing_methods: "Steep one teaspoon of Tai Ping Huo Kui in water heated to 80°C (176°F) for 2-3 minutes for a sweet, vegetal infusion."
 health_benefits: "This tea is rich in antioxidants and is known for supporting digestion and boosting energy."
 popularity: "Tai Ping Huo Kui is highly respected in China and enjoyed by tea connoisseurs for its delicate taste."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

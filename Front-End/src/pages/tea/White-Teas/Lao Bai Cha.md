@@ -9,5 +9,7 @@ harvest_notes: "Made from white tea leaves that are carefully stored and aged to
 brewing_methods: "Steep one teaspoon of Lao Bai Cha in water heated to 85°C-90°C (185°F-194°F) for 2-3 minutes to enjoy its rich, matured taste."
 health_benefits: "Believed to improve with age, this tea is often consumed for its calming properties and digestive benefits."
 popularity: "Valued for its unique aging process and smooth, developed flavors."
+imgFolder: "whiteteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

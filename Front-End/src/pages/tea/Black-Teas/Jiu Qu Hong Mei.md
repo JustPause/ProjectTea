@@ -9,5 +9,7 @@ harvest_notes: "Harvested in spring and summer, using tender leaves for a refine
 brewing_methods: "Steep one teaspoon of Jiu Qu Hong Mei in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes."
 health_benefits: "May support digestion and provide a gentle energy boost."
 popularity: "Appreciated for its fruity and floral notes, making it a favorite among tea lovers."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

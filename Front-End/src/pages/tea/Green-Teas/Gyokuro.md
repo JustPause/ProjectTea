@@ -9,5 +9,7 @@ harvest_notes: "Harvested in early spring, Gyokuro’s leaves are shaded for up 
 brewing_methods: "Steep one teaspoon of Gyokuro in water heated to 60°C (140°F) for 2-3 minutes for a sweet, smooth infusion."
 health_benefits: "Gyokuro may promote relaxation, focus, and overall well-being."
 popularity: "Known for its premium quality, Gyokuro is a favorite among tea connoisseurs who appreciate its complexity and rich taste."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

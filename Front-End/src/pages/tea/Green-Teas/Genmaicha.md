@@ -9,5 +9,7 @@ harvest_notes: "The rice is roasted alongside the green tea leaves, imparting a 
 brewing_methods: "Steep one teaspoon of Genmaicha in water heated to 80°C (176°F) for 3-5 minutes to enjoy its nutty flavor."
 health_benefits: "Genmaicha may promote digestion and help reduce stress, making it an ideal comfort tea."
 popularity: "Widely consumed in Japan, this tea is often referred to as 'popcorn tea' due to the roasted rice."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

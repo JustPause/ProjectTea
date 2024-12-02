@@ -9,5 +9,7 @@ harvest_notes: "Hand-picked in early spring, the leaves are carefully pan-roaste
 brewing_methods: "Steep one teaspoon of Lung Ching in water heated to 85°C (185°F) for 2-3 minutes for a crisp, flavorful cup."
 health_benefits: "Lung Ching is known for its high antioxidant content and is said to support digestion and improve energy levels."
 popularity: "A highly regarded tea, Lung Ching is often enjoyed for its balance of sweetness and roasted flavor."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

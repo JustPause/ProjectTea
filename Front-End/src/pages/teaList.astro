@@ -38,7 +38,10 @@ import json from "public/teav2.json";
     <div class="w-3/12 flex flex-col gap-10 items-center mt-8">
       {
         Object.keys(json).map((category) => (
-          <button class="focus:text-light focus:underline bg-transparent px-3 py-2 rounded flex  text-light/50 TeaSelection ">
+          <button
+            data-category={category}
+            class="bg-transparent px-3 py-2 rounded flex text-light/50 TeaSelection"
+          >
             <p
               id="Block2DataTabs-p"
               class="Subheadline text-inherit leading-none"
@@ -51,12 +54,12 @@ import json from "public/teav2.json";
       }
     </div>
 
-    <div class="w-9/12 flex flex-row flex-wrap gap-x-16 gap-y-12">
-      {
+    <div class="w-9/12 flex flex-row flex-wrap gap-x-16 gap-y-12" id="TeaList">
+      <!-- {
         json["Green Teas"].tealist.map((tea) => (
           <div class="w-[19rem] h-[24rem]  relative rounded-xl  group">
             <img
-              src={`img/tea/Green-Teas/id${tea.id}.jpg`}
+              src={`img/tea/greenteaimages/id${tea.id}.jpg`}
               alt=""
               class="absolute h-full w-full object-cover -z-10 rounded-xl transition-all duration-300 brightness-[0.6] group-hover:brightness-100"
             />
@@ -84,7 +87,7 @@ import json from "public/teav2.json";
             </a>
           </div>
         ))
-      }
+      } -->
     </div>
 
     <style>
@@ -92,6 +95,80 @@ import json from "public/teav2.json";
         transform: scaleX(-1) translateY(-60%);
       }
     </style>
+
+    <script type="module">
+      const categoryButtonsv2 = document.querySelectorAll(".TeaSelection");
+
+      fetch("/teav2.json")
+        .then((response) => response.json())
+        .then((teas) => {
+          categoryButtonsv2.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              categoryButtonsv2.forEach((oderButtons) => {
+                oderButtons.classList.remove("underline");
+                oderButtons.classList.remove("text-light/100");
+              });
+
+              button.classList.add("underline");
+              button.classList.add("text-light/100");
+
+              const categoryv2 = e.target.closest("button").dataset.category;
+
+              renderTeaBarv2(teas, categoryv2);
+            });
+          });
+
+          renderTeaBarv2(teas, "Green Teas");
+        })
+        .catch((error) => {
+          console.error("Error fetching teas:", error);
+        });
+
+      function renderTeaBarv2(teas, teaList) {
+        const carouselv2 = document.getElementById("TeaList");
+        const currentBarv2 = teas[teaList];
+
+        carouselv2.innerHTML = "";
+
+        currentBarv2.tealist.map((tea) => {
+          const teaDivv2 = document.createElement("div");
+          teaDivv2.className = "w-[19rem] h-[24rem] relative rounded-xl group";
+          console.log(teas[teaList]["imgFolder"]);
+
+          teaDivv2.innerHTML = `
+            <img
+              src="img/tea/${teas[teaList]["imgFolder"]}/id${tea.id}.jpg"
+              alt=""
+              class="absolute h-full w-full object-cover -z-10 rounded-xl transition-all duration-300 brightness-[0.6] group-hover:brightness-100"
+            />
+            <a
+              href="/tea/${teaList.replace(" ", "-")}/${tea.tea.name}"
+              class="h-full w-full flex flex-col justify-between"
+            >
+              <div class="flex flex-row justify-between">
+                <p class="m-3 text-light Subheadline group-hover:text-black">
+                  ${tea.tea.name}
+                </p>
+                <img
+                  src="/svg/heart.svg"
+                  alt="Logo"
+                  class="m-3 w-5 fill-none"
+                />
+              </div>
+              <div class="flex justify-end m-3">
+                <button class="border-2 border-light group-hover:border-black rounded-lg py-1 px-4 transition-all duration-300 hover:bg-black/35">
+                  <p class="Caption text-light group-hover:text-black">
+                    Learn more
+                  </p>
+                </button>
+              </div>
+            </a>
+    `;
+
+          carouselv2.appendChild(teaDivv2);
+        });
+      }
+    </script>
   </div>
 
   <div id="Block-3" class="my-32">

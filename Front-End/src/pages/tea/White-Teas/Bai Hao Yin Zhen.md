@@ -9,5 +9,7 @@ harvest_notes: "Made exclusively from young, unopened tea buds, harvested during
 brewing_methods: "Steep one teaspoon of Bai Hao Yin Zhen in water heated to 75°C-80°C (167°F-176°F) for 2-3 minutes for a light, sweet infusion."
 health_benefits: "Rich in antioxidants, Silver Needle is believed to support skin health and boost the immune system."
 popularity: "Highly prized among tea enthusiasts for its subtle sweetness and delicate profile."
+imgFolder: "whiteteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

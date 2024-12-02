@@ -9,5 +9,7 @@ harvest_notes: "Crafted from leaves with a natural honey-like taste, harvested i
 brewing_methods: "Steep one teaspoon of Mi Zhuan in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes."
 health_benefits: "May support digestion and provide calming effects."
 popularity: "Loved for its natural sweetness and smooth finish."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

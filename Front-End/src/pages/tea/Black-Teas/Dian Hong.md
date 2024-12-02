@@ -9,5 +9,7 @@ harvest_notes: "Crafted from tender, golden buds and leaves, often handpicked du
 brewing_methods: "Steep one teaspoon of Dian Hong in water heated to 90°C-95°C (194°F-203°F) for 3-4 minutes."
 health_benefits: "Rich in flavonoids, it may support cardiovascular health and improve mental alertness."
 popularity: "Beloved for its smooth taste and sweet, honey-like aroma."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

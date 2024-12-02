@@ -9,5 +9,7 @@ harvest_notes: "Harvested in early spring, this tea includes both buds and leave
 brewing_methods: "Steep one teaspoon of Bai Mu Dan in water heated to 75°C-80°C (167°F-176°F) for 2-3 minutes for a smooth, aromatic cup."
 health_benefits: "Known for its high antioxidant content, White Peony may help reduce inflammation and promote relaxation."
 popularity: "Widely enjoyed for its complex flavor and affordability compared to Silver Needle."
+imgFolder: "whiteteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

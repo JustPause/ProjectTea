@@ -9,5 +9,7 @@ harvest_notes: "Picked during the spring season, the leaves are carefully proces
 brewing_methods: "Steep one teaspoon of Fenggang Zinc Selenium Tea in water heated to 85°C (185°F) for 2-3 minutes to bring out its full mineral richness."
 health_benefits: "Rich in zinc and selenium, this tea may support immune health and reduce inflammation."
 popularity: "Popular for its health benefits, this tea is a favorite among those seeking a mineral-rich brew."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

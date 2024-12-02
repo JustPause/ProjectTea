@@ -9,5 +9,7 @@ harvest_notes: "Harvested in early spring, the leaves are processed with a speci
 brewing_methods: "Steep one teaspoon of En Shi Yu Lu in water heated to 80°C (176°F) for 2-3 minutes for the best flavor."
 health_benefits: "This tea supports immune health and provides a gentle energy boost."
 popularity: "Known for its quality and flavor, En Shi Yu Lu is appreciated by those who enjoy a refreshing and aromatic green tea."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

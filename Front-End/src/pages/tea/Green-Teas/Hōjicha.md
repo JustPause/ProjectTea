@@ -9,5 +9,7 @@ harvest_notes: "The leaves are roasted at high temperatures, giving the tea a br
 brewing_methods: "Steep one teaspoon of Hōjicha in water heated to 90°C (194°F) for 2-3 minutes for a smooth, roasted taste."
 health_benefits: "Hōjicha is gentle on the stomach and may aid digestion, thanks to its low caffeine content."
 popularity: "Popular in Japan, it’s often consumed in the evening due to its calming properties."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

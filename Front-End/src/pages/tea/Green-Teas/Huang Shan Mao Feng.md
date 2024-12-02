@@ -9,5 +9,7 @@ harvest_notes: "Harvested in early spring, the tender buds are carefully process
 brewing_methods: "Steep one teaspoon of Huang Shan Mao Feng in water heated to 80°C (176°F) for 2-3 minutes for a refreshing cup."
 health_benefits: "This tea is rich in antioxidants and is said to promote heart health and boost immunity."
 popularity: "Highly respected in China, Huang Shan Mao Feng is a favorite for its light and refreshing taste."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

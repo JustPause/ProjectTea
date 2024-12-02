@@ -9,5 +9,7 @@ harvest_notes: "Picked after the first flush of the season, Bancha’s leaves ar
 brewing_methods: "Steep one teaspoon of Bancha in water heated to 80°C (176°F) for 2-3 minutes for a refreshing cup."
 health_benefits: "Bancha is known for its potential to help with digestion and support heart health."
 popularity: "A favorite in Japanese households, it provides a soothing, everyday tea experience."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

@@ -9,5 +9,7 @@ harvest_notes: "Assam tea is typically harvested twice a year, during the first 
 brewing_methods: "Steep one teaspoon of Assam tea in water heated to 95°C-100°C (203°F-212°F) for 3-5 minutes for a robust cup."
 health_benefits: "High in antioxidants, Assam tea is believed to support heart health and boost energy."
 popularity: "Widely popular for its strong, malty flavor, often enjoyed with milk and sugar."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

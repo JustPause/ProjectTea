@@ -9,5 +9,7 @@ harvest_notes: "This tea is made by selecting young twigs and stems after the le
 brewing_methods: "Steep one teaspoon of Kukicha in water heated to 80°C (176°F) for 2-3 minutes to enjoy its light, grassy taste."
 health_benefits: "Kukicha is known for its gentle detoxifying effects and is often consumed to improve digestion."
 popularity: "A favorite in Japanese homes, Kukicha is a mild tea enjoyed for its light and refreshing taste."
+imgFolder: "greenteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---

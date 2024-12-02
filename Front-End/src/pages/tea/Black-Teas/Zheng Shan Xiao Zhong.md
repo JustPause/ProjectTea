@@ -9,5 +9,7 @@ harvest_notes: "Made from larger leaves and traditionally smoked over pinewood f
 brewing_methods: "Steep one teaspoon of Zheng Shan Xiao Zhong in water heated to 95°C-100°C (203°F-212°F) for 4-5 minutes."
 health_benefits: "Rich in antioxidants, it may boost metabolism and support respiratory health."
 popularity: "Renowned for its smoky flavor and robust character."
+imgFolder: "blackteaimages"
+
 layout: ../../../layouts/teaPage.astro
 ---
