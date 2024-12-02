@@ -2,14 +2,8 @@
 import Layout from "src/layouts/layout.astro";
 import NiceButton from "@global/niceButton.astro";
 import BackgroundImige from "@global/backgroundImige.astro";
-import json from "public/teas.json";
+import json from "public/teav2.json";
 import TeaRecipes from "@global/teaRecipes.astro";
-
-const teaLocasion = [
-  "/tea/Green-Teas/",
-  "/tea/Black-Teas/",
-  "/tea/White-Teas/"
-];
 ---
 
 <Layout title="Tea today is delicious" language="en">
@@ -244,7 +238,6 @@ const teaLocasion = [
           class="absolute bg-gradient-to-r from-dark-green to-transparent h-full w-72 left-0 z-10 pointer-events-none"
           id="leftShader"
         >
-        
         </div>
 
         <div
@@ -252,12 +245,15 @@ const teaLocasion = [
           class="h-full flex flex-row items-center gap-16 overflow-x-hidden scrollbar-hide"
         >
           <!-- ToDo: is js gauni Arbata [green tea, black tea, white tea] ta categorija idedi i cia ir textas automatiskai pasikeicia -->
+           
           {
             json["Green Teas"].tealist.slice(0, 5).map((tea) => (
               <div class="h-52 w-52 bg-white border-4 border-color rounded-full shrink-0 overflow-hidden">
-                <a href={`/tea/Green-Teas/${tea.tea.name}`}>
+                <a
+                  href={`/tea/${tea.group.replace(" ", "-").concat("s")}/${tea.tea.name}`}
+                >
                   <img
-                    src={`/img/tea/Green-Teas/id${tea.id}.jpg`}
+                    src={`/img/tea/${json["Green Teas"].imgFolder}/id${tea.id}.jpg`}
                     class="w-full h-full object-cover object-center teaImige"
                     alt={`imige of the tea ${tea.tea.name}`}
                   />
@@ -302,6 +298,8 @@ const teaLocasion = [
       const teaDescription = document.getElementById("teaDescription");
       const teaButton = document.getElementById("buttontext");
 
+      const listOfTeas = document.getElementById
+
       function onCreate() {
         teaName.textContent = "Green Teas";
         teaDescription.textContent =
@@ -310,7 +308,7 @@ const teaLocasion = [
       }
 
       onCreate();
-      fetch("/teas.json")
+      fetch("/teav2.json")
         .then((response) => response.json())
         .then((teas) => {
           function updateTeaDetails(category) {
@@ -318,6 +316,8 @@ const teaLocasion = [
             teaName.textContent = category;
             teaDescription.textContent = selectedTea.description;
             teaButton.textContent = `All ${category}`;
+
+
           }
 
           categoryButtons.forEach((button) => {

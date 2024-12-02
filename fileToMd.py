@@ -2,7 +2,7 @@ import json
 import os
 
 # Load the JSON file
-with open('Front-End/public/teas.json', 'r') as file:
+with open('Front-End/public/teav2.json', 'r') as file:
     data = json.load(file)
 
 # Base folder for the Markdown files

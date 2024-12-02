@@ -1,5 +1,6 @@
 {
-  "whiteteas": {
+  "White Teas": {
+    "imgFolder": "whiteteaimages",
     "description": "Uncover the delicate elegance of white teas, celebrated for their minimal processing and subtle flavors. Discover their gentle harvesting techniques, potential health benefits, and savor the light, refreshing taste while curating your own white tea journey.",
     "tealist": [
       {
@@ -100,7 +101,8 @@
       }
     ]
   },
-  "greenteas": {
+  "Green Teas": {
+    "imgFolder": "greenteaimages",
     "description": "Discover the vibrant world of green teas, renowned for their fresh flavors and minimal processing. Learn about their diverse varieties, meticulous production techniques, and impressive health benefits, while documenting your personal green tea journey.",
     "tealist": [
       {
@@ -409,7 +411,8 @@
       }
     ]
   },
-  "blackteas": {
+  "Black Teas": {
+    "imgFolder": "blackteaimages",
     "description": "Delve into the bold flavors and rich history of black teas. Learn about their unique oxidation process, diverse varieties, and the energizing benefits they offer. Document your preferences and create a personalized black tea experience.",
     "tealist": [
       {
