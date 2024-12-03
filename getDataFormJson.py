@@ -1,7 +1,7 @@
 import json
 
 def teaList():
-    with open('Front-End/public/teas.json', 'r') as file:
+    with open('Front-End/public/teav2.json', 'r') as file:
         data = json.load(file)
         Green = Black = White = []
         for i in data['Green Teas']['tealist']:
@@ -32,9 +32,6 @@ def teaList():
             # White={"name": i['tea']['name']}
             
     return Green, Black, White
-    
-def commentList():
-    pass
 
 def recipeList():
     pass

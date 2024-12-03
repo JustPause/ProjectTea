@@ -1,66 +1,434 @@
 from dataBaseConnector import Database
 from getDataFormJson import teaList
 from main import db
+import random
+
+i = 0
 
 def insert_data_funcion(tea):
     existing_tea = Database.check_for_duplicates_tea(tea["name"])
     
     if existing_tea == 0:
-        Database.add_tea(name=tea["name"], tea_group=tea["type"], link=tea["link"])
+        return Database.add_tea(name=tea["name"], tea_group=tea["type"], link=tea["link"])
+    else:
+        return -1
 
+def insert_comment_funcion(tea_id):
+    data=random_comments(tea_id)
+    Database.add_comment(tea_id=data[3], text=data[0], userName=data[1], location=data[2])
+
+def random_comments(tea_id):
+    randomComment = ["A delicate green tea with a smooth flavor."
+                    ,"Perfect for relaxation after a long day."
+                    ,"An excellent tea for pairing with light snacks."
+                    ,"An Ju Bai Cha has a sweet, mellow taste."
+                    ,"Great for beginners in the world of green tea."
+
+                    ,"Bancha is a classic Japanese green tea."
+                    ,"Mild and refreshing with a light grassy taste."
+                    ,"Perfect for sipping throughout the day."
+                    ,"A traditional tea that pairs well with Japanese cuisine."
+                    ,"A good tea for those who prefer a less grassy flavor."
+
+                    ,"A fragrant tea with a fresh, floral aroma."
+                    ,"Bi Luo Chun has a delicate and sweet taste."
+                    ,"One of the top Chinese green teas, very popular."
+                    ,"The tea leaves are beautifully curled, making it a visual treat."
+                    ,"Great for those who enjoy a fresh, sweet green tea."
+
+                    ,"Dragon Well is one of China's most famous green teas."
+                    ,"A smooth and slightly nutty flavor."
+                    ,"It has a wonderful vegetal taste with a sweet aftertaste."
+                    ,"Dragon Well is perfect for daily tea drinkers."
+                    ,"One of the best green teas you can find from China."
+
+                    ,"A rare and high-quality green tea from En Shi."
+                    ,"Has a refreshing, light taste with floral notes."
+                    ,"En Shi Yu Lu is known for its delicate taste and smooth finish."
+                    ,"A perfect tea for those who like mild green teas."
+                    ,"Great for brewing multiple times, each infusion brings new flavors."
+
+                    ,"Rich in antioxidants due to its high zinc and selenium content."
+                    ,"A mild green tea with a unique, earthy taste."
+                    ,"Known for its health benefits, especially for skin health."
+                    ,"The taste is subtle but refreshing."
+                    ,"A good choice for those who enjoy a soft, mineral flavor."
+
+                    ,"A unique green tea combined with roasted rice."
+                    ,"The roasted rice adds a toasty, nutty flavor."
+                    ,"Genmaicha is soothing and perfect for cold weather."
+                    ,"A comforting, balanced flavor that isn’t too strong."
+                    ,"Great for pairing with a variety of meals."
+
+                    ,"A high-quality Japanese green tea with an umami-rich taste."
+                    ,"Gyokuro is sweet and has a deep, rich flavor."
+                    ,"Great for tea connoisseurs looking for a unique experience."
+                    ,"Perfect for those who enjoy a savory green tea."
+                    ,"This tea offers a sweet and vegetal taste that's very distinct."
+
+                    ,"A famous tea from the Huangshan region in China."
+                    ,"A delicate and floral tea with a smooth finish."
+                    ,"Has a mild, sweet flavor with a light grassy note."
+                    ,"Great for those who enjoy a balanced green tea."
+                    ,"Huang Shan Mao Feng is perfect for afternoon tea."
+
+                    ,"A roasted green tea that has a warm, comforting flavor."
+                    ,"Hōjicha has a rich, toasty flavor that is less grassy."
+                    ,"A great tea for evening relaxation."
+                    ,"Its roasted taste makes it unique compared to other green teas."
+                    ,"Hōjicha has a calming, mellow taste that’s perfect after meals."
+
+                    ,"Fragrant jasmine blossoms enhance the green tea’s flavor."
+                    ,"A perfect blend of floral and grassy notes."
+                    ,"Ideal for relaxing moments, with a sweet aroma."
+                    ,"A classic, refreshing green tea."
+                    ,"Great for anyone who loves floral tea blends."
+
+                    ,"Made from the stems and leaves of the tea plant."
+                    ,"Kukicha has a unique, light, and nutty flavor."
+                    ,"A smooth, sweet taste that's great for beginners."
+                    ,"A very soothing tea that's perfect for any time of day."
+                    ,"Kukicha is a gentle green tea with a light taste."
+
+                    ,"Also known as Dragon Well, it’s a highly revered green tea."
+                    ,"Lung Ching has a deep, rich flavor with a slightly nutty aftertaste."
+                    ,"A fragrant, fresh tea with a vegetal flavor."
+                    ,"Great for people who prefer a clean, natural green tea."
+                    ,"One of the best teas for both beginners and experts."
+
+                    ,"The most famous powdered green tea from Japan."
+                    ,"Matcha has a bold, rich flavor with a creamy finish."
+                    ,"Perfect for traditional Japanese tea ceremonies."
+                    ,"Great for adding to smoothies or desserts."
+                    ,"Matcha has a unique, vibrant green color and a strong taste."
+
+                    ,"A sweet, floral tea with a smooth and refreshing taste."
+                    ,"Meng Ding Gan Lu is light and mellow, perfect for everyday drinking."
+                    ,"A great tea for new green tea drinkers."
+                    ,"Has a rich, sweet aftertaste that lingers."
+                    ,"This tea is gentle, with a light, fresh flavor."
+
+                    ,"A blend of strong black tea with fragrant jasmine."
+                    ,"The floral jasmine aroma complements the boldness of black tea."
+                    ,"Jasmine Black Tea is a great introduction to floral black teas."
+                    ,"Rich in flavor and soothing with a delicate floral finish."
+                    ,"Ideal for those who enjoy fragrant, flavorful teas."
+
+                    ,"A lighter, more delicate version of jasmine tea."
+                    ,"The subtle jasmine fragrance enhances the smooth white tea."
+                    ,"A calming, refreshing drink that's perfect for tea lovers."
+                    ,"Jasmine White Tea has a delicate and aromatic profile."
+                    ,"Great for when you want something gentle and floral."
+
+                    ,"A bold, malty black tea from India."
+                    ,"Assam tea has a rich, full-bodied flavor."
+                    ,"Great for breakfast or a strong afternoon tea."
+                    ,"Pairs well with milk and sugar for a robust cup."
+                    ,"Assam is a classic tea that is perfect for a strong brew."
+
+                    ,"Ceylon tea is light and brisk with a citrusy flavor."
+                    ,"A perfect afternoon tea with a smooth finish."
+                    ,"It has a refreshing taste that’s great on its own or with milk."
+                    ,"Ceylon is perfect for those who enjoy a crisp, clean black tea."
+                    ,"A great tea for a revitalizing pick-me-up."
+
+                    ,"Known as the 'Champagne of teas,' Darjeeling offers a delicate flavor."
+                    ,"A light, floral tea with fruity notes."
+                    ,"Darjeeling is perfect for tea connoisseurs who enjoy complex flavors."
+                    ,"A sophisticated tea with a unique muscatel flavor."
+                    ,"It has a floral aroma and a light, crisp finish."
+
+                    ,"Dian Hong is a smooth, rich black tea from Yunnan, China."
+                    ,"It has a sweet, malty flavor with hints of cocoa."
+                    ,"Dian Hong offers a pleasant, mellow brew that's easy to drink."
+                    ,"This tea has a beautifully rich color and flavor."
+                    ,"A great black tea for those who enjoy a smoother brew."
+
+                    ,"Ruby tea has a sweet, fruity flavor with a smooth finish."
+                    ,"A rare tea from Taiwan with a distinct red color."
+                    ,"Rich in flavor with subtle notes of honey and fruit."
+                    ,"Great for those who prefer a smoother, less astringent black tea."
+                    ,"Ruby tea is a special treat for tea lovers seeking something unique."
+
+                    ,"A luxurious black tea with a sweet, malty flavor."
+                    ,"Jin Jun Mei has a rich, full-bodied taste with hints of honey."
+                    ,"A premium tea that's perfect for special occasions."
+                    ,"It has a smooth, complex flavor profile."
+                    ,"Jin Jun Mei offers a delicate, floral aroma."
+                    ]
+    randomNames = ["Dewdrop Emerald",
+                    "Jade Blossom",
+                    "Silver Springs",
+                    "Mountain Mist",
+                    "Morning Dew",
+                    "Celestial Green",
+                    "Whispering Bamboo",
+                    "Golden Grove",
+                    "Crystal Leaf",
+                    "Frosted Willow",
+                    "Verdant Bliss",
+                    "Tranquil Leaf",
+                    "Jade Dragon",
+                    "Sunlit Meadow",
+                    "Misty Hills",
+                    "Moonlit Orchard",
+                    "Pure Serenity",
+                    "Lush Bamboo",
+                    "Radiant Garden",
+                    "Dewy Forest",
+                    "Ancient Springs",
+                    "Evergreen Delight",
+                    "Zen Essence",
+                    "Crystal Brook",
+                    "Enchanted Meadow",
+                    "Dragon’s Breath",
+                    "Spring Veil",
+                    "Peaceful Grove",
+                    "Everlast Green",
+                    "Twilight Green",
+                    "Verdant Forest",
+                    "Zen Garden",
+                    "Lotus Leaf",
+                    "Emerald Dew",
+                    "Heavenly Green",
+                    "Morning Breeze",
+                    "Green Gold",
+                    "Autumn Green",
+                    "Sacred Dew",
+                    "Whispering Pines",
+                    "Crimson Majesty",
+                    "Velvet Black",
+                    "Dark Night",
+                    "Royal Ceylon",
+                    "Midnight Brew",
+                    "Bold Essence",
+                    "Sunset Brew",
+                    "Dark Velvet",
+                    "Imperial Gold",
+                    "Golden Shadow",
+                    "Majestic Assam",
+                    "Black Thunder",
+                    "Ruby Eclipse",
+                    "Golden Amber",
+                    "Royal Bliss",
+                    "Dark Moon",
+                    "Autumn Ember",
+                    "Smoky Charm",
+                    "Eclipse Delight",
+                    "Dark Blossom",
+                    "Midnight Ember",
+                    "Ebony Dream",
+                    "Wild Harvest",
+                    "Shadow Rose",
+                    "Steeped Essence",
+                    "Velvet Night",
+                    "Royal Harmony",
+                    "Shadowed Gold",
+                    "Spiced Essence",
+                    "Silver Moon",
+                    "Dark Mystique",
+                    "Black Crest",
+                    "Amber Kiss",
+                    "Noble Earl",
+                    "Royal Serenade",
+                    "White Whisper",
+                    "Silver Moonlight",
+                    "Frosted Rose",
+                    "Snow Blossom",
+                    "Morning Dew White",
+                    "Pure Serenity",
+                    "Winter Bloom",
+                    "Silver Frost",
+                    "Crystal White",
+                    "Vanilla Mist",
+                    "White Velvet",
+                    "Golden Orchid",
+                    "Winter’s Kiss",
+                    "Snowflake Essence",
+                    "Bright Snow",
+                    "Pearl Dew",
+                    "Pure Blossom",
+                    "Fresh Snowfall",
+                    "Sweet Haze",
+                    "White Diamond",
+                    "Ice Blossom",
+                    "Elegant Snow",
+                    "Winter Breeze",
+                    "Jasmine Snow",
+                    "Silver Dawn",
+                    "Crystal Veil",
+                    "Radiant Snow",
+                    "Glacial Essence",
+                    "Snowy Embrace",
+                    "Frosted Bliss",
+                    "White Cloud",
+                    "Snowfield White",
+                    "Tranquil Pearl",
+                    "Winter Jewel",
+                    "White Moon",
+                    "Ice Rose",
+                    "Arctic Breeze",
+                    "Frosted Pearl",
+                    "Velvet Snow",
+                    "Pure Horizon"]                   
+    randomLocations = ["Silverstone", 
+                    "Heights",
+                    "Coral Bay City",
+                    "Timberview Park",
+                    "Crescent Harbor",
+                    "Ambercliff",
+                    "Solstice Harbor",
+                    "Moonfall City",
+                    "Riverstone Bay",
+                    "Summit Ridge",
+                    "Crystal Falls",
+                    "Royal Grove",
+                    "Sapphire Springs",
+                    "Redwood Crossing",
+                    "Windward City",
+                    "Emerald Bay",
+                    "Horizon Peaks",
+                    "Ashfield Township",
+                    "Starlight Quarter",
+                    "Falcon's Reach",
+                    "Maplewood",
+                    "Beacon's Edge",
+                    "Aurora Valley",
+                    "Riverview Heights",
+                    "Golden Gate District",
+                    "Seabreeze Cove",
+                    "Summit Gardens",
+                    "Grandview Heights",
+                    "Westbrook Plaza",
+                    "Bayfield Heights",
+                    "Morningstar City",
+                    "Thunder Peak",
+                    "Serpent’s Summit",
+                    "Snowy Ridge",
+                    "Silver Rock Mountain",
+                    "Misty Hillside",
+                    "Ravenstone Peak",
+                    "Crystal Glacier",
+                    "Northward Mountain",
+                    "Suncrest Heights",
+                    "Glacier’s Reach",
+                    "Wintergate Summit",
+                    "Pinecrest Peak",
+                    "Storm Watch",
+                    "Dark Hollow Ridge",
+                    "Bearclaw Summit",
+                    "Twilight Mountain",
+                    "Frostfall Pass",
+                    "Azure Summit",
+                    "Dragon’s Wing Peak",
+                    "Evergreen Spire",
+                    "Highwind Bluff",
+                    "Silverstone Crest",
+                    "Cloudcrest Peak",
+                    "Thundercliff Ridge",
+                    "Eternal Snow Peak",
+                    "Sandspire Dunes",
+                    "Mirage Oasis",
+                    "Sunblaze Desert",
+                    "Golden Sands",
+                    "Crimson Canyon",
+                    "Oasis of Dreams",
+                    "Dustfall Ridge",
+                    "Shifting Sands",
+                    "Starry Hollow",
+                    "Solstice Sands",
+                    "Sunfire Oasis",
+                    "Silver Mirage",
+                    "Cactus Grove",
+                    "Windcarver Dunes",
+                    "Ember Desert",
+                    "Forgotten Canyon",
+                    "Starlight Plateau",
+                    "Heatwave Hollow",
+                    "Serpent’s Mirage",
+                    "Dunecrest Oasis",
+                    "Crystal Mirage",
+                    "Desert Sun Peaks",
+                    "Sagebrush Flats",
+                    "Desert Moon Bay",
+                    "Canyon's End",
+                    "Whispering Woods",
+                    "Twilight Grove",
+                    "Ravenwood Forest",
+                    "Shadowleaf Glen",
+                    "Moonlight Hollow",
+                    "Sylvan Glade",
+                    "Frostwind Forest",
+                    "Deepwood Hollow",
+                    "Ironbark Grove",
+                    "Ashenwood Forest",
+                    "Dreamweaver Grove",
+                    "Fallenleaf Grove",
+                    "Evergreen Hollow",
+                    "Silverpine Forest",
+                    "Mistwood Hollow",
+                    "Wyrmwood Glade",
+                    "Wildflower Forest",
+                    "Hidden Glen",
+                    "Redwood Realm",
+                    "Thicketwood Hollow",
+                    "Sagebrush Forest",
+                    "Starlight Isle",
+                    "Coral Shore",
+                    "Crystal Isle",
+                    "Moonrise Bay",
+                    "Horizon Isle",
+                    "Sapphire Lagoon",
+                    "Emerald Archipelago",
+                    "Solana Island",
+                    "Driftwood Isle",
+                    "Tempest Bay",
+                    "Windward Isles",
+                    "Mariner’s Island",
+                    "Sunreef Isle",
+                    "Seabound Isle"]
+    
+    i1= random.randrange(1,len(randomComment))
+    i2= random.randrange(1,len(randomNames))
+    i3= random.randrange(1,len(randomLocations))
+    
+    return [randomComment[i1], randomNames[i2], randomLocations[i3], tea_id]
+    
 def insert_data():
-
+    
     # Database.drop_tea_table()
     # Database.drop_comment_table()
     # Database.drop_recipe_table()
     
     Green, Black, White=teaList()
-        
+    global i  
     for tea in Green:
-        insert_data_funcion(tea)
-        
+        id=insert_data_funcion(tea)
+        for value in range(5):
+            insert_comment_funcion(id)
+ 
     for tea in Black:
         insert_data_funcion(tea)
         
     for tea in White:
         insert_data_funcion(tea)
-    
-    # tea1 = Database.add_tea(name="Earl Grey2", tea_group=1, link="http://example.com/earlgrey2")
-    # tea2 = Database.add_tea(name="Matcha", tea_group=2, link="http://example.com/matcha")
-    # tea3 = Database.add_tea(name="Chamomile", tea_group=3, link="http://example.com/chamomile")
-    # tea4 = Database.add_tea(name="Oolong", tea_group=1, link="http://example.com/oolong")
-    # tea5 = Database.add_tea(name="Jasmine Green", tea_group=2, link="http://example.com/jasminegreen")
-    # tea6 = Database.add_tea(name="Peach Iced Tea", tea_group=1, link="http://example.com/peachicedtea")
-    # tea7 = Database.add_tea(name="Sencha", tea_group=2, link="http://example.com/sencha")
-    # tea8 = Database.add_tea(name="Peppermint", tea_group=3, link="http://example.com/peppermint")
-    # tea9 = Database.add_tea(name="Blackberry Tea", tea_group=1, link="http://example.com/blackberrytea")
-    # tea10 = Database.add_tea(name="Lemon Balm", tea_group=3, link="http://example.com/lemonbalm")
-    
-    # comment1 = Database.add_comment(tea_id=tea1.id, text="Great taste, very aromatic!")
-    # comment2 = Database.add_comment(tea_id=tea2.id, text="I love the earthy notes in Matcha.")
-    # comment3 = Database.add_comment(tea_id=tea3.id, text="Chamomile is so calming and relaxing.")
-    # comment4 = Database.add_comment(tea_id=tea4.id, text="Oolong is perfect for afternoon tea!")
-    # comment5 = Database.add_comment(tea_id=tea5.id, text="Jasmine Green Tea is my favorite!")
-    # comment6 = Database.add_comment(tea_id=tea6.id, text="Peach Iced Tea is refreshing during summer.")
-    # comment7 = Database.add_comment(tea_id=tea7.id, text="Sencha has a nice grassy flavor.")
-    # comment8 = Database.add_comment(tea_id=tea8.id, text="Peppermint tea is soothing for my stomach.")
-    # comment9 = Database.add_comment(tea_id=tea9.id, text="Blackberry Tea tastes sweet and fruity.")
-    # comment10 = Database.add_comment(tea_id=tea10.id, text="Lemon Balm tea is great before bed.")
-    
-    # recipe1 = Database.add_recipe(tea_id=tea1.id, instructions="Steep in hot water at 90°C for 3-5 minutes.")
-    # recipe2 = Database.add_recipe(tea_id=tea2.id, instructions="Whisk in hot water at 70°C for 1-2 minutes.")
-    # recipe3 = Database.add_recipe(tea_id=tea3.id, instructions="Steep in hot water at 95°C for 4-6 minutes.")
-    # recipe4 = Database.add_recipe(tea_id=tea4.id, instructions="Steep in hot water at 90°C for 5 minutes.")
-    # recipe5 = Database.add_recipe(tea_id=tea5.id, instructions="Steep in hot water at 85°C for 3-4 minutes.")
-    # recipe6 = Database.add_recipe(tea_id=tea6.id, instructions="Steep in cold water for 5-6 hours for a refreshing iced tea.")
-    # recipe7 = Database.add_recipe(tea_id=tea7.id, instructions="Steep in hot water at 80°C for 2-3 minutes.")
-    # recipe8 = Database.add_recipe(tea_id=tea8.id, instructions="Steep in hot water at 100°C for 3-5 minutes.")
-    # recipe9 = Database.add_recipe(tea_id=tea9.id, instructions="Steep in hot water at 90°C for 4-5 minutes.")
-    # recipe10 = Database.add_recipe(tea_id=tea10.id, instructions="Steep in hot water at 95°C for 3-5 minutes.")
-    
+        
 def get_search_data():
     teaList=[]
     for row in Database.get_all_teas():
         teaList.append(row.name)
-
     return teaList
+
+def get_comments(tea_name):
+    id = Database.get_id_for_tea_name(tea_name)
+    
+    commentsList = Database.get_comments_for_tea(id)
+    print(commentsList)
+    
+    return 0
+
+# Makes a comment for tea
+# adds comment to one sesific tea
+
+
+#   BIG SPAGETI, SKANAUS SKAITYTOJUI

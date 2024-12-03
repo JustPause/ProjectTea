@@ -8,11 +8,17 @@ app = Flask(__name__, static_folder = 'Front-End/dist', static_url_path = '')
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 
-tea_names = [tea['name'] for tea in teaListMethod()[0]]
+categorys=["Green-Teas", "White-Teas", "Black-Teas"]
+teaList = teaListMethod()[:3]
+tea_names=[]
+
+for subList in teaList:
+    for tea in subList:
+        tea_names.append(tea['name'])
 
 from dataBaseConnection import Tea, Comment, Recipe
 
-from working_with_data import insert_data, get_search_data
+from working_with_data import insert_data, get_search_data, get_comments
 with app.app_context():
     db.create_all()
     insert_data()
@@ -20,6 +26,11 @@ with app.app_context():
 @app.route('/api/initial-data', methods=['GET'])
 def initial_data():
     return jsonify(get_search_data())
+
+@app.route('/api/get_comments', methods=['POST'])
+def comments():
+    get_comments("An Ju Bai Cha")
+    return [1]
 
 @app.route("/")
 def index():
@@ -49,10 +60,10 @@ def teaList():
 def team():
     return send_from_directory('Front-End/dist', 'team.html')
 
-@app.route('/tea/green-tea/<tea_name>')
-def redirect_to_tea(tea_name):
+@app.route('/tea/<category>/<tea_name>')
+def redirect_to_tea(category, tea_name):
     if tea_name in tea_names:
-        return send_from_directory('Front-End/dist', f"tea/green-tea/{tea_name}/index.html")
+        return send_from_directory('Front-End/dist', f"tea/{category}/{tea_name}/index.html")
     else:
         abort(404)
 

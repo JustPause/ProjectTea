@@ -23,11 +23,19 @@ class Database:
         return db.session.query(Comment).filter(Comment.tea_id == tea_id).all()
 
     @staticmethod
+    def get_comments_count():
+        return db.session.query(Comment).count()
+
+    @staticmethod
     def get_recipe_for_tea(tea_id):
         query = "SELECT * FROM recipe WHERE tea_id = :tea_id"
         logger.info(f"Retrieved recipe for tea_id {tea_id}.")
         
         return db.session.query(Recipe).filter(Recipe.tea_id == tea_id).first()
+    
+    @staticmethod
+    def get_id_for_tea_name(tea_name):
+        return db.session.query(Tea).filter(Tea.name == tea_name).first().id
 
     @staticmethod
     def add_tea(name, tea_group, link):
@@ -39,13 +47,13 @@ class Database:
         
         logger.info(f"Added new tea: {name} (Group: {tea_group}, Link: {link})")
         
-        return new_tea
+        return new_tea.id
 
     @staticmethod
-    def add_comment(tea_id, text):
-        query = "INSERT INTO comment (tea_id, text, time) VALUES (:tea_id, :text, :time)"
+    def add_comment(tea_id, text, userName, location):
+        query = "INSERT INTO comment (tea_id, text, userName, location) VALUES (:tea_id, :text, :userName, :location)"
         
-        new_comment = Comment(tea_id=tea_id, text=text, time=datetime.utcnow())
+        new_comment = Comment(tea_id=tea_id, text=text, userName=userName, location=location)
         db.session.add(new_comment)
         db.session.commit()
         
@@ -92,7 +100,7 @@ class Database:
     @staticmethod
     def check_for_duplicates_tea(name):
         return db.session.query(Tea).filter(Tea.name == name).count()
-
+    
     @staticmethod
     def close():
         db.session.close()

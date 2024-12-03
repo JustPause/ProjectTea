@@ -10,7 +10,7 @@ const count = [1, 2, 3, 4, 5, 6];
 <Layout title="The Tea List" language="en">
   <div id="Block-1" class="flex pt-16 justify-center items-center">
     <div class="flex flex-col items-center my-16 w-[52rem]">
-      <p class="Headline-2">{frontmatter.name}</p>
+      <p class="Headline-2" id="TeaName">{frontmatter.name}</p>
       <p class="Text mt-6 text-center">{frontmatter.description}</p>
     </div>
   </div>
@@ -126,15 +126,26 @@ const count = [1, 2, 3, 4, 5, 6];
     </div>
   </div>
   <script type="module">
-    let data
+    let data;
+    let teaName = document.getElementById("TeaName").textContent;
 
     document.addEventListener("DOMContentLoaded", () => {
-      fetch("/api/comments")
+      fetch("/api/get_comments", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ teaName })
+      })
         .then((response) => response.json())
         .then((data_from_db) => {
           data = data_from_db;
+          alert(data)
         })
         .catch((error) => console.error("Error fetching initial data:", error));
     });
+
+    console.log(data);
+    
   </script>
 </Layout>
