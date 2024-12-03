@@ -1,9 +1,8 @@
 # build output
-dist/
+# dist/
 
 # generated types
 .astro/
-dist/
 .vercel/
 
 # dependencies
