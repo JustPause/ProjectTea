@@ -185,10 +185,10 @@ import TeaRecipes from "@global/teaRecipes.astro";
         Object.keys(json).map((category) => (
           <button
             data-category={category}
-            class="bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row text-light/50
+            class="text-light/50 bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row 
             TeaSelection"
           >
-            <p id="Block2DataTabs-p" class="Text text-inherit leading-none">
+            <p id="Block2DataTabs-p" class="Subheadline text-inherit leading-none">
               {category}
             </p>
           </button>
@@ -309,12 +309,12 @@ import TeaRecipes from "@global/teaRecipes.astro";
           categoryButtons.forEach((button) => {
             button.addEventListener("click", (e) => {
               categoryButtons.forEach((oderButtons) => {
-                oderButtons.classList.remove("underline");
-                oderButtons.classList.remove("text-light/100");
+                oderButtons.classList.remove("!underline");
+                oderButtons.classList.remove("!text-light/100");
               });
 
-              button.classList.add("underline");
-              button.classList.add("text-light/100");
+              button.classList.add("!underline");
+              button.classList.add("!text-light/100");
 
               const category = e.target.closest("button").dataset.category;
               console.log(category);
@@ -419,7 +419,7 @@ import TeaRecipes from "@global/teaRecipes.astro";
       H1="Discover varijas flavors of tea"
       p1="Explore different types of tea, their production processes and health advantages, while keeping track of your personal tea journey."
       b1="Learn more"
-      link="/teaList/"
+      link="/teaList"
     />
   </div>
 
@@ -435,7 +435,7 @@ import TeaRecipes from "@global/teaRecipes.astro";
       H1="Your Tea-Diary"
       p1="Create your personal tea profile and start your tea diary to track and explore your tasting experiences. Share these with your Teamates and build your tea journey together."
       b1="Learn more"
-      link="/profile/"
+      link="/profile"
     />
   </div>
 
@@ -626,7 +626,7 @@ import TeaRecipes from "@global/teaRecipes.astro";
 
       <a
         class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-72 h-12 bg-color hover:bg-light flex items-center justify-center rounded-lg ml-4"
-        href="/team/"
+        href="/team"
       >
         Lets Go
       </a>
