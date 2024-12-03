@@ -23,8 +23,8 @@ class Database:
         return db.session.query(Comment).filter(Comment.tea_id == tea_id).all()
 
     @staticmethod
-    def get_comments_count():
-        return db.session.query(Comment).count()
+    def get_comments_count_with_tea_id(tea_id):
+        return db.session.query(Comment).filter(Comment.tea_id == tea_id).count()
 
     @staticmethod
     def get_recipe_for_tea(tea_id):

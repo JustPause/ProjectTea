@@ -84,8 +84,11 @@ const count = [1, 2, 3, 4, 5, 6];
     <p class="Headline-3 text-light">What do other think about it?</p>
     <p class="Text w-[32rem] text-light">Share your opinion about this tea</p>
 
-    <div class="flex flex-row overflow-scroll gap-12 flex-nowrap mt-8">
-      {
+    <div
+      class="flex flex-row overflow-scroll gap-12 flex-nowrap mt-8"
+      id="CommentSection"
+    >
+      <!-- {
         count.map((a) => (
           <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0">
             <div class="flex flex-row justify-between pt-6 px-6 ">
@@ -109,7 +112,7 @@ const count = [1, 2, 3, 4, 5, 6];
             </p>
           </div>
         ))
-      }
+      } -->
 
       <div
         class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0 items-center"
@@ -140,12 +143,46 @@ const count = [1, 2, 3, 4, 5, 6];
         .then((response) => response.json())
         .then((data_from_db) => {
           data = data_from_db;
-          alert(data)
+          renderCommentsBar();
         })
         .catch((error) => console.error("Error fetching initial data:", error));
     });
 
-    console.log(data);
-    
+    function renderCommentsBar() {
+      const carousel = document.getElementById("CommentSection");
+
+      data.map((comment) => {
+
+      console.log(comment);
+
+
+        const teaDiv = document.createElement("div");
+        teaDiv.className = "h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0";
+
+        teaDiv.innerHTML = `
+          <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0">
+            <div class="flex flex-row justify-between pt-6 px-6 ">
+              <div class="flex flex-row gap-6">
+                <img
+                  src=""
+                  alt=""
+                  class="w-12 h-12 rounded-full bg-dark-green"
+                />
+                <div class="flex flex-col">
+                  <p class="Subheadline text-black">${comment.userName}</p>
+                  <p class="Text text-black">${comment.location}</p>
+                </div>
+              </div>
+              <p class="text-black Subheadline">4.5</p>
+            </div>
+            <p class="Text text-black pb-6 px-6 overflow-scroll text-justify">
+              "${comment.text}"
+            </p>
+          </div>
+        `;
+
+        carousel.appendChild(teaDiv);
+      });
+    }
   </script>
 </Layout>

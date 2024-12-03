@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, abort, jsonify
+from flask import Flask, send_from_directory, abort, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from getDataFormJson import teaList as teaListMethod 
 from config import Config
@@ -29,8 +29,7 @@ def initial_data():
 
 @app.route('/api/get_comments', methods=['POST'])
 def comments():
-    get_comments("An Ju Bai Cha")
-    return [1]
+    return jsonify(get_comments(request.get_json().get('teaName')))
 
 @app.route("/")
 def index():

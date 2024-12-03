@@ -14,8 +14,10 @@ def insert_data_funcion(tea):
         return -1
 
 def insert_comment_funcion(tea_id):
-    data=random_comments(tea_id)
-    Database.add_comment(tea_id=data[3], text=data[0], userName=data[1], location=data[2])
+    
+    if Database.get_comments_count_with_tea_id(tea_id) < 5:
+        data=random_comments(tea_id)
+        Database.add_comment(tea_id=data[3], text=data[0], userName=data[1], location=data[2])
 
 def random_comments(tea_id):
     randomComment = ["A delicate green tea with a smooth flavor."
@@ -421,11 +423,18 @@ def get_search_data():
 
 def get_comments(tea_name):
     id = Database.get_id_for_tea_name(tea_name)
-    
-    commentsList = Database.get_comments_for_tea(id)
-    print(commentsList)
-    
-    return 0
+    comments_data = [
+        {
+            "id": comment.id,
+            "text": comment.text,
+            "location": comment.location,
+            "userName": comment.userName,
+            "tea_id": comment.tea_id
+        }
+        for comment in Database.get_comments_for_tea(id)
+    ]
+ 
+    return comments_data
 
 # Makes a comment for tea
 # adds comment to one sesific tea
