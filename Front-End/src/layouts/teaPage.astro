@@ -56,13 +56,16 @@ const count = [1, 2, 3, 4, 5, 6];
     </div>
   </div> -->
 
-  <div id="Block-4" class="my-32 flex flex-row flex-grow mx-32 gap-32 h-96">
-    <img
-      src="/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
-      alt=""
-      srcset=""
-      class="object-cover w-1/2"
-    />
+  <div id="Block-4" class="my-32 flex flex-row flex-grow mx-14 gap-32 h-96">
+    <div class="w-1/2 ml-8 mr-16 rounded-2xl overflow-hidden">
+      <img
+        src="/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
+        alt=""
+        srcset=""
+        class="object-cover w-full transform -translate-y-[150px]"
+      />
+    </div>
+
     <div class="w-1/2 flex items-center mt-24">
       <div>
         <p class="Subheadline">{json["Black Teas"]["resapylist"][0]["name"]}</p>
@@ -117,14 +120,20 @@ const count = [1, 2, 3, 4, 5, 6];
       <div
         class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0 items-center"
       >
-        <textarea
-          class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
-          placeholder="Type your comment ..."
+        <form
+          action=""
+          method="post"
+          class="h-full w-full flex flex-col items-center"
         >
-        </textarea>
-        <button class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
-          >Comment</button
-        >
+          <textarea
+            class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
+            name="comment"
+            placeholder="Type your comment ..."></textarea>
+          <button
+            class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
+            id="comment">Comment</button
+          >
+        </form>
       </div>
     </div>
   </div>
@@ -152,11 +161,11 @@ const count = [1, 2, 3, 4, 5, 6];
       const carousel = document.getElementById("CommentSection");
 
       data.map((comment) => {
-
-      console.log(comment);
+        console.log(comment);
 
         const teaDiv = document.createElement("div");
-        teaDiv.className = "h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0";
+        teaDiv.className =
+          "h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0";
 
         teaDiv.innerHTML = `
           <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0">

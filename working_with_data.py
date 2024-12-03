@@ -13,6 +13,12 @@ def insert_data_funcion(tea):
     else:
         return -1
 
+def insert_comment(tea_name, text):
+    id = Database.get_id_for_tea_name(tea_name)
+    userName = "Anonymous"
+    location = "No whare"
+    Database.add_comment(tea_id=id, text=text, userName=userName, location=location)
+
 def insert_comment_funcion(tea_id):
     
     if Database.get_comments_count_with_tea_id(tea_id) < 5:

@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from getDataFormJson import teaList as teaListMethod 
 from config import Config
 
-
 app = Flask(__name__, static_folder = 'Front-End/dist', static_url_path = '')
 app.config.from_object(Config)
 db = SQLAlchemy(app)
@@ -18,7 +17,7 @@ for subList in teaList:
 
 from dataBaseConnection import Tea, Comment, Recipe
 
-from working_with_data import insert_data, get_search_data, get_comments
+from working_with_data import insert_data, get_search_data, get_comments, insert_comment_funcion
 with app.app_context():
     db.create_all()
     insert_data()
@@ -41,15 +40,15 @@ def benefits():
   
 @app.route("/profile")
 def profile():
-    return send_from_directory('Front-End/dist', 'profile.html')
+    return send_from_directory('Front-End/dist', 'profile/index.html')
   
 @app.route("/recipes")
 def recipes():
-    return send_from_directory('Front-End/dist', 'recipes.html')
+    return send_from_directory('Front-End/dist', 'recipes/index.html')
   
-@app.route("/singleTea")
-def singleTea():
-    return send_from_directory('Front-End/dist', 'singleTea.html')
+# @app.route("/singleTea")
+# def singleTea():
+#     return send_from_directory('Front-End/dist', 'singleTea.html')
   
 @app.route("/teaList")
 def teaList():
@@ -57,13 +56,25 @@ def teaList():
   
 @app.route("/team")
 def team():
-    return send_from_directory('Front-End/dist', 'team.html')
+    return send_from_directory('Front-End/dist', 'team/index.html')
 
-@app.route('/tea/<category>/<tea_name>')
-def redirect_to_tea(category, tea_name):
-    if tea_name in tea_names:
+@app.route('/tea/<category>/<tea_name>', methods=["GET", "POST"])
+def to_tea(category, tea_name):
+    
+    if request.method == "POST":
+        
+        comment = request.form.get("comment")
+        print(tea_name," : ", comment)
+        # insert_comment_funcion(tea_name,comment)
+        
         return send_from_directory('Front-End/dist', f"tea/{category}/{tea_name}/index.html")
+    
+    if tea_name in tea_names:
+        
+        return send_from_directory('Front-End/dist', f"tea/{category}/{tea_name}/index.html")
+    
     else:
+        
         abort(404)
 
 @app.errorhandler(404)
