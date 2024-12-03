@@ -35,7 +35,7 @@ import json from "public/teav2.json";
   </div>
 
   <div id="Block-2" class="flex flex-row mt-16">
-    <div class="w-3/12 flex flex-col gap-10 items-center mt-8">
+    <div class="w-2/12 flex flex-col gap-4 items-center mt-8">
       {
         Object.keys(json).map((category) => (
           <button
@@ -54,7 +54,7 @@ import json from "public/teav2.json";
       }
     </div>
 
-    <div class="w-9/12 flex flex-row flex-wrap gap-x-16 gap-y-12" id="TeaList">
+    <div class="w-10/12 flex flex-row flex-wrap gap-x-4 gap-y-8" id="TeaList">
       <!-- {
         json["Green Teas"].tealist.map((tea) => (
           <div class="w-[19rem] h-[24rem]  relative rounded-xl  group">
@@ -105,12 +105,12 @@ import json from "public/teav2.json";
           categoryButtonsv2.forEach((button) => {
             button.addEventListener("click", (e) => {
               categoryButtonsv2.forEach((oderButtons) => {
-                oderButtons.classList.remove("underline");
-                oderButtons.classList.remove("text-light/100");
+                oderButtons.classList.remove("!underline");
+                oderButtons.classList.remove("!text-light/100");
               });
 
-              button.classList.add("underline");
-              button.classList.add("text-light/100");
+              button.classList.add("!underline");
+              button.classList.add("!text-light/100");
 
               const categoryv2 = e.target.closest("button").dataset.category;
 
