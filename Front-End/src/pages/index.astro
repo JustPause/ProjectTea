@@ -154,7 +154,7 @@ import TeaRecipes from "@global/teaRecipes.astro";
       const query = searchBar.value.toLowerCase();
 
       const filteredData = data.filter((item) =>
-        item.toLowerCase().includes(query)
+        item["name"].toLowerCase().includes(query)
       );
 
       results.innerHTML = "";
@@ -167,8 +167,17 @@ import TeaRecipes from "@global/teaRecipes.astro";
           "rounded-lg",
           "font-normal"
         );
-        searchBarFingThatShowsLinks.textContent = item;
-        searchBarFingThatShowsLinks.href = "/tea/Green-Teas/" + item;
+        console.log(data);
+
+        let tea_group =
+          item["tea_group"]
+            .replace(/_/g, "-")
+            .replace(/\b\w/g, (char) => char.toUpperCase())
+            .replace(/-\w/g, (match) => match.toUpperCase()) + "s";
+
+        searchBarFingThatShowsLinks.textContent = item["name"];
+        searchBarFingThatShowsLinks.href =
+          "/tea/" + tea_group + "/" + item["name"];
         searchBarFingThatShowsLinks.target = "_blank";
         searchBarFingThatShowsLinks.rel = "noopener noreferrer";
         results.appendChild(searchBarFingThatShowsLinks);
@@ -188,7 +197,10 @@ import TeaRecipes from "@global/teaRecipes.astro";
             class="text-light/50 bg-transparent px-4 py-2 my-6 rounded hover:bg-color/10 flex flex-row 
             TeaSelection"
           >
-            <p id="Block2DataTabs-p" class="Subheadline text-inherit leading-none">
+            <p
+              id="Block2DataTabs-p"
+              class="Subheadline text-inherit leading-none"
+            >
               {category}
             </p>
           </button>
@@ -318,7 +330,7 @@ import TeaRecipes from "@global/teaRecipes.astro";
 
               const category = e.target.closest("button").dataset.category;
               console.log(category);
-              
+
               updateTeaDetails(category);
             });
           });

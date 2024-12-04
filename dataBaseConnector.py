@@ -12,7 +12,7 @@ class Database:
     def get_all_teas():
         query = 'SELECT * FROM tea'
         logger.info(f"Retrieved all teas: {len(query)} teas found.")
-        
+           
         return db.session.query(Tea).all()
 
     @staticmethod

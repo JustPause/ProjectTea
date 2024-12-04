@@ -423,8 +423,14 @@ def insert_data():
         
 def get_search_data():
     teaList=[]
-    for row in Database.get_all_teas():
-        teaList.append(row.name)
+    
+    for teaName in Database.get_all_teas():
+        teaName = {
+            "tea_group": teaName.tea_group,
+            "name": teaName.name
+        }
+        teaList.append(teaName)
+        
     return teaList
 
 def get_comments(tea_name):
