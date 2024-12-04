@@ -83,10 +83,7 @@ import Layout from "src/layouts/layout.astro";
     }
   </script>
 
-  <div
-    id="Block-3"
-    class="flex flex-col items-center justify-center"
-  >
+  <div id="Block-3" class="flex flex-col items-center justify-center">
     <div class="flex Headline-2 text-light mb-12">Delete</div>
     <p class="Text text-light">Delete one of your comments</p>
 
@@ -96,86 +93,90 @@ import Layout from "src/layouts/layout.astro";
     >
     </div>
   </div>
+</Layout>
 
-  <script type="module">
-    let data;
-    let teaName = "An Ju Bai Cha";
+<script type="module">
+  let data;
+  let teaName = "An Ju Bai Cha";
 
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("/api/get_comments", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ teaName })
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("/api/get_comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ teaName })
+    })
+      .then((response) => response.json())
+      .then((data_from_db) => {
+        data = data_from_db;
+        renderCommentsBar();
       })
-        .then((response) => response.json())
-        .then((data_from_db) => {
-          data = data_from_db;
-          renderCommentsBar();
-        })
-        .catch((error) => console.error("Error fetching initial data:", error));
-    });
+      .catch((error) => console.error("Error fetching initial data:", error));
+  });
 
-    function renderCommentsBar() {
-      const carousel = document.getElementById("deleteCommentSection");
+  function renderCommentsBar() {
+    const carousel = document.getElementById("deleteCommentSection");
 
-      data.map((comment) => {
-        console.log(comment);
+    data.map((comment) => {
+      console.log(comment);
 
-        const teaDiv = document.createElement("div");
-        teaDiv.className =
-          "h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0";
+      const teaDiv = document.createElement("div");
+      teaDiv.className =
+        "h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0";
 
-        teaDiv.innerHTML = `
-          <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0">
-            <div class="flex flex-row justify-between pt-6 px-6 ">
-              <div class="flex flex-row gap-6">
-                <img
-                  src=""
-                  alt=""
-                  class="w-12 h-12 rounded-full bg-dark-green"
-                />
-                <div class="flex flex-col">
-                  <p class="Subheadline text-black">${comment.userName}</p>
-                  <p class="Text text-black">${comment.location}</p>
-                </div>
-              </div>
-              <p class="text-black Subheadline">4.5</p>
+      teaDiv.innerHTML = `
+<div class="flex flex-col">
+   <div
+      class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0"
+      >
+      <div class="flex flex-row justify-between pt-6 px-6">
+         <div class="flex flex-row gap-6">
+            <img src="" alt="" class="w-12 h-12 rounded-full bg-dark-green" />
+            <div class="flex flex-col">
+               <p class="Subheadline text-black">${comment.userName}</p>
+               <p class="Text text-black">${comment.location}</p>
             </div>
-            <p class="Text text-black pb-6 px-6 overflow-scroll text-justify">
-              "${comment.text}"
-            </p>
-          </div>
-        `;
-
-        carousel.appendChild(teaDiv);
-      });
-    }
-  </script>
-
-  <div id="Block-4" class="flex pt-16 mx-16 flex-col items-center">
-    <div class="flex Headline-2 text-light mb-12">Connect them all</div>
-
-    <p class="Text text-light">
-      Here, I will connect all databases and show that they are connected,
-      because I have three database tables: Tea, Comments, and Recipes. They are
-      connected through the tea_id
-    </p>
-
-    <div class="flex pt-16 justify-evenly w-[64rem]">
-      <div class="bg-black flex flex-col items-center">
-        <p class="Subheadline">Tea Name</p>
-        <p id="teaName" class="Text">An Ju Bai Cha</p>
+         </div>
+         <p class="text-black Subheadline">4.5</p>
       </div>
-      <div class="bg-black flex flex-col items-center">
-        <p class="Subheadline">Tea Comments</p>
-        <p id="teaComments" class="Text">A</p>
-      </div>
-      <div class="bg-black flex flex-col items-center">
-        <p class="Subheadline">Tea Resapys</p>
-        <p id="teaResapys" class="Text">A</p>
-      </div>
+      <p class="Text text-black pb-6 px-6 overflow-scroll text-justify">
+         "${comment.text}"
+      </p>
+   </div>
+   <button
+      class="bg-color w-min py-1 px-4 rounded-xl text-black mt-2"
+      id="comment_button">Delete</button
+      >
+</div>
+`;
+
+      carousel.appendChild(teaDiv);
+    });
+  }
+</script>
+
+<div id="Block-4" class="flex pt-16 mx-16 flex-col items-center">
+  <div class="flex Headline-2 text-light mb-12">Connect them all</div>
+
+  <p class="Text text-light">
+    Here, I will connect all databases and show that they are connected, because
+    I have three database tables: Tea, Comments, and Recipes. They are connected
+    through the tea_id
+  </p>
+
+  <div class="flex pt-16 justify-evenly w-[64rem]">
+    <div class="bg-black flex flex-col items-center">
+      <p class="Subheadline">Tea Name</p>
+      <p id="teaName" class="Text">An Ju Bai Cha</p>
+    </div>
+    <div class="bg-black flex flex-col items-center">
+      <p class="Subheadline">Tea Comments</p>
+      <p id="teaComments" class="Text">A</p>
+    </div>
+    <div class="bg-black flex flex-col items-center">
+      <p class="Subheadline">Tea Resapys</p>
+      <p id="teaResapys" class="Text">A</p>
     </div>
   </div>
-</Layout>
+</div>
