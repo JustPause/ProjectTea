@@ -17,7 +17,7 @@ for subList in teaList:
 
 from dataBaseConnection import Tea, Comment, Recipe
 
-from working_with_data import insert_data, get_search_data, get_comments, insert_comment_funcion
+from working_with_data import insert_data, get_search_data, get_comments, insert_comment, get_random_comment
 with app.app_context():
     db.create_all()
     insert_data()
@@ -27,8 +27,12 @@ def initial_data():
     return jsonify(get_search_data())
 
 @app.route('/api/get_comments', methods=['POST'])
-def comments():
+def get_comments():
     return jsonify(get_comments(request.get_json().get('teaName')))
+
+@app.route('/api/get_comment', methods=['GET'])
+def get_comment():
+    return jsonify(get_random_comment())
 
 @app.route("/")
 def index():
@@ -64,8 +68,8 @@ def to_tea(category, tea_name):
     if request.method == "POST":
         
         comment = request.form.get("comment")
-        print(tea_name," : ", comment)
-        # insert_comment_funcion(tea_name,comment)
+        # print(tea_name," : ", comment)
+        insert_comment(tea_name,comment)
         
         return send_from_directory('Front-End/dist', f"tea/{category}/{tea_name}/index.html")
     

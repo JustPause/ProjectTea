@@ -1,9 +1,165 @@
 ---
-import Layout from "src/layouts/layout.astro"
+import Layout from "src/layouts/layout.astro";
 ---
 
 <Layout title="The Profile" language="en">
-  <main>
-    <p>Profile</p>
-  </main>
+  <div id="Block-1" class="flex pt-16 justify-center items-center">
+    <div class="flex flex-col items-center">
+      <p class="Headline-2">So Working with DataBase</p>
+      <p class="Text mt-6 text-center">
+        In here, I will work on updating data from the DB, deleting from the DB,
+        and listing from all DBs while connected to all of them.
+      </p>
+    </div>
+  </div>
+
+  <div id="Block-2" class="flex pt-16 mx-16 flex-col">
+    <!-- random tea, random comment to upadate -->
+
+    <div class="flex justify-center Headline-2 text-light mb-12">Update</div>
+
+    <div class="flex justify-between">
+      <div class="w-1/2 text-center flex flex-col items-center justify-center">
+        <div class="flex flex-row items-center justify-center">
+          <p class="Text text-light">
+            The Random Tea with Random comment to be
+          </p>
+          <p id="teaNmae" class="Text !font-bold text-light ml-2">UPDATED</p>
+          <p class="Text text-light">, and you got comment on</p>
+        </div>
+
+        <div class="flex flex-row items-center justify-center">
+          <p id="teaNmae" class="Text !font-bold text-light mr-2">Test</p>
+          <p class="Text text-light">And comment form</p>
+          <p id="CommenterNmae" class="Text !font-bold text-light ml-2">Test</p>
+        </div>
+      </div>
+
+      <div class="w-1/2 flex">
+        <div
+          class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0 items-center ml-auto"
+        >
+          <form
+            action=""
+            method="post"
+            class="h-full w-full flex flex-col items-center"
+          >
+            <textarea
+              class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
+              name="comment"
+              placeholder="Type your comment ..."
+              id="comment">Test</textarea
+            >
+            <button
+              class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
+              id="comment">Comment</button
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    let data;
+    let teaName = document.getElementById("TeaName").textContent;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("/api/get_comment")
+        .then((response) => response.json())
+        .then((data_from_db) => {
+          comment = data_from_db;
+        })
+        .catch((error) => console.error("Error fetching initial data:", error));
+    });
+
+    function renderOneComment() {
+      const carousel = document.getElementById("CommentSection");
+
+      data.map((comment) => {
+        console.log(comment);
+
+        const teaDiv = document.createElement("div");
+        teaDiv.className =
+          "h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0";
+
+        teaDiv.innerHTML = `
+          <div class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0">
+            <div class="flex flex-row justify-between pt-6 px-6 ">
+              <div class="flex flex-row gap-6">
+                <img
+                  src=""
+                  alt=""
+                  class="w-12 h-12 rounded-full bg-dark-green"
+                />
+                <div class="flex flex-col">
+                  <p class="Subheadline text-black">${comment.userName}</p>
+                  <p class="Text text-black">${comment.location}</p>
+                </div>
+              </div>
+              <p class="text-black Subheadline">4.5</p>
+            </div>
+            <p class="Text text-black pb-6 px-6 overflow-scroll text-justify">
+              "${comment.text}"
+            </p>
+          </div>
+        `;
+
+        carousel.appendChild(teaDiv);
+      });
+    }
+  </script>
+
+  <div id="Block-3" class="flex pt-16 mx-16 flex-col items-center">
+    <div class="flex Headline-2 text-light mb-12">Delete</div>
+    <p class="Text text-light">Delete one of your comments</p>
+
+    <div class="flex pt-16">
+      <div
+        class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0 items-center ml-auto"
+      >
+        <form
+          action=""
+          method="post"
+          class="h-full w-full flex flex-col items-center"
+        >
+          <textarea
+            class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
+            name="comment"
+            placeholder="Type your comment ..."
+            id="comment">Test</textarea
+          >
+          <button
+            class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
+            id="comment">Comment</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="Block-4" class="flex pt-16 mx-16 flex-col items-center">
+    <div class="flex Headline-2 text-light mb-12">Connect them all</div>
+
+    <p class="Text text-light">
+      Here, I will connect all databases and show that they are connected,
+      because I have three database tables: Tea, Comments, and Recipes. They are
+      connected through the tea_id
+    </p>
+
+    <div class="flex pt-16 justify-evenly w-[64rem]">
+      <div class="bg-black flex flex-col items-center">
+        <p class="Subheadline">Tea Name</p>
+        <p id="teaName" class="Text">An Ju Bai Cha</p>
+      </div>
+      <div class="bg-black flex flex-col items-center">
+        <p class="Subheadline">Tea Comments</p>
+        <p id="teaComments" class="Text">A</p>
+      </div>
+      <div class="bg-black flex flex-col items-center">
+        <p class="Subheadline">Tea Resapys</p>
+        <p id="teaResapys" class="Text">A</p>
+      </div>
+    </div>
+  </div>
 </Layout>

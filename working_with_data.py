@@ -442,6 +442,14 @@ def get_comments(tea_name):
  
     return comments_data
 
+def get_random_comment():
+    # Get Comment count, how many commants thare is
+    # Gen Random valid id
+    # Get All Comments with id
+    # Select random one
+    
+    return {"A":"A","B":"B"}
+
 # Makes a comment for tea
 # adds comment to one sesific tea
 
