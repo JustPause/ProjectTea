@@ -87,32 +87,13 @@ import Layout from "src/layouts/layout.astro";
     <div class="flex Headline-2 text-light mb-12">Delete</div>
     <p class="Text text-light">Delete one of your comments</p>
 
-    <div class="flex pt-16">
-      <div
-        class="h-[16rem] w-[32rem] bg-color flex flex-col rounded-xl justify-between flex-shrink-0 items-center ml-auto"
-      >
-        <form
-          action=""
-          method="post"
-          class="h-full w-full flex flex-col items-center"
-        >
-          <textarea
-            class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
-            name="comment"
-            placeholder="Type your comment ..."
-            id="comment"></textarea>
-          <button
-            class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
-            id="comment">Comment</button
-          >
-        </form>
-      </div>
-    </div>
+    <div class="flex flex-row overflow-scroll gap-12 flex-nowrap pt-16 w-11/12"
+     id="deleteCommentSection"></div>
   </div>
 
   <script type="module">
     let data;
-    let teaName = document.getElementById("TeaName").textContent;
+    let teaName = "An Ju Bai Cha";
 
     document.addEventListener("DOMContentLoaded", () => {
       fetch("/api/get_comments", {
@@ -131,7 +112,7 @@ import Layout from "src/layouts/layout.astro";
     });
 
     function renderCommentsBar() {
-      const carousel = document.getElementById("CommentSection");
+      const carousel = document.getElementById("deleteCommentSection");
 
       data.map((comment) => {
         console.log(comment);

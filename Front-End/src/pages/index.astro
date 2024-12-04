@@ -167,7 +167,6 @@ import TeaRecipes from "@global/teaRecipes.astro";
           "rounded-lg",
           "font-normal"
         );
-        console.log(data);
 
         let tea_group =
           item["tea_group"]
@@ -329,7 +328,6 @@ import TeaRecipes from "@global/teaRecipes.astro";
               button.classList.add("!text-light/100");
 
               const category = e.target.closest("button").dataset.category;
-              console.log(category);
 
               updateTeaDetails(category);
             });
