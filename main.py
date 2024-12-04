@@ -17,7 +17,8 @@ for subList in teaList:
 
 from dataBaseConnection import Tea, Comment, Recipe
 
-from working_with_data import insert_data, get_search_data, get_comments, insert_comment, get_random_comment, update_comment_with_tea_id
+from working_with_data import insert_data, get_search_data, get_comments, insert_comment, get_random_comment, update_comment_with_tea_id,delete_comment_with_id
+
 with app.app_context():
     db.create_all()
     insert_data()
@@ -46,9 +47,18 @@ def benefits():
 def profile():
     
     if request.method == "POST":
-        comment_id = request.form.get("comment_id")
-        comment = request.form.get("comment")
-        update_comment_with_tea_id(comment_id,comment)
+
+        form_type = request.form.get("form_type")
+        
+        if form_type == "Comment":
+            comment_id = request.form.get("comment_id")
+            comment = request.form.get("comment")
+            update_comment_with_tea_id(comment_id, comment)
+            
+        elif form_type == "Delete":
+            comment_id = request.form.get("comment_id")
+            print("Deleting comment ", comment_id)
+            delete_comment_with_id(comment_id)
     
     return send_from_directory('Front-End/dist', 'profile/index.html')
   

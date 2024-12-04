@@ -34,4 +34,15 @@ def teaList():
     return Green, Black, White
 
 def recipeList():
-    pass
+    with open('Front-End/public/recipes.json', 'r') as file:
+        data = json.load(file)
+        Recipes=[]
+        for i in data['teaRecipes']:
+            Recipes.append({
+                "id": i['id'],
+                "tea_id": i['tea_id'],
+                "instructions": i['notes']
+            })
+            
+    return Recipes
+recipeList()

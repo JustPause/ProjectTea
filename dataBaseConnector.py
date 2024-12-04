@@ -78,10 +78,10 @@ class Database:
         return new_comment
 
     @staticmethod
-    def add_recipe(tea_id, instructions):
+    def add_recipe(id,tea_id, instructions):
         query = "INSERT INTO recipe (tea_id, instructions) VALUES (:tea_id, :instructions)"
         
-        new_recipe = Recipe(tea_id=tea_id, instructions=instructions)
+        new_recipe = Recipe(id=id, tea_id=tea_id, instructions=instructions)
         db.session.add(new_recipe)
         db.session.commit()
         
@@ -94,6 +94,12 @@ class Database:
         comment_to_update = db.session.query(Comment).filter(Comment.id == id).first()
         comment_to_update.text = comment
         db.session.commit()
+    
+    @staticmethod
+    def delete_comment(id):
+        deleted = db.session.query(Comment).filter(Comment.id == id).delete()
+        db.session.commit()
+        return deleted
     
     @staticmethod
     def drop_tea_table():
@@ -122,6 +128,10 @@ class Database:
     @staticmethod
     def check_for_duplicates_tea(name):
         return db.session.query(Tea).filter(Tea.name == name).count()
+    
+    @staticmethod
+    def check_for_duplicates_resapy(id):
+        return db.session.query(Recipe).filter(Recipe.id == id).count()
     
     @staticmethod
     def close():

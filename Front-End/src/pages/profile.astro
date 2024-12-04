@@ -52,7 +52,9 @@ import Layout from "src/layouts/layout.astro";
               id="comment"></textarea>
             <button
               class="bg-dark-green w-min py-1 px-4 rounded-xl text-light mb-2"
-              id="comment_button">Comment</button
+              id="comment_button"
+              value="Comment"
+              name="form_type">Comment</button
             >
           </form>
         </div>
@@ -125,8 +127,7 @@ import Layout from "src/layouts/layout.astro";
         teaForm.setAttribute("action", "");
         teaForm.setAttribute("method", "post");
 
-        teaForm.className =
-          "flex flex-col";
+        teaForm.className = "flex flex-col";
 
         teaForm.innerHTML = `
     <div
@@ -136,6 +137,8 @@ import Layout from "src/layouts/layout.astro";
           <div class="flex flex-row gap-6">
               <img src="" alt="" class="w-12 h-12 rounded-full bg-dark-green" />
               <div class="flex flex-col">
+                <input type="hidden" name="comment_id" id="commentId" value=${comment.id} />
+
                 <p class="Subheadline text-black">${comment.userName}</p>
                 <p class="Text text-black">${comment.location}</p>
               </div>
@@ -146,9 +149,11 @@ import Layout from "src/layouts/layout.astro";
           "${comment.text}"
         </p>
     </div>
-    <button
+    <button 
+        name="form_type" 
+        value="Delete"
         class="bg-color w-min py-1 px-4 rounded-xl text-black mt-2"
-        id="comment_button">Delete</button
+        id="delete_button">Delete</button
         >
 `;
 

@@ -1,0 +1,424 @@
+{
+  "teaRecipes": [
+    {
+      "id": 1,
+      "tea_id": 15,
+      "recipeName": "Bai Mu Dan Fizz",
+      "group": "White Tea",
+      "type": "white_tea",
+      "teaUsed": "Bai Mu Dan",
+      "description": "A crisp, bubbly drink that mixes Bai Mu Dan white tea with sparkling water and a touch of citrus.",
+      "ingredients": [
+        "3 ounces Bai Mu Dan tea (brewed and chilled)",
+        "2 ounces sparkling water",
+        "1 tablespoon lemon juice",
+        "Ice cubes",
+        "Lemon wheel, for garnish"
+      ],
+      "notes": "Adjust sweetness by adding simple syrup or honey as needed."
+    },
+    {
+      "id": 2,
+
+      "tea_id": 3,
+      "recipeName": "Sencha Lemonade",
+      "group": "Green Tea",
+      "type": "green_tea",
+      "teaUsed": "Sencha",
+      "description": "A vibrant Sencha Lemonade, this drink combines the earthy notes of Sencha green tea with the refreshing citrus kick of lemonade.",
+      "ingredients": [
+        "2 ounces Sencha green tea (brewed and chilled)",
+        "3 ounces fresh lemon juice",
+        "2 teaspoons honey or agave syrup",
+        "Ice cubes",
+        "Lemon slice, for garnish"
+      ],
+      "notes": "You can substitute honey with agave syrup for a vegan option."
+    },
+    {
+      "id": 3,
+      "tea_id": 27,
+      "recipeName": "Darjeeling Iced Tea Punch",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Darjeeling",
+      "description": "Darjeeling Iced Tea Punch is a tropical iced tea punch made with Darjeeling tea, pineapple juice, and a splash of rum.",
+      "ingredients": [
+        "4 ounces Darjeeling black tea (brewed and chilled)",
+        "2 ounces pineapple juice",
+        "1 ounce rum",
+        "Ice cubes",
+        "Pineapple slice, for garnish",
+        "Mint sprig, for garnish"
+      ],
+      "notes": "To make it alcohol-free, simply omit the rum and add extra pineapple juice."
+    },
+    {
+      "id": 4,
+      "tea_id": 19,
+      "recipeName": "Assam Chai Latte",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Assam",
+      "description": "A strong and malty Assam tea brewed with chai spices and topped with steamed milk for a warming, spiced latte.",
+      "ingredients": [
+        "1 bag Assam tea",
+        "1/2 teaspoon ground cardamom",
+        "1/2 teaspoon ground cinnamon",
+        "1/4 teaspoon ground ginger",
+        "1/2 cup milk (or plant-based milk)",
+        "1 tablespoon honey or sugar"
+      ],
+      "notes": "Adjust the spices to your taste. For a more traditional approach, steep the spices with the tea leaves."
+    },
+    {
+      "id": 5,
+      "tea_id": 8,
+      "recipeName": "Matcha Green Tea Smoothie",
+      "group": "Green Tea",
+      "type": "green_tea",
+      "teaUsed": "Matcha",
+      "description": "Matcha Green Tea Smoothie is a creamy, nutrient-packed smoothie made with the powerful antioxidant-rich matcha green tea.",
+      "ingredients": [
+        "1 teaspoon matcha powder",
+        "1 cup almond milk",
+        "1/2 banana",
+        "1 tablespoon honey or maple syrup",
+        "Ice cubes"
+      ],
+      "notes": "Use a plant-based milk such as almond or oat for a fully vegan smoothie."
+    },
+    {
+      "id": 6,
+      "tea_id": 36,
+      "recipeName": "Classic Iced Green Tea",
+      "group": "Green Tea",
+      "type": "green_tea",
+      "teaUsed": "Jasmine Green Tea",
+      "description": "A simple yet refreshing iced green tea, infused with the delicate floral notes of Jasmine green tea.",
+      "ingredients": [
+        "2 teaspoons Jasmine Green Tea",
+        "1 cup hot water",
+        "Ice cubes",
+        "Lemon wedge, for garnish",
+        "Mint leaves, for garnish"
+      ],
+      "notes": "Serve with a slice of lemon or mint leaves for a refreshing twist."
+    },
+    {
+      "id": 7,
+      "tea_id": 12,
+      "recipeName": "Earl Grey Iced Latte",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Earl Grey",
+      "description": "A creamy iced latte made with bold Earl Grey black tea, milk, and a touch of vanilla syrup for sweetness.",
+      "ingredients": [
+        "1 bag of Earl Grey tea",
+        "1/2 cup hot water",
+        "1/2 cup cold milk",
+        "1 tablespoon vanilla syrup",
+        "Ice cubes"
+      ],
+      "notes": "You can use oat milk or almond milk for a dairy-free version."
+    },
+    {
+      "id": 8,
+      "tea_id": 4,
+      "recipeName": "Chai Spiced Hot Chocolate",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Chai Tea",
+      "description": "Chai Spiced Hot Chocolate blends the warmth of chai spices with the richness of hot chocolate for a comforting drink.",
+      "ingredients": [
+        "1 bag of Chai tea",
+        "1 cup milk or dairy-free milk",
+        "2 tablespoons cocoa powder",
+        "1 tablespoon sugar",
+        "Pinch of cinnamon and nutmeg"
+      ],
+      "notes": "For a vegan version, use a plant-based milk like coconut milk and maple syrup as a sweetener."
+    },
+    {
+      "id": 9,
+      "tea_id": 21,
+      "recipeName": "Iced Matcha Latte",
+      "group": "Green Tea",
+      "type": "green_tea",
+      "teaUsed": "Matcha",
+      "description": "A vibrant, creamy iced matcha latte made with matcha powder, almond milk, and a touch of sweetness.",
+      "ingredients": [
+        "1 teaspoon matcha powder",
+        "2 ounces hot water",
+        "6 ounces cold almond milk",
+        "1 teaspoon honey or agave syrup",
+        "Ice cubes"
+      ],
+      "notes": "Try coconut milk for a richer, tropical flavor. For a sweeter taste, adjust the honey or syrup."
+    },
+    {
+      "id": 10,
+      "tea_id": 32,
+      "recipeName": "Lemon Honey Black Tea",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Ceylon",
+      "description": "A soothing hot black tea with a hint of lemon and honey, perfect for relaxation or a morning boost.",
+      "ingredients": [
+        "1 bag of Ceylon black tea",
+        "1 cup hot water",
+        "1 tablespoon honey",
+        "1 slice of lemon"
+      ],
+      "notes": "Add a touch of ginger for an extra kick and to promote digestion."
+    },
+    {
+      "id": 11,
+      "tea_id": 6,
+      "recipeName": "Iced Earl Grey Lemonade",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Earl Grey",
+      "description": "This is a refreshing iced drink combining Earl Grey tea, lemonade, and a splash of honey or agave.",
+      "ingredients": [
+        "2 bags of Earl Grey tea",
+        "1 cup hot water",
+        "1/2 cup lemonade",
+        "Ice cubes",
+        "Lemon wedge, for garnish"
+      ],
+      "notes": "You can replace honey with agave syrup for a vegan version."
+    },
+    {
+      "id": 12,
+      "tea_id": 10,
+      "recipeName": "Green Tea Ginger Fizz",
+      "group": "Green Tea",
+      "type": "green_tea",
+      "teaUsed": "Green Tea",
+      "description": "A refreshing green tea drink with a zingy ginger kick, topped off with a sparkling soda.",
+      "ingredients": [
+        "3 ounces brewed green tea",
+        "1 ounce fresh ginger juice",
+        "1 tablespoon honey",
+        "Club soda, to top",
+        "Lime slice, for garnish"
+      ],
+      "notes": "For a refreshing twist, add mint leaves or cucumber slices."
+    },
+    {
+      "id": 13,
+      "tea_id": 30,
+      "recipeName": "Vanilla Black Tea Latte",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A creamy and aromatic latte with black tea and vanilla.",
+      "ingredients": [
+        "2 bags of black tea",
+        "1 cup hot water",
+        "1/2 cup steamed milk",
+        "1 teaspoon vanilla extract",
+        "Honey or sugar, to taste"
+      ],
+      "notes": "Top with frothed milk for a café-style experience."
+    },
+    {
+      "id": 14,
+      "tea_id": 1,
+      "recipeName": "Black Tea Citrus Punch",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A refreshing punch combining black tea with citrus flavors.",
+      "ingredients": [
+        "2 cups brewed black tea (chilled)",
+        "1/2 cup orange juice",
+        "1/4 cup lemon juice",
+        "Ice cubes",
+        "Orange slices, for garnish"
+      ],
+      "notes": "Add a splash of sparkling water for fizz."
+    },
+    {
+      "id": 15,
+      "tea_id": 29,
+      "recipeName": "Spiced Black Tea Apple Cider",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A cozy blend of black tea and warm spiced apple cider.",
+      "ingredients": [
+        "1 cup brewed black tea",
+        "1 cup apple cider",
+        "1/4 teaspoon cinnamon",
+        "1 cinnamon stick, for garnish"
+      ],
+      "notes": "Serve warm and enjoy on a chilly day."
+    },
+    {
+      "id": 16,
+      "tea_id": 24,
+      "recipeName": "Iced Blackberry Black Tea",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A fruity iced tea with the sweetness of blackberries.",
+      "ingredients": [
+        "2 cups brewed black tea (chilled)",
+        "1/2 cup blackberry syrup",
+        "Ice cubes",
+        "Fresh blackberries, for garnish"
+      ],
+      "notes": "Substitute with blueberry syrup for a different flavor."
+    },
+    {
+      "id": 17,
+      "tea_id": 18,
+      "recipeName": "Maple Cinnamon Black Tea",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A warm and comforting tea with the rich flavor of maple and a hint of cinnamon.",
+      "ingredients": [
+        "1 cup brewed black tea",
+        "1 tablespoon maple syrup",
+        "1/4 teaspoon cinnamon",
+        "Cinnamon stick, for garnish"
+      ],
+      "notes": "Pair with your favorite baked goods for a cozy treat."
+    },
+    {
+      "id": 18,
+      "tea_id": 7,
+      "recipeName": "Black Tea Rose Lemonade",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A floral and refreshing drink with rose and lemonade.",
+      "ingredients": [
+        "2 cups brewed black tea (chilled)",
+        "1/2 cup lemonade",
+        "1 tablespoon rose syrup",
+        "Ice cubes",
+        "Rose petals, for garnish"
+      ],
+      "notes": "Use edible rose petals for garnish."
+    },
+    {
+      "id": 19,
+      "tea_id": 35,
+      "recipeName": "Chocolate Black Tea Delight",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A decadent blend of black tea and chocolate, perfect for dessert.",
+      "ingredients": [
+        "1 cup brewed black tea",
+        "2 tablespoons cocoa powder",
+        "1 tablespoon sugar or honey",
+        "1/4 cup milk"
+      ],
+      "notes": "Top with whipped cream for extra indulgence."
+    },
+    {
+      "id": 20,
+      "tea_id": 22,
+      "recipeName": "Black Tea Ginger Cooler",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A zesty and refreshing drink with black tea and ginger.",
+      "ingredients": [
+        "2 cups brewed black tea (chilled)",
+        "1 ounce fresh ginger juice",
+        "1 tablespoon honey",
+        "Ice cubes",
+        "Lime wedge, for garnish"
+      ],
+      "notes": "For added kick, use sparkling water instead of ice."
+    },
+    {
+      "id": 21,
+      "tea_id": 13,
+      "recipeName": "Caramel Black Tea Latte",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A sweet and creamy latte with the rich flavor of caramel.",
+      "ingredients": [
+        "1 cup brewed black tea",
+        "1/2 cup steamed milk",
+        "2 tablespoons caramel syrup",
+        "Whipped cream, for garnish"
+      ],
+      "notes": "Drizzle additional caramel on top for decoration."
+    },
+    {
+      "id": 22,
+      "tea_id": 2,
+      "recipeName": "Minty Black Tea Mojito",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A refreshing mocktail with black tea, mint, and lime.",
+      "ingredients": [
+        "2 cups brewed black tea (chilled)",
+        "1 tablespoon lime juice",
+        "1 teaspoon honey",
+        "Fresh mint leaves",
+        "Ice cubes"
+      ],
+      "notes": "Add club soda for a fizzy version."
+    },
+    {
+      "id": 23,
+      "tea_id": 28,
+      "recipeName": "Honey Lemon Black Tea",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A simple and soothing blend of black tea with honey and lemon.",
+      "ingredients": [
+        "1 cup brewed black tea",
+        "1 tablespoon honey",
+        "1 tablespoon lemon juice",
+        "Lemon slice, for garnish"
+      ],
+      "notes": "Serve warm or iced depending on your preference."
+    },
+    {
+      "id": 24,
+      "tea_id": 9,
+      "recipeName": "Spiced Orange Black Tea",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A warm and zesty tea with hints of orange and spices.",
+      "ingredients": [
+        "1 cup brewed black tea",
+        "1/4 cup orange juice",
+        "1/4 teaspoon cinnamon",
+        "Orange peel, for garnish"
+      ],
+      "notes": "Pair with a cinnamon stick for added aroma."
+    },
+    {
+      "id": 25,
+      "tea_id": 33,
+      "recipeName": "Black Tea Berry Lemonade",
+      "group": "Black Tea",
+      "type": "black_tea",
+      "teaUsed": "Black Tea",
+      "description": "A fruity and tangy drink blending black tea with mixed berries and lemonade.",
+      "ingredients": [
+        "2 cups brewed black tea (chilled)",
+        "1/2 cup mixed berry syrup",
+        "1/2 cup lemonade",
+        "Ice cubes",
+        "Fresh berries, for garnish"
+      ],
+      "notes": "Use frozen berries for a slushy texture."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 from dataBaseConnector import Database
-from getDataFormJson import teaList
+from getDataFormJson import teaList, recipeList
 from main import db
 import random
 
@@ -25,6 +25,12 @@ def insert_comment_funcion(tea_id):
     if Database.get_comments_count_with_tea_id(tea_id) < 5:
         data=random_comments(tea_id)
         Database.add_comment(tea_id=data[3], text=data[0], userName=data[1], location=data[2])
+
+def insert_resapy(id,tea_id,note):
+    existing_resapy = Database.check_for_duplicates_resapy(id)
+    
+    if existing_resapy == 0:
+        Database.add_recipe(id,tea_id,note)
 
 def random_comments(tea_id):
     randomComment = ["A delicate green tea with a smooth flavor."
@@ -409,6 +415,7 @@ def insert_data():
     # Database.drop_comment_table()
     # Database.drop_recipe_table()
     
+    Resapys=recipeList()
     Green, Black, White=teaList()
     global i  
     for tea in Green:
@@ -417,10 +424,18 @@ def insert_data():
             insert_comment_funcion(id)
  
     for tea in Black:
-        insert_data_funcion(tea)
+        id=insert_data_funcion(tea)
+        for value in range(5):
+            insert_comment_funcion(id)
         
     for tea in White:
-        insert_data_funcion(tea)
+        id=insert_data_funcion(tea)
+        for value in range(5):
+            insert_comment_funcion(id)
+    
+    for resapy in Resapys:
+        insert_resapy(resapy["id"],resapy["tea_id"],resapy["instructions"])     
+    
         
 def get_search_data():
     teaList=[]
@@ -475,6 +490,9 @@ def get_random_comment():
 
 def update_comment_with_tea_id(id,comment):
     Database.update_comment(id,comment)
+
+def delete_comment_with_id(id):
+    Database.delete_comment(id)
 
 # Makes a comment for tea
 # adds comment to one sesific tea
