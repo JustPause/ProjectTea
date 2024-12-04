@@ -27,7 +27,7 @@ def initial_data():
     return jsonify(get_search_data())
 
 @app.route('/api/get_comments', methods=['POST'])
-def get_comments():
+def comments():
     return jsonify(get_comments(request.get_json().get('teaName')))
 
 @app.route('/api/get_comment', methods=['GET'])

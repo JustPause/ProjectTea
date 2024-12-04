@@ -23,8 +23,20 @@ class Database:
         return db.session.query(Comment).filter(Comment.tea_id == tea_id).all()
 
     @staticmethod
+    def get_tea_count():
+        return db.session.query(Tea).count()
+
+    @staticmethod
+    def get_comments_count():
+        return db.session.query(Comment).count()
+
+    @staticmethod
     def get_comments_count_with_tea_id(tea_id):
         return db.session.query(Comment).filter(Comment.tea_id == tea_id).count()
+
+    @staticmethod
+    def get_comments_with_tea_id(tea_id):
+        return db.session.query(Comment).filter(Comment.tea_id == tea_id).all()
 
     @staticmethod
     def get_recipe_for_tea(tea_id):
@@ -36,6 +48,10 @@ class Database:
     @staticmethod
     def get_id_for_tea_name(tea_name):
         return db.session.query(Tea).filter(Tea.name == tea_name).first().id
+
+    @staticmethod
+    def get_name_for_tea_id(tea_id):
+        return db.session.query(Tea).filter(Tea.id == tea_id).first().name
 
     @staticmethod
     def add_tea(name, tea_group, link):

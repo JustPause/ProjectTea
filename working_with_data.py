@@ -448,7 +448,22 @@ def get_random_comment():
     # Get All Comments with id
     # Select random one
     
-    return {"A":"A","B":"B"}
+    count=Database.get_tea_count()
+    rand_count=random.randint(1, count)
+    data=Database.get_comments_with_tea_id(rand_count)
+    rand_data_count=random.randint(1, len(data))-1
+    comment=data[rand_data_count]
+    
+    comments_data = [
+        {
+            "teaName": Database.get_name_for_tea_id(comment.tea_id),
+            "text": comment.text,
+            "location": comment.location,
+            "userName": comment.userName,
+            "tea_id": comment.tea_id
+        }
+    ]
+    return comments_data
 
 # Makes a comment for tea
 # adds comment to one sesific tea
