@@ -120,8 +120,6 @@ import Layout from "src/layouts/layout.astro";
       const carousel = document.getElementById("deleteCommentSection");
 
       data.map((comment) => {
-        console.log(comment);
-
         const teaForm = document.createElement("form");
 
         teaForm.setAttribute("action", "");
@@ -186,4 +184,24 @@ import Layout from "src/layouts/layout.astro";
       </div>
     </div>
   </div>
+  <script type="module">
+    let teaId = 5;
+
+    fetch("/api/get_joind_data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ teaId })
+    })
+      .then((response) => response.json())
+      .then((data_from_db) => {
+        renderIt(data_from_db);
+      })
+      .catch((error) => console.error("Error fetching initial data:", error));
+
+    function renderIt(data) {
+      console.log(data);
+    }
+  </script>
 </Layout>

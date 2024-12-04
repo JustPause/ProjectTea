@@ -494,8 +494,10 @@ def update_comment_with_tea_id(id,comment):
 def delete_comment_with_id(id):
     Database.delete_comment(id)
 
-# Makes a comment for tea
-# adds comment to one sesific tea
-
+def get_data_for_db(tea_id):
+    
+    returnVar = [[4],[5,4,6,7],[7]]
+    return returnVar
+    # Give back array of [{teaName},[teaComment,...],{teaResepys}]
 
 #   BIG SPAGETI, SKANAUS SKAITYTOJUI

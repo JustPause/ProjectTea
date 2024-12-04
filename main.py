@@ -17,7 +17,7 @@ for subList in teaList:
 
 from dataBaseConnection import Tea, Comment, Recipe
 
-from working_with_data import insert_data, get_search_data, get_comments, insert_comment, get_random_comment, update_comment_with_tea_id,delete_comment_with_id
+from working_with_data import insert_data, get_search_data, get_comments, insert_comment, get_random_comment, update_comment_with_tea_id,delete_comment_with_id,get_data_for_db
 
 with app.app_context():
     db.create_all()
@@ -35,6 +35,10 @@ def comments():
 def get_comment():
     return jsonify(get_random_comment())
 
+@app.route('/api/get_joind_data', methods=['POST'])
+def get_data():
+    return jsonify(get_data_for_db(request.get_json().get('teaId')))
+    
 @app.route("/")
 def index():
     return send_from_directory('Front-End/dist', 'index.html')
