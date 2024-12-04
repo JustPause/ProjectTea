@@ -90,6 +90,12 @@ class Database:
         return new_recipe 
     
     @staticmethod
+    def update_comment(id,comment):
+        comment_to_update = db.session.query(Comment).filter(Comment.id == id).first()
+        comment_to_update.text = comment
+        db.session.commit()
+    
+    @staticmethod
     def drop_tea_table():
         with db.engine.connect() as connection:
             tea_table = Table('tea', MetaData(), autoload_with=db.engine)

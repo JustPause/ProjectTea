@@ -456,6 +456,7 @@ def get_random_comment():
     
     comments_data = [
         {
+            "id": comment.id,
             "teaName": Database.get_name_for_tea_id(comment.tea_id),
             "text": comment.text,
             "location": comment.location,
@@ -464,6 +465,9 @@ def get_random_comment():
         }
     ]
     return comments_data
+
+def update_comment_with_tea_id(id,comment):
+    Database.update_comment(id,comment)
 
 # Makes a comment for tea
 # adds comment to one sesific tea

@@ -29,9 +29,9 @@ import Layout from "src/layouts/layout.astro";
         </div>
 
         <div class="flex flex-row items-center justify-center">
-          <p id="teaNmae" class="Text !font-bold text-light mr-2">Test</p>
+          <p id="teaNmae" class="Text !font-bold text-light mr-2"></p>
           <p class="Text text-light">And comment form</p>
-          <p id="CommenterNmae" class="Text !font-bold text-light ml-2">Test</p>
+          <p id="CommenterNmae" class="Text !font-bold text-light ml-2"></p>
         </div>
       </div>
 
@@ -44,6 +44,7 @@ import Layout from "src/layouts/layout.astro";
             method="post"
             class="h-full w-full flex flex-col items-center"
           >
+            <input type="hidden" name="comment_id" id="commentId" value="" />
             <textarea
               class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
               name="comment"
@@ -74,7 +75,9 @@ import Layout from "src/layouts/layout.astro";
       const comment = document.getElementById("comment");
       const commenterNmae = document.getElementById("CommenterNmae");
       const teaNmae = document.getElementById("teaNmae");
+      const commentId = document.getElementById("commentId");
 
+      commentId.value = data[0]["id"];
       comment.textContent = data[0]["text"];
       commenterNmae.textContent = data[0]["userName"];
       teaNmae.textContent = data[0]["teaName"];
