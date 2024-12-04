@@ -121,6 +121,7 @@ import json from "public/resapys.json";
         <form action="" method="post" class="h-full w-full flex flex-col items-center">
           <textarea
             class="Text text-black pt-6 px-6 h-full w-full resize-none overflow-auto text-justify bg-transparent outline-none placeholder-black/70"
+            name="comment"
             placeholder="Type your comment ..."
           >
           </textarea>
@@ -132,7 +133,7 @@ import json from "public/resapys.json";
       </div>
     </div>
   </div>
-  
+
   <script type="module">
     let data;
     let teaName = document.getElementById("TeaName").textContent;

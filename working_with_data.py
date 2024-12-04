@@ -17,6 +17,7 @@ def insert_comment(tea_name, text):
     id = Database.get_id_for_tea_name(tea_name)
     userName = "Anonymous"
     location = "No whare"
+    print(id, text, userName, location)
     Database.add_comment(tea_id=id, text=text, userName=userName, location=location)
 
 def insert_comment_funcion(tea_id):
