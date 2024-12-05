@@ -494,9 +494,26 @@ def update_comment_with_tea_id(id,comment):
 def delete_comment_with_id(id):
     Database.delete_comment(id)
 
-def get_data_for_db(tea_id):
+def get_data_for_db(teaName):
     
-    returnVar = [[4],[5,4,6,7],[7]]
+    tea_id=Database.get_id_for_tea_name(teaName)
+    data=Database.join_all_tabales(tea_id)
+    resapy=data[0][3]
+    comment=[]
+    
+    for dat in data:
+        
+        comment.append(dat[2])
+        
+        if resapy != dat[3]:
+            print("Big prblem")
+            resapy=dat[3]
+    
+    
+    
+    returnVar = [comment,resapy]
+    
+    
     return returnVar
     # Give back array of [{teaName},[teaComment,...],{teaResepys}]
 

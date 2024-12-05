@@ -134,6 +134,19 @@ class Database:
         return db.session.query(Recipe).filter(Recipe.id == id).count()
     
     @staticmethod
+    def join_all_tabales(id):
+        query = db.session.query(
+            Tea.id,
+            Tea.name,
+            Comment.userName,
+            Recipe.instructions
+        ).join(Comment, Tea.id == Comment.tea_id).join(Recipe, Tea.id == Recipe.tea_id).filter(Tea.id == id)
+    
+        data=query.all()
+        
+        return data
+    
+    @staticmethod
     def close():
         db.session.close()
         

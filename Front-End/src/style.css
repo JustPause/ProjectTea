@@ -14,7 +14,8 @@ body {
   font-size: medium;
 }
 
-p {
+p,
+label {
   font-family: "Arima", system-ui;
   font-optical-sizing: auto;
   font-style: normal;

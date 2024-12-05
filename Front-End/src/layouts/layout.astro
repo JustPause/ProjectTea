@@ -2,7 +2,7 @@
 import NavigationBar from "@global/navigationBar.astro";
 import Footer from "@global/footer.astro";
 
-import '/src/style.css';
+import "/src/style.css";
 
 interface Props {
   title: string;
@@ -12,7 +12,7 @@ interface Props {
 const { title, language } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={language}>
   <head>
     <meta charset="UTF-8" />
@@ -40,6 +40,13 @@ const { title, language } = Astro.props;
     <link
       href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&fam
       ily=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
 

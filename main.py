@@ -37,7 +37,7 @@ def get_comment():
 
 @app.route('/api/get_joind_data', methods=['POST'])
 def get_data():
-    return jsonify(get_data_for_db(request.get_json().get('teaId')))
+    return jsonify(get_data_for_db(request.get_json().get('teaName')))
     
 @app.route("/")
 def index():
