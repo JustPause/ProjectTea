@@ -172,8 +172,8 @@ import Layout from "src/layouts/layout.astro";
     <div
       class="flex flex-wrap pt-16 justify-center sm:justify-evenly w-full mx-auto flex-row"
     >
-      <div class="bg-black flex flex-col items-center px-4 py-4 rounded h-min">
-        <label for="TeaSelection" class="Subheadline text-light mb-2"
+      <div class="bg-color flex flex-col items-center px-4 py-4 rounded h-min">
+        <label for="TeaSelection" class="Subheadline text-black mb-2"
           >Tea Name</label
         >
         <select
@@ -181,24 +181,24 @@ import Layout from "src/layouts/layout.astro";
           id="TeaSelection"
           class="text-light Text p-2 rounded bg-dark-green"
         >
-          <option value="An Ju Bai Cha" class="text-light Text"
+          <option value="An Ju Bai Cha" class="text-black Text"
             >An Ju Bai Cha</option
           >
-          <option value="Gong Mei" class="text-light Text">Assam</option>
-          <option value="Bai Mu Dan" class="text-light Text">Bai Hao Yin Zhen</option
+          <option value="Gong Mei" class="text-black Text">Assam</option>
+          <option value="Bai Mu Dan" class="text-black Text">Bai Hao Yin Zhen</option
           >
-          <option value="Bancha" class="text-light Text">Bancha</option>
+          <option value="Bancha" class="text-black Text">Bancha</option>
         </select>
       </div>
 
-      <div class="bg-black flex flex-col items-center px-4 py-4 rounded h-min">
-        <p class="Subheadline">Tea Comments</p>
+      <div class="bg-color flex flex-col items-center px-4 py-4 rounded h-min">
+        <p class="Subheadline text-black">Tea Comments</p>
         <div class="pt-2 px-2" id="comments">
         </div>
       </div>
 
-      <div class="bg-black flex flex-col items-center px-4 py-4 rounded h-min">
-        <p class="Subheadline">Tea Resapys</p>
+      <div class="bg-color flex flex-col items-center px-4 py-4 rounded h-min">
+        <p class="Subheadline text-black">Tea Resapys</p>
 
         <div class="pt-2 px-2" id="resapys">
         </div>
@@ -211,13 +211,13 @@ import Layout from "src/layouts/layout.astro";
       const comments_div = document.getElementById("comments");
       resapy_div.innerHTML = comments_div.innerHTML = "";
 
-      comments.className = "Text";
+      comments.className = "Text text-black";
 
       console.log(data[1]);
         const resapy = document.createElement("p");
         resapy.innerHTML = data[1];
 
-        resapy.className = "Text";
+        resapy.className = "Text text-black";
 
         resapy_div.appendChild(resapy);
 
@@ -225,7 +225,7 @@ import Layout from "src/layouts/layout.astro";
         const comments = document.createElement("p");
         comments.innerHTML = data[0][index];
 
-        comments.className = "Text";
+        comments.className = "Text text-black";
 
         comments_div.appendChild(comments);
       }
