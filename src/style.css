@@ -10,7 +10,7 @@
 
 body {
   /* background-color: var(--dark-green); */
-  background-color: #394132;
+  background-color: #323232;
   font-size: medium;
 }
 
@@ -23,35 +23,21 @@ p {
 
 .Headline-1 {
   font-size: 70pt;
-
   font-family: "Crimson Text", serif;
-  font-weight: 400;
-
-  line-height: 1.25em;
 }
 .Headline-2 {
   font-size: 50pt;
-
   font-family: "Crimson Text", serif;
-  font-weight: 400;
 }
 .Headline-3 {
   font-size: 30pt;
-
-  font-weight: 700;
 }
 .Subheadline {
   font-size: 20pt;
-
-  font-weight: 600;
 }
 .Text {
   font-size: 16pt;
-
-  font-weight: 400;
 }
 .Caption {
   font-size: 12pt;
-
-  font-weight: 600;
 }
