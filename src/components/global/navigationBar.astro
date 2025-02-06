@@ -3,15 +3,17 @@ import Logo from "@global/logo.astro";
 
 const Tabs = [
   { name: "Tea", link: "/teaList" },
-   { name: "Benefits", link: "/benefits" },
+  { name: "Benefits", link: "/benefits" },
   { name: "Recipes", link: "/recipes" },
-   { name: "Profile", link: "/profile" }
+  { name: "Profile", link: "/profile" }
 ];
 ---
 
-<nav class="fixed w-full w-32 md:w-full px-6 z-50 mt-4">
+<nav class="fixed w-full px-6 z-50 mt-4">
   <div class="w-full h-8 flex flex-row items-center justify-between mb-2">
-    <div class="left-0 h-16 flex items-center content-center overflow-hidden mb-2">
+    <div
+      class="left-0 h-16 flex items-center content-center overflow-hidden mb-2"
+    >
       <Logo />
     </div>
 
@@ -36,6 +38,7 @@ const Tabs = [
       </div>
     </div>
   </div>
+
   <hr class="border-b-px w-full border-white" />
 
   <div

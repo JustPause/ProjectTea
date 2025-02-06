@@ -9,8 +9,7 @@
 }
 
 body {
-  /* background-color: var(--dark-green); */
-  background-color: #323232;
+  background-color: var(--dark-green);
   font-size: medium;
 }
 
