@@ -83,30 +83,3 @@ So if we want to add translasion is semi dificalt, well repetitive but posibal, 
 ### Fonts
 
 How to add fonts [more](https://docs.astro.build/en/guides/fonts/)
-
-## Back-End
-
-### Dependencys
-
-- python3
-- flask
-
-Indented Code Block (expected style):
-
-```bash
-  python3 -m venv .env
-  source .env/bin/activate
-  pip install -r requirements.txt
-```
-
-To just run after inisiligine the flask project
-
-```bash
-  flask --app main run
-```
-
-If you whant to updata data form json you need to run
-```bash
-  python fileToMd.py
-```
-and move teas_md to Front-End/src/pages/tea/
