@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --white: #ffffff;
   --light: #f4f0e5;
@@ -8,10 +12,20 @@
   --accent: #a62f03;
 }
 
-body {
-  /* background-color: var(--dark-green); */
-  background-color: #394132;
-  font-size: medium;
+@theme { 
+  --color-white: #ffffff;
+  --color-light: #f4f0e5;
+  --color-color: #b8cfa3;
+  --color-dark-green: #394132;
+  --color-true-black: #000;
+  --color-black: #303030;
+  --color-accent: #a62f03;
+
+  /* --font-display: "Arima", "sans-serif"; */
+}
+
+body {  
+  font-size: 12px;
 }
 
 p {
@@ -19,6 +33,13 @@ p {
   font-optical-sizing: auto;
   font-style: normal;
   color: var(--light);
+}
+
+p {
+  @apply 
+  font-normal
+  text-light;
+  /* font-display; */
 }
 
 .Headline-1 {
