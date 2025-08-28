@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "project_tea",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,9 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.5.9",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.4",
+    "deno": "^2.4.4",
     "tailwindcss": "^4.1.12"
   }
 }

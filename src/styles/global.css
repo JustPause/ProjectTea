@@ -1,1 +1,76 @@
 @import "tailwindcss";
+
+:root {
+  --white: #ffffff;
+  --light: #f4f0e5;
+  --color: #b8cfa3;
+  --dark-green: #394132;
+  --true-black: #000;
+  --black: #303030;
+  --accent: #a62f03;
+}
+
+@theme { 
+  --color-white: #ffffff;
+  --color-light: #f4f0e5;
+  --color-color: #b8cfa3;
+  --color-dark-green: #394132;
+  --color-true-black: #000;
+  --color-black: #303030;
+  --color-accent: #a62f03;
+
+  /* --font-display: "Arima", "sans-serif"; */
+}
+
+body {  
+  font-size: 12px;
+}
+
+p {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--light);
+}
+
+p {
+  @apply 
+  font-normal
+  text-light;
+  /* font-display; */
+}
+
+.Headline-1 {
+  font-size: 70pt;
+
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+
+  line-height: 1.25em;
+}
+.Headline-2 {
+  font-size: 50pt;
+
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+}
+.Headline-3 {
+  font-size: 30pt;
+
+  font-weight: 700;
+}
+.Subheadline {
+  font-size: 20pt;
+
+  font-weight: 600;
+}
+.Text {
+  font-size: 16pt;
+
+  font-weight: 400;
+}
+.Caption {
+  font-size: 12pt;
+
+  font-weight: 600;
+}
