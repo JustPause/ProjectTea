@@ -1,0 +1,13 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@global/*": ["src/components/global/*"],
+      "@home/*": ["src/components/home/*"]
+    },
+    "strict": false,
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
