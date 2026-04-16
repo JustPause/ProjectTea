@@ -2,58 +2,58 @@
 import NavigationBar from "@global/navigationBar.astro";
 import Footer from "@global/footer.astro";
 
-import '/src/styles/global.css';
+import "./src/styles/global.css";
 
 interface Props {
-  title: string;
-  language: string;
+    title: string;
+    language: string;
 }
 
 const { title, language } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={language}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="/favicon/favicon-48x48.png"
-      sizes="48x48"
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <meta name="apple-mobile-web-app-title" content="Tea Page" />
-    <link rel="manifest" href="/manifest.json" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicon/favicon-48x48.png"
+            sizes="48x48"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="Tea Page" />
+        <link rel="manifest" href="/manifest.json" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&fam
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&fam
       ily=Crimson+Text&display=swap"
-      rel="stylesheet"
-    />
+            rel="stylesheet"
+        />
 
-    <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
 
-  <body class="bg-dark-green">
-    <NavigationBar />
+    <body class="bg-dark-green">
+        <NavigationBar />
 
-    <slot />
+        <slot />
 
-    <Footer />
-  </body>
+        <Footer />
+    </body>
 </html>

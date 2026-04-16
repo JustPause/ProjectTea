@@ -1,7 +1,7 @@
 {
   "name": "project_tea",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -13,5 +13,8 @@
     "astro": "^6.1.7",
     "deno": "^2.4.4",
     "tailwindcss": "^4.1.12"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
