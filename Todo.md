@@ -1,22 +1,21 @@
 # TODO
 
-- [x] Headerio miktuvai visi kaip ir veikia
-- [ ] Tea pasirinkimia, riekia padaryti arbatu sarasa
-- [ ] Iskojijmo funcija gera, bet neuveda i po paskaudimo i taji puslapi su datos duomenimis
-- [ ] Andtros dalies arbatu pasirinkimas neatitinka standartu
-  - [ ] Jis neturi iskarto parinktos arbatos, kuri turtu buti Green tea
-  - [ ] Duomenis po paspaudimo nepasikeicia
-  - [ ] ir arbatos nuotraukos nei nuveda i arbatos puslapi ne leidziasi buti paspaustos
-- [ ] Discover nenuveda link nekur nenuveda
-- [ ] Receptai po paspaudimo neissilecia, ir nesiskiria vienas nuo kito
-- [ ] Receptu miktukas nuveda neikur
-- [ ] Asmenimis puslapis neegzstuoja
-- [ ] Meet the tea-m nuveda neras imanomas paspausti
-- [ ] Komentaru filtas, kad bendrakursiai nebutu labai nemalonus
-
-- [ ] informacija visuose WEB puslapiuose pilnai supildyta (1)
-- [ ] dzainas vieningas (CSS stilių faile visi stilių aprašai, HTML'e negali būti) (1)
-- [ ] DB struktūroje ne mažiau 3 susijusios ryšiais lentelės (2)
-- [ ] duomenų bazėje suvesta ne mažiau kaip 25 įrašai kiekvienoje lentelėje (1)
-- [ ] bet kartą panaudota SELECT, INSERT, UPDATE, DELETE sakiniai (3)
-- [ ] bent vienas SELECT turi traukti duomenis ne mažiau kaip iš 3 lentelių (sujungtų ryšiais tarpusavyje) (2)
+- [ ] The header buttons work.
+- [ ] Tea selection — need to create a tea list.
+- [ ] The search function is good, but after clicking it does not take you to the page with the date data.
+- [ ] The tea selection in the second section does not meet the standards.
+  - [ ] It does not have a preselected tea, which should be Green tea.
+  - [ ] The data does not change after clicking.
+  - [ ] The tea images neither lead to the tea page nor can they be clicked.
+- [ ] Discover does not lead anywhere.
+- [ ] The recipes do not expand after clicking, and they are not different from each other.
+- [ ] The recipe button leads nowhere.
+- [ ] The personal page does not exist.
+- [ ] Meet the team leads nowhere / cannot be clicked.
+- [ ] Comment filter, so classmates would not be too rude.
+- [ ] Information on all web pages is fully filled in (1)
+- [ ] The design is consistent (all style definitions are in the CSS file; there cannot be styles in HTML) (1)
+- [ ] The database structure has at least 3 related tables (2)
+- [ ] At least 25 records are entered in each table in the database (1)
+- [ ] At least once, the SELECT, INSERT, UPDATE, and DELETE statements are used (3)
+- [ ] At least one SELECT must pull data from no fewer than 3 tables connected by relations (2)
