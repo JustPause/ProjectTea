@@ -1,36 +1,42 @@
 ---
 const { img, H1, p1, b1, link } = Astro.props;
+// const background = `/img/background/${img}.jpeg`;
+const background = `/src/img/background/${img}.jpeg`;
+import { Image } from "astro:assets";
 ---
 
 <div class="relative h-screen w-screen overflow-hidden">
-  <img
-    id="TheBackGorundImage"
-    class="h-auto w-screen Background object-cover origin-center"
-    src={`/img/background/${img}.jpeg`}
-    alt="Tea"
-  />
+    <Image
+        id="TheBackGorundImageIn
+        "
+        class="h-auto w-screen Background object-cover origin-center"
+        src={background}
+        alt="Tea"
+        width={1920}
+        height={1080}
+    />
 
-  <div
-    id="Text"
-    class="absolute flex flex-col gap-4 content-center items-center w-[44rem] TeaCupText top-[20%] left-[10%] z-20 bg-true-black/50 p-10 rounded-2xl backdrop-blur-xl drop-shadow-md"
-  >
-    <p class="Headline-2 text-center">{H1}</p>
-    <p class="Text text-center pb-4">
-      {p1}
-    </p>
-    <div class="flex w-full">
-      <a
-        class="border-white text-white border-2 font-medium rounded-lg px-12 py-4 hover:bg-light hover:text-black hover:border-black"
-        href={link}
-      >
-        <p class="Text leading-none text-inherit">{b1}</p>
-      </a>
+    <div
+        id="Text"
+        class="absolute flex flex-col gap-4 content-center items-center w-176 TeaCupText top-[20%] left-[10%] z-20 bg-true-black/50 p-10 rounded-2xl backdrop-blur-xl drop-shadow-md"
+    >
+        <p class="Headline-2 text-center">{H1}</p>
+        <p class="Text text-center pb-4">
+            {p1}
+        </p>
+        <div class="flex w-full">
+            <a
+                class="border-white text-white border-2 font-medium rounded-lg px-12 py-4 hover:bg-light hover:text-black hover:border-black"
+                href={link}
+            >
+                <p class="Text leading-none text-inherit">{b1}</p>
+            </a>
+        </div>
     </div>
-  </div>
 </div>
 
 <style>
-  .Background {
-    transform: scale(0.675) rotate(90deg) translate(-85%);
-  }
+    .Background {
+        transform: scale(0.675) rotate(90deg) translate(-85%);
+    }
 </style>

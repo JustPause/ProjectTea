@@ -2,6 +2,8 @@
 import Layout from "src/layouts/layout.astro";
 import TeaRecipes from "@global/teaRecipes.astro";
 import json from "public/teav2.json";
+import { Image } from "astro:assets";
+
 ---
 
 <Layout title="The Tea List" language="en">
@@ -9,19 +11,21 @@ import json from "public/teav2.json";
     <div class="h-screen w-screen overflow-hidden">
       <div
         id="DarkSideBar"
-        class="absolute w-full h-full right-0 z-10 from-true-black/90 bg-gradient-to-r opacity-95"
+        class="absolute w-full h-full right-0 z-10 from-true-black/90 bg-linear-to-r opacity-95"
       >
       </div>
-      <img
+      <Image
         id="TheBackGorundImage"
         class="h-auto w-screen Background object-cover origin-center"
-        src={"/img/background/4cab0c59f687caecc49177923efdc0d3.png"}
+        src={"/src/img/background/4cab0c59f687caecc49177923efdc0d3.png"}
         alt="Tea"
+        width={1920}
+        height={1080}
       />
 
       <div
         id="Text"
-        class="absolute flex flex-col gap-4 content-center items-center w-[44rem] TeaCupText top-[25%] left-[10%] z-20"
+        class="absolute flex flex-col gap-4 content-center items-center w-176 TeaCupText top-[25%] left-[10%] z-20"
       >
         <p class="Headline-2 mr-48">
           Our Tea<br /> &nbsp;&nbsp;&nbsp;&nbsp;Collection

@@ -2,6 +2,9 @@
 import NiceButton from "./niceButton.astro";
 
 const count = [1, 2, 3, 4];
+
+import { Image } from "astro:assets";
+
 ---
 
 <div
@@ -20,10 +23,12 @@ const count = [1, 2, 3, 4];
           <div
             class={`child section flex flex-row h-full bg-color rounded-3xl border-4 border-color overflow-hidden flex-shrink-0 ${index === 0 ? "active" : ""}`}
           >
-            <img
-              src="/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
+            <Image
+              src="/src/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
               alt=""
               class="overflow-clip w-[24rem] object-cover rounded-2xl"
+              width={1920}
+              height={1080}
             />
 
             <div

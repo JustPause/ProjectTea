@@ -1,14 +1,18 @@
 ---
 import Layout from "src/layouts/layout.astro";
 const { frontmatter } = Astro.props;
+import { Image } from "astro:assets";
+
 ---
 
 <Layout title="The Tea List" language="en">
     <div class="flex flex-row mx-32 pt-40 pb-80 justify-evenly">
-        <img
+        <Image
             class="w-2xl object-cover rounded-2xl"
-            src={`/img/recipes/${frontmatter.img}`}
+            src={`/src/img/recipes/${frontmatter.img}`}
             alt="recipes img"
+            width={1920}
+            height={1080}
         />
         <div class="w-2xl flex flex-col justify-between">
             <p class="Headline-1">{frontmatter.name}</p>

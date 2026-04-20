@@ -9,45 +9,46 @@
     --color-black: #303030;
     --color-accent: #a62f03;
 
-    /* --font-display: "Arima", "sans-serif"; */
+    --font-display: "Arima", "sans-serif";
 }
+@layer components {
+    p {
+        font-family: "Arima", system-ui;
+        font-optical-sizing: auto;
+        font-style: normal;
+        @apply font-normal text-light;
+    }
 
-p {
-    font-family: "Arima", system-ui;
-    font-optical-sizing: auto;
-    font-style: normal;
-    @apply font-normal text-light;
-}
-.Headline-1 {
-    font-size: 70pt;
+    .Headline-1 {
+        font-size: 70pt;
+        font-family: "Crimson Text", serif;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
 
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
+    .Headline-2 {
+        font-size: 50pt;
+        font-family: "Crimson Text", serif;
+        font-weight: 400;
+    }
 
-    line-height: 1.25em;
-}
-.Headline-2 {
-    font-size: 50pt;
+    .Headline-3 {
+        font-size: 30pt;
+        font-weight: 700;
+    }
 
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-}
-.Headline-3 {
-    font-size: 30pt;
+    .Subheadline {
+        font-size: 20pt;
+        font-weight: 600;
+    }
 
-    font-weight: 700;
-}
-.Subheadline {
-    font-size: 20pt;
+    .Text {
+        font-size: 16pt;
+        font-weight: 400;
+    }
 
-    font-weight: 600;
-}
-.Text {
-    font-size: 16pt;
-    font-weight: 400;
-}
-.Caption {
-    font-size: 12pt;
-
-    font-weight: 600;
+    .Caption {
+        font-size: 12pt;
+        font-weight: 600;
+    }
 }

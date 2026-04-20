@@ -13,8 +13,5 @@
     "astro": "^6.1.7",
     "deno": "^2.4.4",
     "tailwindcss": "^4.1.12"
-  },
-  "overrides": {
-    "vite": "^7"
   }
 }

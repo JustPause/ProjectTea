@@ -16,11 +16,13 @@ import TeaRecipes from "@global/teaRecipes.astro";
             </div>
 
             <img
-                id="TheBackGorundImage"
+                id="TheBackGorundImageOut"
                 class="h-auto w-screen TeaCupBackground"
                 style=""
-                src="/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
+                src="/src/img/background/a823ff6bdd05ad85b615988a96e28739.jpeg"
                 alt="Tea"
+                width={1920}
+                height={1080}
             />
         </div>
 
@@ -144,17 +146,6 @@ import TeaRecipes from "@global/teaRecipes.astro";
             "skonis-ir-kvapas-earl-grey",
             "citrusu-vejas",
         ];
-
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch("/api/initial-data")
-                .then((response) => response.json())
-                .then((data_from_db) => {
-                    data = data_from_db;
-                })
-                .catch((error) =>
-                    console.error("Error fetching initial data:", error),
-                );
-        });
 
         searchBar.addEventListener("input", function () {
             const query = searchBar.value.toLowerCase();

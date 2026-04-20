@@ -1,6 +1,8 @@
 ---
 import Layout from "src/layouts/layout.astro";
 import json from "public/resapys.json";
+import { Image } from "astro:assets";
+
 
 const count = [1, 2, 3, 4];
 ---
@@ -10,24 +12,26 @@ const count = [1, 2, 3, 4];
     <div class="h-screen w-screen overflow-hidden">
       <div
         id="DarkSideBar"
-        class="absolute w-full h-full right-0 z-10 from-true-black/90 bg-gradient-to-r opacity-95"
+        class="absolute w-full h-full right-0 z-10 from-true-black/90 bg-linear-to-r opacity-95"
       >
       </div>
-      <img
+      <Image
         id="TheBackGorundImage"
         class="h-auto w-screen Background object-cover origin-center"
-        src={"/img/background/de5a4cb8642183b4a81e590368c8ebe0.jpeg"}
+        src={"/src/img/background/de5a4cb8642183b4a81e590368c8ebe0.jpeg"}
         alt="Tea"
+        width={1920}
+        height={1080}
       />
 
       <div
         id="Text"
-        class="absolute flex flex-col gap-4 content-center items-center w-[44rem] TeaCupText top-[25%] left-[10%] z-20"
+        class="absolute flex flex-col gap-4 content-center items-center w-176 TeaCupText top-[25%] left-[10%] z-20"
       >
         <p class="Headline-2 mr-48">
           Our Tea<br /> &nbsp;&nbsp;&nbsp;&nbsp;Recipes
         </p>
-        <p class="Text text-center pb-4 w-[32rem] ml-32">
+        <p class="Text text-center pb-4 w-lg ml-32">
           Explore our curated collection of teas, each offering a unique flavor
           and experience. Take a moment to steep in the variety
         </p>
@@ -55,11 +59,13 @@ const count = [1, 2, 3, 4];
       {
         count.map((coun, index) => (
           <div class="w-full h-72 bg-black flex mt-8">
-            <img
-              src="/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
+            <Image
+              src="/src/img/recipes/bf183e5f6399b21ef8213e18bff71afd.png"
               alt=""
               srcset=""
               class="w-1/2 object-cover"
+              width={1920}
+              height={1080}
             />
             <div class="w-1/2 flex items-center">
               <div class="flex flex-col mx-6">
